@@ -121,7 +121,7 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
 
       {/* Section Separator */}
       <SectionSeparator 
-        imageUrl="/lovable-uploads/75dba489-9c83-4689-89c0-1f3043618b4d.png"
+        imageUrl="/lovable-uploads/3c70149a-3a2d-4191-baf4-f26c0ca17e4f.png"
         alt="Bitaxe Bitcoin miners circuit boards"
       />
 
