@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -100,6 +99,33 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Featured Organizations - Moved to second position */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+              Featured Organizations
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover some of the amazing organizations you can support with your mining rewards
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {featuredOrganizations.map((org, index) => (
+              <OrganizationCard key={index} organization={org} />
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" variant="outline" className="bg-white hover:bg-gray-50 px-8 py-3 text-lg border-2">
+              📊 View All Supported Organizations
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Step-by-Step Guide */}
       <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
@@ -158,33 +184,6 @@ const Index = () => {
           </div>
           
           <PledgeGenerator />
-        </div>
-      </section>
-
-      {/* Featured Organizations */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
-              Featured Organizations
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover some of the amazing organizations you can support with your mining rewards
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {featuredOrganizations.map((org, index) => (
-              <OrganizationCard key={index} organization={org} />
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Button size="lg" variant="outline" className="bg-white hover:bg-gray-50 px-8 py-3 text-lg border-2">
-              📊 View All Supported Organizations
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </Button>
-          </div>
         </div>
       </section>
 
