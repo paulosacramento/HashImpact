@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -55,6 +56,16 @@ const Index = () => {
             </h1>
           </div>
           
+          {/* Image container */}
+          <div className="mx-auto max-w-2xl mb-8">
+            <div className="aspect-video bg-slate-800/50 border-2 border-dashed border-yellow-500/30 rounded-xl flex items-center justify-center">
+              <div className="text-center text-gray-400">
+                <Upload className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                <p className="text-sm">Image placeholder</p>
+              </div>
+            </div>
+          </div>
+
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
             <p className="text-base">What if your Bitcoin miner could do more than just earn you sats? What if it could fund education and help onboard new users to Bitcoin in underprivileged regions — all while humming in the background?</p>
             <p>This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses. It's easy to set up, requires no prior coding experience, and turns energy into meaningful impact.</p>
@@ -197,4 +208,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
