@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink, Zap } from "lucide-react";
@@ -34,7 +33,7 @@ export const OrganizationCard = ({ organization }: OrganizationCardProps) => {
             <Zap className="w-5 h-5 text-black" />
           </div>
           <CardTitle className="text-lg font-semibold text-white leading-tight">
-            BTC Schule
+            {organization.name}
           </CardTitle>
         </div>
         <p className="text-gray-300 text-sm leading-relaxed">
