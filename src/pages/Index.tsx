@@ -58,11 +58,12 @@ const Index = () => {
           
           {/* Image container */}
           <div className="mx-auto max-w-2xl mb-8">
-            <div className="aspect-video bg-slate-800/50 border-2 border-dashed border-yellow-500/30 rounded-xl flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <Upload className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                <p className="text-sm">Image placeholder</p>
-              </div>
+            <div className="aspect-video rounded-xl overflow-hidden">
+              <img 
+                src="/lovable-uploads/84863232-7298-4ab5-9c6a-f3e72f8f2427.png" 
+                alt="Bitaxe Bitcoin miners"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
