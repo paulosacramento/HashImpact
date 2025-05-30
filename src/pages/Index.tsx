@@ -119,6 +119,12 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
         </div>
       </section>
 
+      {/* Section Separator */}
+      <SectionSeparator 
+        imageUrl="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=600&fit=crop"
+        alt="Mountain landscape separator"
+      />
+
       {/* Step-by-Step Guide */}
       <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
         <div className="mx-auto max-w-6xl">
@@ -159,12 +165,6 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
           </div>
         </div>
       </section>
-
-      {/* Section Separator */}
-      <SectionSeparator 
-        imageUrl="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=600&fit=crop"
-        alt="Mountain landscape separator"
-      />
 
       {/* Pledge Generator */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
