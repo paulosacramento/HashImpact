@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -59,17 +58,19 @@ const Index = () => {
           {/* Image container */}
           <div className="mx-auto max-w-2xl mb-8">
             <div className="aspect-video rounded-xl overflow-hidden">
-              <img 
-                src="/lovable-uploads/84863232-7298-4ab5-9c6a-f3e72f8f2427.png" 
-                alt="Bitaxe Bitcoin miners"
-                className="w-full h-full object-cover"
-              />
+              <img src="/lovable-uploads/84863232-7298-4ab5-9c6a-f3e72f8f2427.png" alt="Bitaxe Bitcoin miners" className="w-full h-full object-cover" />
             </div>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
             <p className="text-base">What if your Bitcoin miner could do more than just earn you sats? What if it could fund education and help onboard new users to Bitcoin in underprivileged regions — all while humming in the background?</p>
-            <p>This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses. It's easy to set up, requires no prior coding experience, and turns energy into meaningful impact.</p>
+            <p>This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses.
+
+
+It also helps you chose an organisation that will the most positively impacted by your contribution due to the circumstances or price levels and cost of living in their country.
+
+
+It's easy to set up, requires no prior coding experience, and turns energy into meaningful impact.</p>
             <p>Whether you've just unboxed a Bitaxe or have a miner running for a long time, you can join a decentralized community that's channeling hashpower for good.</p>
           </div>
 
@@ -209,5 +210,4 @@ const Index = () => {
       </footer>
     </div>;
 };
-
 export default Index;
