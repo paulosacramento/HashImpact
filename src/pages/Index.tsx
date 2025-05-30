@@ -56,13 +56,8 @@ const Index = () => {
           </div>
           
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
-            <p className="text-base">What if your Bitcoin miner could do more than just earn you sats?
-
-
-What if it could fund education, support open-source tools, or help onboard new users to Bitcoin in underprivileged regions — all while running quietly in the background?</p>
-            <p>
-              This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses. It's easy to set up, requires no prior coding experience, and turns idle energy into meaningful impact.
-            </p>
+            <p className="text-base">What if your Bitcoin miner could do more than just earn you sats? What if it could fund education and help onboard new users to Bitcoin in underprivileged regions — all while humming in the background?</p>
+            <p>This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses. It's easy to set up, requires no prior coding experience, and turns energy into meaningful impact.</p>
             <p>Whether you've just unboxed a Bitaxe or have a miner running for a long time, you can join a decentralized community that's channeling hashpower for good.</p>
           </div>
 
