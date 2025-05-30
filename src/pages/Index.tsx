@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
+import { SectionSeparator } from "@/components/SectionSeparator";
 
 const Index = () => {
   const steps = [{
@@ -158,6 +159,12 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
           </div>
         </div>
       </section>
+
+      {/* Section Separator */}
+      <SectionSeparator 
+        imageUrl="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=600&fit=crop"
+        alt="Mountain landscape separator"
+      />
 
       {/* Pledge Generator */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
