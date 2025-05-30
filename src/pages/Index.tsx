@@ -1,12 +1,227 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PledgeGenerator } from "@/components/PledgeGenerator";
+import { OrganizationCard } from "@/components/OrganizationCard";
 
 const Index = () => {
+  const steps = [
+    {
+      number: "01",
+      title: "Get Your Gear Ready",
+      description: "You'll need a low-power Bitcoin miner — something like a Bitaxe is perfect. These devices are energy-efficient, quiet, and ideal for home use.",
+      icon: <Zap className="w-8 h-8 text-orange-500" />
+    },
+    {
+      number: "02", 
+      title: "Choose Braiins Mining Pool",
+      description: "Pick a mining pool that lets you set a custom payout Lightning address, such as Braiins.",
+      icon: <Target className="w-8 h-8 text-blue-500" />
+    },
+    {
+      number: "03",
+      title: "Enter the Organization's Lightning Address", 
+      description: "In the pool configuration, set the Lightning address of the non-profit you want to support.",
+      icon: <Users className="w-8 h-8 text-green-500" />
+    },
+    {
+      number: "04",
+      title: "Start Mining",
+      description: "Power up your miner, confirm it's hashing, and let it run. The rewards go directly to the chosen organization — no intermediaries needed.",
+      icon: <Zap className="w-8 h-8 text-purple-500" />
+    }
+  ];
+
+  const featuredOrganizations = [
+    {
+      name: "Bitcoin Education Initiative",
+      description: "Teaching Bitcoin fundamentals in developing regions",
+      lightningAddress: "donate@bitcoinedu.org",
+      impact: "500+ students educated"
+    },
+    {
+      name: "Open Source Bitcoin Tools",
+      description: "Funding development of Bitcoin privacy tools",
+      lightningAddress: "funding@btctools.dev", 
+      impact: "12 tools maintained"
+    },
+    {
+      name: "Lightning Network Adoption",
+      description: "Onboarding merchants to Lightning payments",
+      lightningAddress: "support@lnadopt.com",
+      impact: "200+ merchants onboarded"
+    }
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-orange-800 mb-6">
+              <Zap className="w-4 h-4 mr-2" />
+              HashImpact Project
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl bg-gradient-to-r from-orange-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+              Turn Mining Power Into Positive Change
+            </h1>
+          </div>
+          
+          <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-600">
+            <p>
+              What if your Bitcoin miner could do more than just earn you sats? What if it could fund education, support open-source tools, or help onboard new users to Bitcoin in underprivileged regions — all while running quietly in the background?
+            </p>
+            <p>
+              This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses. It's easy to set up, requires no prior coding experience, and turns idle energy into meaningful impact.
+            </p>
+            <p>
+              Whether you've just unboxed a Bitaxe or have a Raspberry Pi rig collecting dust, you can join a decentralized community that's channeling hashpower for good.
+            </p>
+          </div>
+
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white px-8 py-3 text-lg">
+              Start Your Impact Journey
+            </Button>
+            <Button variant="outline" size="lg" className="px-8 py-3 text-lg">
+              <ArrowDown className="w-4 h-4 mr-2" />
+              Learn How
+            </Button>
+          </div>
+        </div>
+
+        {/* Background decoration */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <div className="absolute left-1/2 top-0 ml-[-38rem] h-[25rem] w-[81.25rem] dark:[mask-image:linear-gradient(white,transparent)]">
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-400/30 to-purple-400/30 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Step-by-Step Guide */}
+      <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+              🔧 Step-by-Step Guide
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Follow these simple steps to redirect your mining rewards to organizations making a difference
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {steps.map((step, index) => (
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center text-sm font-bold text-gray-700 group-hover:scale-110 transition-transform">
+                      {step.number}
+                    </div>
+                    <div className="group-hover:scale-110 transition-transform">
+                      {step.icon}
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-gray-900">
+                    {step.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 leading-relaxed">
+                    {step.description}
+                  </p>
+                  {step.title.includes("Braiins") && (
+                    <Button variant="link" className="mt-3 p-0 h-auto text-blue-600 hover:text-blue-800">
+                      View full Braiins tutorial
+                      <ExternalLink className="w-4 h-4 ml-1" />
+                    </Button>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pledge Generator */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-50 to-purple-50">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+              📢 Make Your Pledge
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Show your commitment to support an organization with your hashrate. Create a shareable pledge card.
+            </p>
+          </div>
+          
+          <PledgeGenerator />
+        </div>
+      </section>
+
+      {/* Featured Organizations */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+              Featured Organizations
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover some of the amazing organizations you can support with your mining rewards
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {featuredOrganizations.map((org, index) => (
+              <OrganizationCard key={index} organization={org} />
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" variant="outline" className="bg-white hover:bg-gray-50 px-8 py-3 text-lg border-2">
+              📊 View All Supported Organizations
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Listed CTA */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-6">
+            📬 Get Your Organization Listed
+          </h2>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Are you running a non-profit that aligns with Bitcoin's mission? Apply to be included in our supported organizations list.
+          </p>
+          <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 text-lg">
+            Submit Your Organization
+            <ExternalLink className="w-4 h-4 ml-2" />
+          </Button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-300">
+              A project by the HashImpact community – Bridging Bitcoin mining and global good.
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+            <span>|</span>
+            <a href="#privacy" className="hover:text-white transition-colors">Privacy</a>
+            <span>|</span>
+            <a href="#github" className="hover:text-white transition-colors">GitHub</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
