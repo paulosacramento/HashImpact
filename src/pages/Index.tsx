@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -55,21 +54,21 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <div className="mb-8">
-            <div className="inline-flex items-center rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-orange-800 mb-6">
+            <div className="inline-flex items-center rounded-full bg-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400 mb-6 border border-yellow-500/30">
               <Zap className="w-4 h-4 mr-2" />
               HashImpact Project
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl bg-gradient-to-r from-orange-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
               Turn Mining Power Into Positive Change
             </h1>
           </div>
           
-          <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-600">
+          <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
             <p>
               What if your Bitcoin miner could do more than just earn you sats? What if it could fund education, support open-source tools, or help onboard new users to Bitcoin in underprivileged regions — all while running quietly in the background?
             </p>
@@ -82,10 +81,10 @@ const Index = () => {
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white px-8 py-3 text-lg">
+            <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold px-8 py-3 text-lg">
               Start Your Impact Journey
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-3 text-lg">
+            <Button variant="outline" size="lg" className="px-8 py-3 text-lg border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10">
               <ArrowDown className="w-4 h-4 mr-2" />
               Learn How
             </Button>
@@ -95,19 +94,19 @@ const Index = () => {
         {/* Background decoration */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute left-1/2 top-0 ml-[-38rem] h-[25rem] w-[81.25rem] dark:[mask-image:linear-gradient(white,transparent)]">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-400/30 to-purple-400/30 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-amber-400/20 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]"></div>
           </div>
         </div>
       </section>
 
       {/* Featured Organizations - Moved to second position */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
               Featured Organizations
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Discover some of the amazing organizations you can support with your mining rewards
             </p>
           </div>
@@ -122,7 +121,7 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="bg-white hover:bg-gray-50 px-8 py-3 text-lg border-2"
+              className="bg-slate-800/50 hover:bg-slate-700/50 px-8 py-3 text-lg border-2 border-yellow-500/50 text-yellow-400 hover:text-yellow-300"
               asChild
             >
               <a 
@@ -139,39 +138,39 @@ const Index = () => {
       </section>
 
       {/* Step-by-Step Guide */}
-      <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-50 to-purple-50">
+      <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
               🔧 Step-by-Step Guide
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Follow these simple steps to redirect your mining rewards to organizations making a difference
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {steps.map((step, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center text-sm font-bold text-gray-700 group-hover:scale-110 transition-transform">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
                       {step.number}
                     </div>
                     <div className="group-hover:scale-110 transition-transform">
                       {step.icon}
                     </div>
                   </div>
-                  <CardTitle className="text-xl font-semibold text-gray-900">
+                  <CardTitle className="text-xl font-semibold text-white">
                     {step.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed">
                     {step.description}
                   </p>
                   {step.title.includes("Braiins") && (
-                    <Button variant="link" className="mt-3 p-0 h-auto text-blue-600 hover:text-blue-800">
+                    <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300">
                       View full Braiins tutorial
                       <ExternalLink className="w-4 h-4 ml-1" />
                     </Button>
@@ -184,13 +183,13 @@ const Index = () => {
       </section>
 
       {/* Pledge Generator */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-50 to-purple-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
               📢 Make Your Pledge
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Show your commitment to support an organization with your hashrate. Create a shareable pledge card.
             </p>
           </div>
@@ -200,15 +199,15 @@ const Index = () => {
       </section>
 
       {/* Get Listed CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-purple-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-6">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
             📬 Get Your Organization Listed
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Are you running a non-profit that aligns with Bitcoin's mission? Apply to be included in our supported organizations list.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3 text-lg">
+          <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold px-8 py-3 text-lg">
             Submit Your Organization
             <ExternalLink className="w-4 h-4 ml-2" />
           </Button>
@@ -216,7 +215,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-t border-yellow-500/20">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-8">
             <p className="text-lg text-gray-300">
@@ -225,11 +224,11 @@ const Index = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+            <a href="#contact" className="hover:text-yellow-400 transition-colors">Contact</a>
             <span>|</span>
-            <a href="#privacy" className="hover:text-white transition-colors">Privacy</a>
+            <a href="#privacy" className="hover:text-yellow-400 transition-colors">Privacy</a>
             <span>|</span>
-            <a href="#github" className="hover:text-white transition-colors">GitHub</a>
+            <a href="#github" className="hover:text-yellow-400 transition-colors">GitHub</a>
           </div>
         </div>
       </footer>
