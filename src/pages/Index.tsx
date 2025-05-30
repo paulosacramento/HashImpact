@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -109,7 +110,7 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
           <div className="text-center">
             <Button size="lg" variant="outline" className="bg-slate-800/50 hover:bg-slate-700/50 px-8 py-3 text-lg border-2 border-yellow-500/50 text-yellow-400 hover:text-yellow-300" asChild>
               <a href="https://docs.google.com/spreadsheets/d/1GQvSrFTnYREAJ-7rrAU9r9ky10ybeIdH7j0zz63YTwU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                📊 View All Supported Organizations
+                📊 View All Listed Organizations
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
             </Button>
