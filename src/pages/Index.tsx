@@ -303,6 +303,101 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
         </div>
       </section>
 
+      {/* Partners and Support */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+              🤝 Partners and Support
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              This project is made possible by the support of our partners and the Bitcoin community
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* Braiins Partnership */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Zap className="w-6 h-6 text-blue-400" />
+                  </div>
+                </div>
+                <CardTitle className="text-xl font-semibold text-white">
+                  Braiins Pool
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Leading mining pool that enables custom Lightning address payouts, making this project possible.
+                </p>
+                <Button variant="link" className="p-0 h-auto text-yellow-400 hover:text-yellow-300">
+                  Visit Braiins Pool
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Community Support */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Users className="w-6 h-6 text-green-400" />
+                  </div>
+                </div>
+                <CardTitle className="text-xl font-semibold text-white">
+                  Bitcoin Community
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Built by and for the Bitcoin community. Open source and transparent.
+                </p>
+                <Button variant="link" className="p-0 h-auto text-yellow-400 hover:text-yellow-300">
+                  Join the Community
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Technical Support */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Target className="w-6 h-6 text-purple-400" />
+                  </div>
+                </div>
+                <CardTitle className="text-xl font-semibold text-white">
+                  Technical Contributors
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Special thanks to developers and technical contributors who help maintain this project.
+                </p>
+                <Button variant="link" className="p-0 h-auto text-yellow-400 hover:text-yellow-300">
+                  Contribute on GitHub
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <p className="text-gray-300 text-lg mb-6">
+              Want to support this project or become a partner?
+            </p>
+            <Button size="lg" variant="outline" className="bg-slate-800/50 hover:bg-slate-700/50 px-8 py-3 text-lg border-2 border-yellow-500/50 text-yellow-400 hover:text-yellow-300">
+              Get in Touch
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-t border-yellow-500/20">
         <div className="mx-auto max-w-6xl">
