@@ -1,4 +1,3 @@
-
 export interface PledgeData {
   organization: string;
   monthsOfSupport: string;
@@ -14,9 +13,9 @@ export const generatePledgeImage = async (data: PledgeData): Promise<Blob> => {
     throw new Error('Could not get canvas context');
   }
 
-  // Set canvas size to 1080x1080 for social sharing
-  canvas.width = 1080;
-  canvas.height = 1080;
+  // Set canvas size to 800x800 for 1:1 aspect ratio
+  canvas.width = 800;
+  canvas.height = 800;
 
   // Background setup
   if (data.minerPhoto) {
@@ -36,36 +35,36 @@ export const generatePledgeImage = async (data: PledgeData): Promise<Blob> => {
 
   // Draw border
   ctx.strokeStyle = '#f59e0b'; // amber-500
-  ctx.lineWidth = 8;
-  ctx.strokeRect(40, 40, canvas.width - 80, canvas.height - 80);
+  ctx.lineWidth = 6;
+  ctx.strokeRect(30, 30, canvas.width - 60, canvas.height - 60);
 
   // Draw inner border
   ctx.strokeStyle = '#fbbf24'; // amber-400
   ctx.lineWidth = 2;
-  ctx.strokeRect(60, 60, canvas.width - 120, canvas.height - 120);
+  ctx.strokeRect(45, 45, canvas.width - 90, canvas.height - 90);
 
   // Title
   ctx.fillStyle = '#fbbf24'; // amber-400
-  ctx.font = 'bold 64px Arial, sans-serif';
+  ctx.font = 'bold 48px Arial, sans-serif';
   ctx.textAlign = 'center';
-  ctx.fillText('PLEDGE CERTIFICATE', canvas.width / 2, 200);
+  ctx.fillText('PLEDGE CERTIFICATE', canvas.width / 2, 150);
 
   // Main pledge text
   ctx.fillStyle = '#ffffff';
-  ctx.font = 'bold 48px Arial, sans-serif';
+  ctx.font = 'bold 36px Arial, sans-serif';
   
   const mainText = `I pledge to support the ${data.organization}`;
   const timeText = `for ${data.monthsOfSupport} ${parseInt(data.monthsOfSupport) === 1 ? 'month' : 'months'}`;
   
   // Draw main text with line breaks if needed
-  drawWrappedText(ctx, mainText, canvas.width / 2, 400, 900, 60);
-  drawWrappedText(ctx, timeText, canvas.width / 2, 520, 900, 60);
+  drawWrappedText(ctx, mainText, canvas.width / 2, 300, 700, 45);
+  drawWrappedText(ctx, timeText, canvas.width / 2, 400, 700, 45);
 
   // Optional miner text
   if (data.minerName) {
-    ctx.font = '36px Arial, sans-serif';
+    ctx.font = '28px Arial, sans-serif';
     const minerText = `with the hashrate of the ${data.minerName}.`;
-    drawWrappedText(ctx, minerText, canvas.width / 2, 650, 900, 50);
+    drawWrappedText(ctx, minerText, canvas.width / 2, 500, 700, 40);
   }
 
   // Decorative elements
@@ -73,8 +72,8 @@ export const generatePledgeImage = async (data: PledgeData): Promise<Blob> => {
 
   // HashImpact branding
   ctx.fillStyle = '#f59e0b'; // amber-500
-  ctx.font = '24px Arial, sans-serif';
-  ctx.fillText('HashImpact Project', canvas.width / 2, canvas.height - 100);
+  ctx.font = '20px Arial, sans-serif';
+  ctx.fillText('HashImpact Project', canvas.width / 2, canvas.height - 80);
 
   // Convert canvas to blob
   return new Promise((resolve, reject) => {
@@ -153,35 +152,35 @@ const drawWrappedText = (
 };
 
 const drawDecorations = (ctx: CanvasRenderingContext2D, width: number, height: number): void => {
-  // Draw corner decorations
+  // Draw corner decorations - adjusted for smaller canvas
   ctx.strokeStyle = '#fbbf24'; // amber-400
-  ctx.lineWidth = 3;
+  ctx.lineWidth = 2;
   
   // Top left corner
   ctx.beginPath();
-  ctx.moveTo(100, 140);
-  ctx.lineTo(140, 140);
-  ctx.lineTo(140, 100);
+  ctx.moveTo(75, 105);
+  ctx.lineTo(105, 105);
+  ctx.lineTo(105, 75);
   ctx.stroke();
 
   // Top right corner
   ctx.beginPath();
-  ctx.moveTo(width - 100, 140);
-  ctx.lineTo(width - 140, 140);
-  ctx.lineTo(width - 140, 100);
+  ctx.moveTo(width - 75, 105);
+  ctx.lineTo(width - 105, 105);
+  ctx.lineTo(width - 105, 75);
   ctx.stroke();
 
   // Bottom left corner
   ctx.beginPath();
-  ctx.moveTo(100, height - 140);
-  ctx.lineTo(140, height - 140);
-  ctx.lineTo(140, height - 100);
+  ctx.moveTo(75, height - 105);
+  ctx.lineTo(105, height - 105);
+  ctx.lineTo(105, height - 75);
   ctx.stroke();
 
   // Bottom right corner
   ctx.beginPath();
-  ctx.moveTo(width - 100, height - 140);
-  ctx.lineTo(width - 140, height - 140);
-  ctx.lineTo(width - 140, height - 100);
+  ctx.moveTo(width - 75, height - 105);
+  ctx.lineTo(width - 105, height - 105);
+  ctx.lineTo(width - 105, height - 75);
   ctx.stroke();
 };
