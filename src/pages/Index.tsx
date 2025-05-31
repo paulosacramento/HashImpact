@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,13 +8,60 @@ import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
 
-// Import static data
-import { steps } from "@/data/steps";
-import { partners } from "@/data/partners";
-import { featuredOrganizations } from "@/data/organizations";
-import { heroContent, sectionsContent, footerContent } from "@/data/content";
-
 const Index = () => {
+  const steps = [{
+    number: "01",
+    title: "Get Your Bitaxe Ready",
+    description: "You'll need a low-power Bitcoin miner — something like a Bitaxe is perfect. These devices are energy-efficient, quiet, and ideal for home use. Be sure to watch the video up to the 30-minute mark.",
+    icon: <Zap className="w-8 h-8 text-orange-500" />
+  }, {
+    number: "02",
+    title: "Choose Braiins Mining Pool",
+    description: "Pick a mining pool that lets you set a custom payout Lightning address, such as Braiins.",
+    icon: <Target className="w-8 h-8 text-blue-500" />
+  }, {
+    number: "03",
+    title: "Enter the Organization's Lightning Address",
+    description: "In the pool configuration, set the Lightning address of the non-profit you want to support.",
+    icon: <Users className="w-8 h-8 text-green-500" />
+  }, {
+    number: "04",
+    title: "Start Mining",
+    description: "Power up your miner, confirm it's hashing, and let it run. The rewards go directly to the chosen organization — no intermediaries needed.",
+    icon: <Zap className="w-8 h-8 text-purple-500" />
+  }];
+  const featuredOrganizations = [{
+    name: "Bitcoin Education Initiative",
+    description: "Teaching Bitcoin fundamentals in developing regions",
+    lightningAddress: "donate@bitcoinedu.org",
+    impact: "500+ students educated"
+  }, {
+    name: "Open Source Bitcoin Tools",
+    description: "Funding development of Bitcoin privacy tools",
+    lightningAddress: "funding@btctools.dev",
+    impact: "12 tools maintained"
+  }, {
+    name: "Lightning Network Adoption",
+    description: "Onboarding merchants to Lightning payments",
+    lightningAddress: "support@lnadopt.com",
+    impact: "200+ merchants onboarded"
+  }];
+  const partners = [{
+    title: "Braiins Pool",
+    description: "Leading mining pool that enables custom Lightning address payouts, making this project possible.",
+    linkText: "Visit Braiins Pool",
+    icon: <Zap className="w-6 h-6 text-blue-400" />
+  }, {
+    title: "Bitcoin Community",
+    description: "Built by and for the Bitcoin community. Open source and transparent.",
+    linkText: "Join the Community",
+    icon: <Users className="w-6 h-6 text-green-400" />
+  }, {
+    title: "Technical Contributors",
+    description: "Special thanks to developers and technical contributors who help maintain this project.",
+    linkText: "Contribute on GitHub",
+    icon: <Target className="w-6 h-6 text-purple-400" />
+  }];
   return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
@@ -23,31 +69,32 @@ const Index = () => {
           <div className="mb-8">
             <div className="inline-flex items-center rounded-full bg-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400 mb-6 border border-yellow-500/30">
               <Zap className="w-4 h-4 mr-2" />
-              {heroContent.badge.text}
+              HashImpact Project
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
-              {heroContent.title}
+              Turn Mining Power Into Positive Change
             </h1>
           </div>
           
           {/* Image container */}
           <div className="mx-auto max-w-2xl mb-8">
             <div className="aspect-video rounded-xl overflow-hidden">
-              <img alt={heroContent.heroImage.alt} className="w-full h-full object-cover" src={heroContent.heroImage.src} />
+              <img alt="Bitaxe Bitcoin miners" className="w-full h-full object-cover" src="/lovable-uploads/889526d5-d5e3-4fcc-ba16-85672464fd6f.png" />
             </div>
           </div>
 
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
-            <p className="text-2xl">{heroContent.subtitle}</p>
-            {heroContent.description.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            <p className="text-2xl">What if your home Bitcoin miner could power real change in underprivileged regions?</p>
+            <p>If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life.</p>
+            <p>This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further.</p>
+            
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold px-8 py-3 text-lg">
-              {heroContent.ctaButton.text}
+              Start Your Impact Journey
             </Button>
+            
           </div>
         </div>
 
@@ -169,10 +216,10 @@ const Index = () => {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              {sectionsContent.featuredOrganizations.title}
+              Featured Organizations
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              {sectionsContent.featuredOrganizations.subtitle}
+              Discover some of the amazing organizations you can support with your mining rewards
             </p>
           </div>
 
@@ -184,8 +231,8 @@ const Index = () => {
 
           <div className="text-center">
             <Button size="lg" variant="outline" className="bg-slate-800/50 hover:bg-slate-700/50 px-8 py-3 text-lg border-2 border-yellow-500/50 text-yellow-400 hover:text-yellow-300" asChild>
-              <a href={sectionsContent.featuredOrganizations.externalLink.url} target="_blank" rel="noopener noreferrer">
-                {sectionsContent.featuredOrganizations.externalLink.text}
+              <a href="https://docs.google.com/spreadsheets/d/1GQvSrFTnYREAJ-7rrAU9r9ky10ybeIdH7j0zz63YTwU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
+                📊 View All Listed Organizations
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
             </Button>
@@ -201,47 +248,46 @@ const Index = () => {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              {sectionsContent.stepByStepGuide.title}
+              🔧 Step-by-Step Guide
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              {sectionsContent.stepByStepGuide.subtitle}
+              Follow these simple steps to redirect your mining rewards to organizations making a difference
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {steps.map((step, index) => {
-              const IconComponent = step.icon;
-              return (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
-                        {step.number}
-                      </div>
-                      <div className="group-hover:scale-110 transition-transform">
-                        <IconComponent className="w-8 h-8 text-orange-500" />
-                      </div>
+            {steps.map((step, index) => <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
+                      {step.number}
                     </div>
-                    <CardTitle className="text-xl font-semibold text-white">
-                      {step.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-300 leading-relaxed">
-                      {step.description}
-                    </p>
-                    {step.videoLink && (
-                      <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
-                        <a href={step.videoLink} target="_blank" rel="noopener noreferrer">
-                          {step.videoLinkText}
-                          <ExternalLink className="w-4 h-4 ml-1" />
-                        </a>
-                      </Button>
-                    )}
-                  </CardContent>
-                </Card>
-              );
-            })}
+                    <div className="group-hover:scale-110 transition-transform">
+                      {step.icon}
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl font-semibold text-white">
+                    {step.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 leading-relaxed">
+                    {step.description}
+                  </p>
+                  {step.title.includes("Get Your Gear Ready") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
+                      <a href="https://www.youtube.com/watch?v=QAwSXZ3L7Pc&t=1424s" target="_blank" rel="noopener noreferrer">
+                        Video tutorial
+                        <ExternalLink className="w-4 h-4 ml-1" />
+                      </a>
+                    </Button>}
+                  {step.title.includes("Braiins") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
+                      <a href="https://youtu.be/jC-Wp4J4Jb4?si=51H-LAqZnRlrRL1G&t=1292" target="_blank" rel="noopener noreferrer">
+                        View full Braiins tutorial
+                        <ExternalLink className="w-4 h-4 ml-1" />
+                      </a>
+                    </Button>}
+                </CardContent>
+              </Card>)}
           </div>
         </div>
       </section>
@@ -251,10 +297,10 @@ const Index = () => {
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              {sectionsContent.pledgeGenerator.title}
+              📢 Make Your Pledge
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              {sectionsContent.pledgeGenerator.subtitle}
+              Show your commitment to support an organization with your hashrate. Create a shareable pledge card.
             </p>
           </div>
           
@@ -266,13 +312,13 @@ const Index = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
-            {sectionsContent.getListedCta.title}
+            📬 Get Your Organization Listed
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            {sectionsContent.getListedCta.subtitle}
+            Are you running a non-profit that aligns with Bitcoin's mission? Apply to be included in our supported organizations list.
           </p>
           <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold px-8 py-3 text-lg">
-            {sectionsContent.getListedCta.ctaButton.text}
+            Submit Your Organization
             <ExternalLink className="w-4 h-4 ml-2" />
           </Button>
         </div>
@@ -283,10 +329,10 @@ const Index = () => {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              {sectionsContent.partnersSupport.title}
+              🤝 Partners and Support
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              {sectionsContent.partnersSupport.subtitle}
+              This project is made possible by the support of our partners and the Bitcoin community
             </p>
           </div>
 
@@ -299,7 +345,7 @@ const Index = () => {
               Want to support this project or become a partner?
             </p>
             <Button size="lg" variant="outline" className="bg-slate-800/50 hover:bg-slate-700/50 px-8 py-3 text-lg border-2 border-yellow-500/50 text-yellow-400 hover:text-yellow-300">
-              {sectionsContent.partnersSupport.ctaButton.text}
+              Get in Touch
               <ExternalLink className="w-4 h-4 ml-2" />
             </Button>
           </div>
@@ -311,17 +357,16 @@ const Index = () => {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-8">
             <p className="text-lg text-gray-300">
-              {footerContent.description}
+              A project by the HashImpact community – Bridging Bitcoin mining and global good.
             </p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-            {footerContent.links.map((link, index) => (
-              <React.Fragment key={index}>
-                <a href={link.href} className="hover:text-yellow-400 transition-colors">{link.text}</a>
-                {index < footerContent.links.length - 1 && <span>|</span>}
-              </React.Fragment>
-            ))}
+            <a href="#contact" className="hover:text-yellow-400 transition-colors">Contact</a>
+            <span>|</span>
+            <a href="#privacy" className="hover:text-yellow-400 transition-colors">Privacy</a>
+            <span>|</span>
+            <a href="#github" className="hover:text-yellow-400 transition-colors">GitHub</a>
           </div>
         </div>
       </footer>
