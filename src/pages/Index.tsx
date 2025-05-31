@@ -302,10 +302,10 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 leading-relaxed">
-                  Pick a mining pool that lets you set a custom payout Lightning address, such as Braiins.
+                  Pick a mining pool that lets you set a custom payout Lightning address, such as Braiins. Watch the video until 29:10.
                 </p>
                 <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
-                  <a href="https://youtu.be/jC-Wp4J4Jb4?si=51H-LAqZnRlrRL1G&t=1292" target="_blank" rel="noopener noreferrer">
+                  <a href="https://youtu.be/jC-Wp4J4Jb4?si=2CY4vADA8fnIefVe&t=1294" target="_blank" rel="noopener noreferrer">
                     View full Braiins tutorial
                     <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
@@ -330,7 +330,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 leading-relaxed">
-                  In the pool configuration, set the Lightning address of the non-profit you want to support.
+                  In the previous step, enter the Lightning address of the organization you want to support instead of your own. That's it.
                 </p>
               </CardContent>
             </Card>
@@ -347,12 +347,12 @@ const Index = () => {
                   </div>
                 </div>
                 <CardTitle className="text-xl font-semibold text-white">
-                  Start Mining
+                  Let It Run
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 leading-relaxed">
-                  Power up your miner, confirm it's hashing, and let it run. The rewards go directly to the chosen organization — no intermediaries needed.
+                  Just let the miner run — funds will go to the organization you chose. You can track payouts on the Braiins dashboard.
                 </p>
               </CardContent>
             </Card>
