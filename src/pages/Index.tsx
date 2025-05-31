@@ -448,7 +448,9 @@ const Index = () => {
                 <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
                   <img src={company.logo} alt={`${company.name} logo`} className="w-24 h-24 object-cover rounded-lg" />
                 </div>
-                <input type="text" defaultValue={company.name} className="w-full max-w-xs text-center text-sm text-gray-300 bg-slate-800/50 border border-gray-600 rounded px-3 py-2 focus:outline-none focus:border-yellow-500 focus:text-white" placeholder="Organization name" />
+                <p className="text-center text-sm text-gray-300 max-w-xs">
+                  {company.name}
+                </p>
               </div>)}
           </div>
 
