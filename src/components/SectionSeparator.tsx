@@ -10,8 +10,8 @@ const SectionSeparator = ({ imageUrl, alt, className = "" }: SectionSeparatorPro
     <section className={`relative w-full h-64 md:h-80 lg:h-96 overflow-hidden ${className}`}>
       <div className="absolute inset-0">
         <img 
-          src="/lovable-uploads/20e5684f-72c1-4189-9617-6e84acb50414.png"
-          alt="Bitaxe Bitcoin miners circuit boards"
+          src={imageUrl} 
+          alt={alt}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/30"></div>
