@@ -1,10 +1,8 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Upload, Copy, Share2, Zap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -115,18 +113,15 @@ export const PledgeGenerator = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="organization" className="text-sm font-medium text-gray-700">
-              Choose Organization *
+              Organization Name *
             </Label>
-            <Select value={formData.organization} onValueChange={(value) => setFormData(prev => ({...prev, organization: value}))}>
-              <SelectTrigger>
-                <SelectValue placeholder="Select an organization to support" />
-              </SelectTrigger>
-              <SelectContent>
-                {organizations.map((org) => (
-                  <SelectItem key={org} value={org}>{org}</SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            <Input
+              id="organization"
+              placeholder="Enter organization name (e.g., Bitcoin Education Initiative)"
+              value={formData.organization}
+              onChange={(e) => setFormData(prev => ({...prev, organization: e.target.value}))}
+              className="w-full"
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
