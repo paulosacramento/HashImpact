@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -109,9 +108,7 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 leading-relaxed">
-                  Your Bitcoin miner can do more than earn sats — it can help fund education, support communities, and onboard new users in underserved regions. We help hobby miners direct their rewards to trusted Bitcoin-related non-profits.
-                </p>
+                <p className="text-gray-300 leading-relaxed font-normal">Your Bitcoin miner can do more than earn sats — it can help fund education, support communities, and onboard new users in underserved regions. We help hobby miners direct their rewards to trusted Bitcoin-related non-profits.</p>
               </CardContent>
             </Card>
 
@@ -320,5 +317,4 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
       </footer>
     </div>;
 };
-
 export default Index;
