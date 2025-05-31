@@ -9,7 +9,7 @@ export const EditableOrganizationCard1 = () => {
     name: "BTC Schule",
     description: "Burundi",
     lightningAddress: "donate@bitcoinedu.org",
-    impact: "500+ students educated"
+    impact: "48.9"
   };
   const { toast } = useToast();
 
