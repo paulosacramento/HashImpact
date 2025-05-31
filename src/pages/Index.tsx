@@ -1,9 +1,10 @@
-import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar } from "lucide-react";
+import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -87,6 +88,111 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute left-1/2 top-0 ml-[-38rem] h-[25rem] w-[81.25rem] dark:[mask-image:linear-gradient(white,transparent)]">
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-amber-400/20 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Mission */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Target className="w-6 h-6 text-yellow-400" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl font-semibold text-white">
+                  Mission: Turn Hobby Mining into Meaningful Support
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed">
+                  Your Bitcoin miner can do more than earn sats — it can help fund education, support communities, and onboard new users in underserved regions. We help hobby miners direct their rewards to trusted Bitcoin-related non-profits.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Problem */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <AlertCircle className="w-6 h-6 text-red-400" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl font-semibold text-white">
+                  Problem: Limited Value, Missed Opportunity
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed">
+                  In high-income countries, mining rewards are often too small to matter. But those same sats could go much further in regions with weaker currencies and greater need — where Bitcoin can truly empower.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Solution */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Zap className="w-6 h-6 text-blue-400" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl font-semibold text-white">
+                  Solution: Simple Setup, Maximum Impact
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <span><strong>Easy Setup</strong> – Step-by-step guides to get your miner ready.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <span><strong>Smart Matching</strong> – Choose an org based on values, region, or economic impact.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <span><strong>Seamless Giving</strong> – Use Lightning addresses to send rewards with minimal fees.</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Impact */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Users className="w-6 h-6 text-green-400" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl font-semibold text-white">
+                  Impact: Mining That Matters
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <span>Support vital work in hard-to-reach areas.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <span>Strengthen circular Bitcoin economies.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                    <span>Show the world that mining can be for good — not just profit.</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -214,4 +320,5 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
       </footer>
     </div>;
 };
+
 export default Index;
