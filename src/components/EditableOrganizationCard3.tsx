@@ -1,6 +1,7 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Copy, ExternalLink, Zap } from "lucide-react";
+import { Copy, ExternalLink } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const EditableOrganizationCard3 = () => {
@@ -25,8 +26,17 @@ export const EditableOrganizationCard3 = () => {
     <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm h-full hover:bg-slate-700/80">
       <CardHeader className="pb-4">
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-            <Zap className="w-5 h-5 text-black" />
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform relative overflow-hidden">
+            {/* Mozambique flag background */}
+            <div className="absolute inset-0 flex flex-col">
+              <div className="flex-1 bg-green-600"></div>
+              <div className="flex-1 bg-black"></div>
+              <div className="flex-1 bg-yellow-400"></div>
+            </div>
+            {/* Red triangle on the left */}
+            <div className="absolute inset-0">
+              <div className="w-0 h-0 border-t-[20px] border-b-[20px] border-r-[15px] border-t-red-600 border-b-red-600 border-r-transparent"></div>
+            </div>
           </div>
           <CardTitle className="text-lg font-semibold text-white leading-tight">
             {organization.name}
