@@ -5,7 +5,6 @@ import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { PartnerCard } from "@/components/PartnerCard";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -83,38 +82,10 @@ const Index = () => {
 
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
             <p className="text-2xl">What if your hobby Bitcoin miner could power real change in underprivileged regions?</p>
-            <p>If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life.
-
-
-
-
-This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further.
-
-
-
-
-You'll also get help choosing an organization where your support can make the greatest impact, based on local conditions and cost of living.
-
-
-
-
-It's simple to set up, requires no technical background, and turns your energy into real, meaningful change.</p>
-            <p>If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life.
-
-
-
-
-This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further.
-
-
-
-
-You'll also get help choosing an organization where your support can make the greatest impact, based on local conditions and cost of living.
-
-
-
-
-It's simple to set up, requires no technical background, and turns your energy into real, meaningful change.</p>
+            <p>Problem
+If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life. This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further. You'll also get help choosing an organization where your support can make the greatest impact, based on local conditions and cost of living. It's simple to set up, requires no technical background, and turns your energy into real, meaningful change.</p>
+            <p className="text-base font-normal">Solution
+If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life. This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further. You'll also get help choosing an organization where your support can make the greatest impact, based on local conditions and cost of living. It's simple to set up, requires no technical background, and turns your energy into real, meaningful change.</p>
             
           </div>
 
