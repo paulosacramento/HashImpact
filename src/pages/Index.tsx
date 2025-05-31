@@ -274,9 +274,11 @@ const Index = () => {
                   <p className="text-gray-300 leading-relaxed">
                     {step.description}
                   </p>
-                  {step.title.includes("Get Your Gear Ready") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300">
-                      Video tutorial
-                      <ExternalLink className="w-4 h-4 ml-1" />
+                  {step.title.includes("Get Your Gear Ready") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
+                      <a href="https://www.youtube.com/watch?v=QAwSXZ3L7Pc&t=1424s" target="_blank" rel="noopener noreferrer">
+                        Video tutorial
+                        <ExternalLink className="w-4 h-4 ml-1" />
+                      </a>
                     </Button>}
                   {step.title.includes("Braiins") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300">
                       View full Braiins tutorial
