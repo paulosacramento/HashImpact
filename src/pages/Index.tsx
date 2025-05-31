@@ -5,7 +5,6 @@ import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { PartnerCard } from "@/components/PartnerCard";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -44,27 +43,22 @@ const Index = () => {
     lightningAddress: "support@lnadopt.com",
     impact: "200+ merchants onboarded"
   }];
-  const partners = [
-    {
-      title: "Braiins Pool",
-      description: "Leading mining pool that enables custom Lightning address payouts, making this project possible.",
-      linkText: "Visit Braiins Pool",
-      icon: <Zap className="w-6 h-6 text-blue-400" />
-    },
-    {
-      title: "Bitcoin Community",
-      description: "Built by and for the Bitcoin community. Open source and transparent.",
-      linkText: "Join the Community",
-      icon: <Users className="w-6 h-6 text-green-400" />
-    },
-    {
-      title: "Technical Contributors",
-      description: "Special thanks to developers and technical contributors who help maintain this project.",
-      linkText: "Contribute on GitHub",
-      icon: <Target className="w-6 h-6 text-purple-400" />
-    }
-  ];
-
+  const partners = [{
+    title: "Braiins Pool",
+    description: "Leading mining pool that enables custom Lightning address payouts, making this project possible.",
+    linkText: "Visit Braiins Pool",
+    icon: <Zap className="w-6 h-6 text-blue-400" />
+  }, {
+    title: "Bitcoin Community",
+    description: "Built by and for the Bitcoin community. Open source and transparent.",
+    linkText: "Join the Community",
+    icon: <Users className="w-6 h-6 text-green-400" />
+  }, {
+    title: "Technical Contributors",
+    description: "Special thanks to developers and technical contributors who help maintain this project.",
+    linkText: "Contribute on GitHub",
+    icon: <Target className="w-6 h-6 text-purple-400" />
+  }];
   return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
@@ -88,13 +82,22 @@ const Index = () => {
 
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
             <p className="text-2xl">What if your hobby Bitcoin miner could power real change in underprivileged regions?</p>
-            <p>This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses.
+            <p>If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don’t make a significant difference in your life.
 
 
-It also helps you chose an organisation that will the most positively impacted by your contribution due to the circumstances or price levels and cost of living in their country.
 
 
-It's easy to set up, requires no previous experience, and turns energy into meaningful impact.</p>
+This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further.
+
+
+
+
+You'll also get help choosing an organization where your support can make the greatest impact, based on local conditions and cost of living.
+
+
+
+
+It's simple to set up, requires no technical background, and turns your energy into real, meaningful change.</p>
             
           </div>
 
@@ -335,9 +338,7 @@ It's easy to set up, requires no previous experience, and turns energy into mean
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {partners.map((partner, index) => (
-              <PartnerCard key={index} partner={partner} partnerId={`partner-${index}`} />
-            ))}
+            {partners.map((partner, index) => <PartnerCard key={index} partner={partner} partnerId={`partner-${index}`} />)}
           </div>
 
           <div className="text-center">
@@ -372,5 +373,4 @@ It's easy to set up, requires no previous experience, and turns energy into mean
       </footer>
     </div>;
 };
-
 export default Index;
