@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -8,7 +7,6 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -259,9 +257,7 @@ const Index = () => {
       <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              🔧 Step-by-Step Guide
-            </h2>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Step-by-Step Guide</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">Follow these simple steps to redirect your mining rewards to organizations that make a difference</p>
           </div>
 
@@ -373,9 +369,7 @@ const Index = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              📢 Make Your Pledge
-            </h2>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Make Your Pledge</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Show your commitment to support an organization with your hashrate. Create a shareable pledge card.
             </p>
@@ -388,9 +382,7 @@ const Index = () => {
       {/* Get Listed CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
-            📬 Get Your Organization Listed
-          </h2>
+          <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">Get Your Organization Listed</h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Are you running a non-profit that aligns with Bitcoin's mission? Apply to be included in our supported organizations list.
           </p>
@@ -405,28 +397,19 @@ const Index = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              🤝 Partners and Support
-            </h2>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Partners and Support</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               This project is made possible by the support of our partners and the Bitcoin community
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {companyLogos.map((company, index) => 
-              <div key={index} className="flex flex-col items-center">
+            {companyLogos.map((company, index) => <div key={index} className="flex flex-col items-center">
                 <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
                   <img src={company.logo} alt={`${company.name} logo`} className="w-24 h-24 object-cover rounded-lg" />
                 </div>
-                <input 
-                  type="text" 
-                  defaultValue={company.name}
-                  className="w-full max-w-xs text-center text-sm text-gray-300 bg-slate-800/50 border border-gray-600 rounded px-3 py-2 focus:outline-none focus:border-yellow-500 focus:text-white"
-                  placeholder="Organization name"
-                />
-              </div>
-            )}
+                <input type="text" defaultValue={company.name} className="w-full max-w-xs text-center text-sm text-gray-300 bg-slate-800/50 border border-gray-600 rounded px-3 py-2 focus:outline-none focus:border-yellow-500 focus:text-white" placeholder="Organization name" />
+              </div>)}
           </div>
 
           <div className="text-center">
