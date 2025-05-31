@@ -50,8 +50,8 @@ const Index = () => {
     name: "Bitcoin Design Community",
     logo: "/lovable-uploads/ac2c1c00-76fb-4ea0-b819-92b9515ef4d1.png"
   }, {
-    name: "DataFlow",
-    logo: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=200&h=200&fit=crop&crop=center"
+    name: "256 Foundation",
+    logo: "/lovable-uploads/954001e3-627d-40c4-a3bb-012085857025.png"
   }, {
     name: "CloudTech",
     logo: "https://images.unsplash.com/photo-1438565434616-3ef039228b15?w=200&h=200&fit=crop&crop=center"
