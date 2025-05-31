@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle, Edit2, Save, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,7 +5,6 @@ import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { useState, useEffect } from "react";
-
 const Index = () => {
   // Editable content state
   const [editableContent, setEditableContent] = useState({
@@ -27,9 +25,11 @@ const Index = () => {
       description: "Support vital work in hard-to-reach areas.\nStrengthen circular Bitcoin economies.\nShow the world that mining can be for good — not just profit."
     }
   });
-
   const [editingCard, setEditingCard] = useState<string | null>(null);
-  const [tempContent, setTempContent] = useState({ title: "", description: "" });
+  const [tempContent, setTempContent] = useState({
+    title: "",
+    description: ""
+  });
 
   // Load content from localStorage on component mount
   useEffect(() => {
@@ -47,12 +47,10 @@ const Index = () => {
   useEffect(() => {
     localStorage.setItem('hashimpact-editable-content', JSON.stringify(editableContent));
   }, [editableContent]);
-
   const startEditing = (cardKey: string) => {
     setEditingCard(cardKey);
     setTempContent(editableContent[cardKey as keyof typeof editableContent]);
   };
-
   const saveEdit = () => {
     if (editingCard) {
       setEditableContent(prev => ({
@@ -61,14 +59,18 @@ const Index = () => {
       }));
     }
     setEditingCard(null);
-    setTempContent({ title: "", description: "" });
+    setTempContent({
+      title: "",
+      description: ""
+    });
   };
-
   const cancelEdit = () => {
     setEditingCard(null);
-    setTempContent({ title: "", description: "" });
+    setTempContent({
+      title: "",
+      description: ""
+    });
   };
-
   const steps = [{
     number: "01",
     title: "Get Your Gear Ready",
@@ -90,7 +92,6 @@ const Index = () => {
     description: "Power up your miner, confirm it's hashing, and let it run. The rewards go directly to the chosen organization — no intermediaries needed.",
     icon: <Zap className="w-8 h-8 text-purple-500" />
   }];
-
   const featuredOrganizations = [{
     name: "Bitcoin Education Initiative",
     description: "Teaching Bitcoin fundamentals in developing regions",
@@ -107,37 +108,24 @@ const Index = () => {
     lightningAddress: "support@lnadopt.com",
     impact: "200+ merchants onboarded"
   }];
-
   const renderEditableCard = (cardKey: string, icon: React.ReactNode, iconBgClass: string, iconColorClass: string) => {
     const content = editableContent[cardKey as keyof typeof editableContent];
     const isEditing = editingCard === cardKey;
-
-    return (
-      <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80 relative">
+    return <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80 relative">
         <CardHeader className="pb-4">
           <div className="flex items-center gap-4 mb-4">
             <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-br ${iconBgClass} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
               {icon}
             </div>
-            {!isEditing && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => startEditing(cardKey)}
-                className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
-              >
+            {!isEditing && <Button variant="ghost" size="sm" onClick={() => startEditing(cardKey)} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">
                 <Edit2 className="w-4 h-4" />
-              </Button>
-            )}
+              </Button>}
           </div>
-          {isEditing ? (
-            <div className="space-y-3">
-              <input
-                type="text"
-                value={tempContent.title}
-                onChange={(e) => setTempContent(prev => ({ ...prev, title: e.target.value }))}
-                className="w-full bg-slate-700 text-white text-xl font-semibold border border-slate-600 rounded-md px-3 py-2"
-              />
+          {isEditing ? <div className="space-y-3">
+              <input type="text" value={tempContent.title} onChange={e => setTempContent(prev => ({
+            ...prev,
+            title: e.target.value
+          }))} className="w-full bg-slate-700 text-white text-xl font-semibold border border-slate-600 rounded-md px-3 py-2" />
               <div className="flex gap-2">
                 <Button onClick={saveEdit} size="sm" className="bg-green-600 hover:bg-green-700">
                   <Save className="w-4 h-4 mr-1" />
@@ -148,41 +136,25 @@ const Index = () => {
                   Cancel
                 </Button>
               </div>
-            </div>
-          ) : (
-            <CardTitle className="text-2xl font-semibold text-white">
+            </div> : <CardTitle className="text-2xl font-semibold text-white">
               {content.title}
-            </CardTitle>
-          )}
+            </CardTitle>}
         </CardHeader>
         <CardContent>
-          {isEditing ? (
-            <textarea
-              value={tempContent.description}
-              onChange={(e) => setTempContent(prev => ({ ...prev, description: e.target.value }))}
-              className="w-full h-32 bg-slate-700 text-gray-300 border border-slate-600 rounded-md px-3 py-2 resize-none"
-            />
-          ) : (
-            <div className="text-gray-300 leading-relaxed">
-              {content.description.split('\n').map((line, index) => (
-                <div key={index} className={line.trim().startsWith('-') || line.trim().startsWith('•') ? "flex items-start gap-3 mb-2" : "mb-2"}>
-                  {line.trim().startsWith('-') || line.trim().startsWith('•') ? (
-                    <>
+          {isEditing ? <textarea value={tempContent.description} onChange={e => setTempContent(prev => ({
+          ...prev,
+          description: e.target.value
+        }))} className="w-full h-32 bg-slate-700 text-gray-300 border border-slate-600 rounded-md px-3 py-2 resize-none" /> : <div className="text-gray-300 leading-relaxed">
+              {content.description.split('\n').map((line, index) => <div key={index} className={line.trim().startsWith('-') || line.trim().startsWith('•') ? "flex items-start gap-3 mb-2" : "mb-2"}>
+                  {line.trim().startsWith('-') || line.trim().startsWith('•') ? <>
                       <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                       <span>{line.replace(/^[-•]\s*/, '')}</span>
-                    </>
-                  ) : (
-                    <span>{line}</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
+                    </> : <span>{line}</span>}
+                </div>)}
+            </div>}
         </CardContent>
-      </Card>
-    );
+      </Card>;
   };
-
   return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
@@ -205,7 +177,7 @@ const Index = () => {
           </div>
 
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
-            <p className="text-base">What if your Bitcoin miner could do more than just earn you sats? What if it could fund education and help onboard new users to Bitcoin in underprivileged regions — all while humming in the background?</p>
+            <p className="text-2xl">What if your Bitcoin miner could fund education and help onboard new users to Bitcoin in underprivileged regions?</p>
             <p>This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses.
 
 
@@ -213,7 +185,7 @@ It also helps you chose an organisation that will the most positively impacted b
 
 
 It's easy to set up, requires no prior coding experience, and turns energy into meaningful impact.</p>
-            <p>Whether you've just unboxed a Bitaxe or have a miner running for a long time, you can join a decentralized community that's channeling hashpower for good.</p>
+            
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-x-6">
