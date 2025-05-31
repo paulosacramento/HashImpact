@@ -7,7 +7,6 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -47,20 +46,16 @@ const Index = () => {
     impact: "200+ merchants onboarded"
   }];
   // Random company logos with 1:1 aspect ratio
-  const companyLogos = [
-    {
-      name: "TechCorp",
-      logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=200&fit=crop&crop=center"
-    },
-    {
-      name: "DataFlow", 
-      logo: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=200&h=200&fit=crop&crop=center"
-    },
-    {
-      name: "CloudTech",
-      logo: "https://images.unsplash.com/photo-1438565434616-3ef039228b15?w=200&h=200&fit=crop&crop=center"
-    }
-  ];
+  const companyLogos = [{
+    name: "TechCorp",
+    logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=200&fit=crop&crop=center"
+  }, {
+    name: "DataFlow",
+    logo: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=200&h=200&fit=crop&crop=center"
+  }, {
+    name: "CloudTech",
+    logo: "https://images.unsplash.com/photo-1438565434616-3ef039228b15?w=200&h=200&fit=crop&crop=center"
+  }];
   const partners = [{
     title: "Braiins Pool",
     description: "Leading mining pool that enables custom Lightning address payouts, making this project possible.",
@@ -265,9 +260,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
               🔧 Step-by-Step Guide
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Follow these simple steps to redirect your mining rewards to organizations making a difference
-            </p>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Follow these simple steps to redirect your mining rewards to organizations that make a difference</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -419,15 +412,9 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {companyLogos.map((company, index) => (
-              <div key={index} className="flex items-center justify-center p-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <img 
-                  src={company.logo} 
-                  alt={`${company.name} logo`}
-                  className="w-16 h-16 object-cover rounded-lg"
-                />
-              </div>
-            ))}
+            {companyLogos.map((company, index) => <div key={index} className="flex items-center justify-center p-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <img src={company.logo} alt={`${company.name} logo`} className="w-16 h-16 object-cover rounded-lg" />
+              </div>)}
           </div>
 
           <div className="text-center">
