@@ -280,9 +280,11 @@ const Index = () => {
                         <ExternalLink className="w-4 h-4 ml-1" />
                       </a>
                     </Button>}
-                  {step.title.includes("Braiins") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300">
-                      View full Braiins tutorial
-                      <ExternalLink className="w-4 h-4 ml-1" />
+                  {step.title.includes("Braiins") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
+                      <a href="https://youtu.be/jC-Wp4J4Jb4?si=51H-LAqZnRlrRL1G&t=1292" target="_blank" rel="noopener noreferrer">
+                        View full Braiins tutorial
+                        <ExternalLink className="w-4 h-4 ml-1" />
+                      </a>
                     </Button>}
                 </CardContent>
               </Card>)}
