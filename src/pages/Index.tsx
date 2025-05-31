@@ -7,7 +7,6 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -222,52 +221,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Impact Calculation Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-y border-green-500/20">
-        <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center rounded-full bg-green-500/20 px-6 py-3 text-sm font-medium text-green-400 mb-8 border border-green-500/30">
-            <Target className="w-5 h-5 mr-2" />
-            Real Impact Calculator
-          </div>
-          
-          <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            Your Mining Power in Action
-          </h2>
-          
-          <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl border border-green-500/20 p-8 mb-6">
-            <div className="text-6xl font-bold text-green-400 mb-4">$180</div>
-            <p className="text-xl text-gray-300 mb-4">
-              Assuming a Bitcoin price of <span className="text-yellow-400 font-semibold">$100,000</span>, ten Bitaxes would collectively send approximately <span className="text-green-400 font-semibold">$180</span> over the course of one year.
-            </p>
-            <p className="text-lg text-gray-400">
-              While this might seem modest in a high-income country, it can make a significant difference in regions where the average daily income is much lower.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="bg-slate-800/40 rounded-xl p-6 border border-green-500/10">
-              <div className="text-2xl font-bold text-green-400 mb-2">10x</div>
-              <p className="text-gray-300">Bitaxe Miners</p>
-            </div>
-            <div className="bg-slate-800/40 rounded-xl p-6 border border-green-500/10">
-              <div className="text-2xl font-bold text-yellow-400 mb-2">365</div>
-              <p className="text-gray-300">Days Mining</p>
-            </div>
-            <div className="bg-slate-800/40 rounded-xl p-6 border border-green-500/10">
-              <div className="text-2xl font-bold text-blue-400 mb-2">24/7</div>
-              <p className="text-gray-300">Continuous Impact</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Featured Organizations - Moved to second position */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              Featured Organizations
-            </h2>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Real Impact Estimator</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Discover some of the amazing organizations you can support with your mining rewards
             </p>
@@ -448,9 +406,7 @@ const Index = () => {
                 <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
                   <img src={company.logo} alt={`${company.name} logo`} className="w-24 h-24 object-cover rounded-lg" />
                 </div>
-                <p className="text-center text-sm text-gray-300 max-w-xs">
-                  {company.name}
-                </p>
+                <input type="text" defaultValue={company.name} className="w-full max-w-xs text-center text-sm text-gray-300 bg-slate-800/50 border border-gray-600 rounded px-3 py-2 focus:outline-none focus:border-yellow-500 focus:text-white" placeholder="Organization name" />
               </div>)}
           </div>
 
