@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink } from "lucide-react";
@@ -72,30 +71,16 @@ export const EditableOrganizationCard1 = () => {
           </div>
         </div>
 
-        <div className="flex gap-2">
-          <Button 
-            size="sm" 
-            className="flex-1 text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all"
-            asChild
-          >
-            <a href={organization.url} target="_blank" rel="noopener noreferrer">
-              Learn More
-              <ExternalLink className="w-3 h-3 ml-1" />
-            </a>
-          </Button>
-          
-          <Button 
-            size="sm" 
-            variant="outline" 
-            className="flex-1 text-xs border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 hover:text-yellow-300"
-            asChild
-          >
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              Video tutorial
-              <ExternalLink className="w-3 h-3 ml-1" />
-            </a>
-          </Button>
-        </div>
+        <Button 
+          size="sm" 
+          className="w-full text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all"
+          asChild
+        >
+          <a href={organization.url} target="_blank" rel="noopener noreferrer">
+            Learn More
+            <ExternalLink className="w-3 h-3 ml-1" />
+          </a>
+        </Button>
       </CardContent>
     </Card>
   );
