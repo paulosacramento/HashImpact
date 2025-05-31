@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink } from "lucide-react";
@@ -33,12 +32,6 @@ export const EditableOrganizationCard2 = () => {
               <div className="flex-1 bg-red-600"></div>
               <div className="flex-1 bg-black"></div>
               <div className="flex-1 bg-orange-500"></div>
-            </div>
-            {/* Eagle silhouette */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-6 h-6 bg-orange-600 rounded-sm flex items-center justify-center">
-                <div className="text-black text-xs font-bold">🦅</div>
-              </div>
             </div>
           </div>
           <CardTitle className="text-lg font-semibold text-white leading-tight">
