@@ -71,7 +71,7 @@ const Index = () => {
 It also helps you chose an organisation that will the most positively impacted by your contribution due to the circumstances or price levels and cost of living in their country.
 
 
-It's easy to set up, requires no prior coding experience, and turns energy into meaningful impact.</p>
+It's easy to set up, requires no previous experience, and turns energy into meaningful impact.</p>
             
           </div>
 
