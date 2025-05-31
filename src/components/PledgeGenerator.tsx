@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Upload, Copy, Share2, Zap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -10,6 +11,7 @@ export const PledgeGenerator = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     organization: "",
+    monthsOfSupport: "",
     startDate: "",
     endDate: "",
     minerPhoto: null as File | null,
@@ -27,7 +29,7 @@ export const PledgeGenerator = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.organization || !formData.startDate || !formData.endDate) {
+    if (!formData.organization || !formData.monthsOfSupport || !formData.startDate || !formData.endDate) {
       toast({
         title: "Missing Information",
         description: "Please fill in all required fields to create your pledge.",
@@ -43,7 +45,7 @@ export const PledgeGenerator = () => {
   };
 
   const handleCopyPledge = () => {
-    const pledgeText = `🚀 I'm pledging my Bitcoin mining hashrate to support ${formData.organization} from ${formData.startDate} to ${formData.endDate}! Join me in turning mining power into positive change. #HashImpact #Bitcoin4Good`;
+    const pledgeText = `🚀 I'm pledging my Bitcoin mining hashrate to support ${formData.organization} for ${formData.monthsOfSupport} months from ${formData.startDate} to ${formData.endDate}! Join me in turning mining power into positive change. #HashImpact #Bitcoin4Good`;
     navigator.clipboard.writeText(pledgeText);
     toast({
       title: "Copied to Clipboard!",
@@ -71,9 +73,16 @@ export const PledgeGenerator = () => {
             
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white rounded-lg p-4 shadow-sm">
+                <h4 className="text-sm font-medium text-gray-700 mb-1">Duration</h4>
+                <p className="text-lg font-semibold text-gray-900">{formData.monthsOfSupport} months</p>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-sm">
                 <h4 className="text-sm font-medium text-gray-700 mb-1">Start Date</h4>
                 <p className="text-lg font-semibold text-gray-900">{formData.startDate}</p>
               </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4">
               <div className="bg-white rounded-lg p-4 shadow-sm">
                 <h4 className="text-sm font-medium text-gray-700 mb-1">End Date</h4>
                 <p className="text-lg font-semibold text-gray-900">{formData.endDate}</p>
@@ -122,6 +131,24 @@ export const PledgeGenerator = () => {
               onChange={(e) => setFormData(prev => ({...prev, organization: e.target.value}))}
               className="w-full"
             />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="monthsOfSupport" className="text-sm font-medium text-gray-700">
+              Months of Support *
+            </Label>
+            <Select value={formData.monthsOfSupport} onValueChange={(value) => setFormData(prev => ({...prev, monthsOfSupport: value}))}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select duration of support" />
+              </SelectTrigger>
+              <SelectContent>
+                {Array.from({ length: 12 }, (_, i) => i + 1).map((month) => (
+                  <SelectItem key={month} value={month.toString()}>
+                    {month} {month === 1 ? 'month' : 'months'}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
