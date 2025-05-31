@@ -121,8 +121,8 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
 
       {/* Section Separator */}
       <SectionSeparator 
-        imageUrl="/lovable-uploads/3c70149a-3a2d-4191-baf4-f26c0ca17e4f.png"
-        alt="Bitaxe Bitcoin miners circuit boards"
+        imageUrl="/lovable-uploads/a96e0b77-b82a-4c10-804b-626f027c29de.png"
+        alt="Global Bitcoin network with mining nodes and lightning connections"
       />
 
       {/* Step-by-Step Guide */}
