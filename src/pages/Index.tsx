@@ -11,12 +11,12 @@ import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard
 const Index = () => {
   const steps = [{
     number: "01",
-    title: "Get Your Gear Ready",
-    description: "You'll need a low-power Bitcoin miner — something like a Bitaxe is perfect. These devices are energy-efficient, quiet, and ideal for home use.",
+    title: "Get Your Bitaxe Ready",
+    description: "You'll need a low-power Bitcoin miner — a Bitaxe is a great choice. It's energy-efficient, quiet, and well-suited for home use. Be sure to watch the video up to the 30-minute mark.",
     icon: <Zap className="w-8 h-8 text-orange-500" />
   }, {
     number: "02",
-    title: "Choose Braiins Mining Pool",
+    title: "Setup Braiins As Your Mining Pool",
     description: "Pick a mining pool that lets you set a custom payout Lightning address, such as Braiins.",
     icon: <Target className="w-8 h-8 text-blue-500" />
   }, {
