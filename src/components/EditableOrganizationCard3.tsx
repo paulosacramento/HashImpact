@@ -5,11 +5,11 @@ import { useToast } from "@/hooks/use-toast";
 
 export const EditableOrganizationCard3 = () => {
   const organization = {
-    name: "Bitcoin Innovation Hub",
-    description: "Uganda",
+    name: "Bitcoin Famba",
+    description: "Mocambique",
     lightningAddress: "support@lnadopt.com",
-    impact: "53.1",
-    url: "https://btchubafrica.com/"
+    impact: "55.4",
+    url: "https://linktr.ee/BitcoinFamba"
   };
   const { toast } = useToast();
 
