@@ -3,28 +3,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink, Zap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useState, useEffect } from "react";
 
 export const EditableOrganizationCard3 = () => {
-  const [organization, setOrganization] = useState({
+  const organization = {
     name: "Lightning Network Adoption",
     description: "Onboarding merchants to Lightning payments",
     lightningAddress: "support@lnadopt.com",
     impact: "200+ merchants onboarded"
-  });
+  };
   const { toast } = useToast();
-
-  // Load from localStorage on mount
-  useEffect(() => {
-    const saved = localStorage.getItem('editable-org-card-3');
-    if (saved) {
-      try {
-        setOrganization(JSON.parse(saved));
-      } catch (e) {
-        console.error('Error loading organization data:', e);
-      }
-    }
-  }, []);
 
   const handleCopyAddress = () => {
     navigator.clipboard.writeText(organization.lightningAddress);

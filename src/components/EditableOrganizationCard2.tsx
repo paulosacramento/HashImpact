@@ -3,28 +3,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink, Zap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useState, useEffect } from "react";
 
 export const EditableOrganizationCard2 = () => {
-  const [organization, setOrganization] = useState({
+  const organization = {
     name: "Open Source Bitcoin Tools",
     description: "Funding development of Bitcoin privacy tools",
     lightningAddress: "funding@btctools.dev",
     impact: "12 tools maintained"
-  });
+  };
   const { toast } = useToast();
-
-  // Load from localStorage on mount
-  useEffect(() => {
-    const saved = localStorage.getItem('editable-org-card-2');
-    if (saved) {
-      try {
-        setOrganization(JSON.parse(saved));
-      } catch (e) {
-        console.error('Error loading organization data:', e);
-      }
-    }
-  }, []);
 
   const handleCopyAddress = () => {
     navigator.clipboard.writeText(organization.lightningAddress);
