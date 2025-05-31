@@ -55,7 +55,7 @@ export const PartnerCard = ({ partner, partnerId }: PartnerCardProps) => {
 
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80 relative">
-      <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+      <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity z-10">
         {!isEditing ? (
           <Button
             size="sm"
@@ -98,8 +98,9 @@ export const PartnerCard = ({ partner, partnerId }: PartnerCardProps) => {
             <input
               value={editedPartner.title}
               onChange={(e) => setEditedPartner({ ...editedPartner, title: e.target.value })}
-              className="bg-slate-700 border border-yellow-500/50 rounded px-2 py-1 text-white w-full"
+              className="bg-slate-700 border border-yellow-500/50 rounded px-3 py-2 text-white w-full text-xl font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
               placeholder="Partner title"
+              autoFocus
             />
           ) : (
             editedPartner.title
@@ -108,31 +109,33 @@ export const PartnerCard = ({ partner, partnerId }: PartnerCardProps) => {
       </CardHeader>
       
       <CardContent>
-        <p className="text-gray-300 leading-relaxed mb-4">
+        <div className="text-gray-300 leading-relaxed mb-4">
           {isEditing ? (
             <textarea
               value={editedPartner.description}
               onChange={(e) => setEditedPartner({ ...editedPartner, description: e.target.value })}
-              className="bg-slate-700 border border-yellow-500/50 rounded px-2 py-1 text-gray-300 w-full h-20 resize-none"
+              className="bg-slate-700 border border-yellow-500/50 rounded px-3 py-2 text-gray-300 w-full h-24 resize-none focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
               placeholder="Partner description"
             />
           ) : (
             editedPartner.description
           )}
-        </p>
-        <Button variant="link" className="p-0 h-auto text-yellow-400 hover:text-yellow-300">
+        </div>
+        <div className="flex items-center">
           {isEditing ? (
             <input
               value={editedPartner.linkText}
               onChange={(e) => setEditedPartner({ ...editedPartner, linkText: e.target.value })}
-              className="bg-slate-700 border border-yellow-500/50 rounded px-2 py-1 text-yellow-400 w-full"
+              className="bg-slate-700 border border-yellow-500/50 rounded px-3 py-2 text-yellow-400 flex-1 focus:outline-none focus:ring-2 focus:ring-yellow-500/50"
               placeholder="Link text"
             />
           ) : (
-            editedPartner.linkText
+            <Button variant="link" className="p-0 h-auto text-yellow-400 hover:text-yellow-300">
+              {editedPartner.linkText}
+              <ExternalLink className="w-4 h-4 ml-1" />
+            </Button>
           )}
-          <ExternalLink className="w-4 h-4 ml-1" />
-        </Button>
+        </div>
       </CardContent>
     </Card>
   );
