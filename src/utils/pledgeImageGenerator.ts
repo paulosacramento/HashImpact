@@ -55,7 +55,7 @@ export const generatePledgeImage = async (data: PledgeData): Promise<Blob> => {
   ctx.font = 'bold 48px Arial, sans-serif';
   
   const mainText = `I pledge to support the ${data.organization}`;
-  const timeText = `for ${data.monthsOfSupport} ${parseInt(data.monthsOfSupport) === 1 ? 'month' : 'months'}.`;
+  const timeText = `for ${data.monthsOfSupport} ${parseInt(data.monthsOfSupport) === 1 ? 'month' : 'months'}`;
   
   // Draw main text with line breaks if needed
   drawWrappedText(ctx, mainText, canvas.width / 2, 400, 900, 60);

@@ -67,7 +67,7 @@ export const PledgeGenerator = () => {
   };
 
   const handleCopyPledge = () => {
-    const pledgeText = `🚀 I'm pledging my Bitcoin mining hashrate to support ${formData.organization} for ${formData.monthsOfSupport} months! Join me in turning mining power into positive change. #HashImpact #Bitcoin4Good`;
+    const pledgeText = `🚀 I'm pledging my Bitcoin mining hashrate to support ${formData.organization} for ${formData.monthsOfSupport} months! Join me in turning mining power into positive change. #HashImpact`;
     navigator.clipboard.writeText(pledgeText);
     toast({
       title: "Copied to Clipboard!",
