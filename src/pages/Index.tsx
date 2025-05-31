@@ -4,7 +4,46 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
+import { useState, useEffect } from "react";
+
 const Index = () => {
+  const defaultOrganizations = [{
+    name: "Bitcoin Education Initiative",
+    description: "Teaching Bitcoin fundamentals in developing regions",
+    lightningAddress: "donate@bitcoinedu.org",
+    impact: "500+ students educated"
+  }, {
+    name: "Open Source Bitcoin Tools",
+    description: "Funding development of Bitcoin privacy tools",
+    lightningAddress: "funding@btctools.dev",
+    impact: "12 tools maintained"
+  }, {
+    name: "Lightning Network Adoption",
+    description: "Onboarding merchants to Lightning payments",
+    lightningAddress: "support@lnadopt.com",
+    impact: "200+ merchants onboarded"
+  }];
+
+  const [featuredOrganizations, setFeaturedOrganizations] = useState(defaultOrganizations);
+
+  useEffect(() => {
+    const savedOrganizations = localStorage.getItem('featuredOrganizations');
+    if (savedOrganizations) {
+      try {
+        setFeaturedOrganizations(JSON.parse(savedOrganizations));
+      } catch (error) {
+        console.error('Error loading saved organizations:', error);
+      }
+    }
+  }, []);
+
+  const handleOrganizationUpdate = (index: number, updatedOrg: any) => {
+    const newOrganizations = [...featuredOrganizations];
+    newOrganizations[index] = updatedOrg;
+    setFeaturedOrganizations(newOrganizations);
+    localStorage.setItem('featuredOrganizations', JSON.stringify(newOrganizations));
+  };
+
   const steps = [{
     number: "01",
     title: "Get Your Gear Ready",
@@ -25,22 +64,6 @@ const Index = () => {
     title: "Start Mining",
     description: "Power up your miner, confirm it's hashing, and let it run. The rewards go directly to the chosen organization — no intermediaries needed.",
     icon: <Zap className="w-8 h-8 text-purple-500" />
-  }];
-  const featuredOrganizations = [{
-    name: "Bitcoin Education Initiative",
-    description: "Teaching Bitcoin fundamentals in developing regions",
-    lightningAddress: "donate@bitcoinedu.org",
-    impact: "500+ students educated"
-  }, {
-    name: "Open Source Bitcoin Tools",
-    description: "Funding development of Bitcoin privacy tools",
-    lightningAddress: "funding@btctools.dev",
-    impact: "12 tools maintained"
-  }, {
-    name: "Lightning Network Adoption",
-    description: "Onboarding merchants to Lightning payments",
-    lightningAddress: "support@lnadopt.com",
-    impact: "200+ merchants onboarded"
   }];
   return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Hero Section */}
@@ -196,7 +219,7 @@ It's easy to set up, requires no previous experience, and turns energy into mean
         </div>
       </section>
 
-      {/* Featured Organizations - Moved to second position */}
+      {/* Featured Organizations - Updated to use editable cards */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -209,7 +232,14 @@ It's easy to set up, requires no previous experience, and turns energy into mean
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {featuredOrganizations.map((org, index) => <OrganizationCard key={index} organization={org} />)}
+            {featuredOrganizations.map((org, index) => 
+              <OrganizationCard 
+                key={index} 
+                organization={org} 
+                index={index}
+                onUpdate={handleOrganizationUpdate}
+              />
+            )}
           </div>
 
           <div className="text-center">
