@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink, Zap } from "lucide-react";
@@ -9,7 +8,8 @@ export const EditableOrganizationCard2 = () => {
     name: "Bitcoin Zambia",
     description: "Zambia",
     lightningAddress: "funding@btctools.dev",
-    impact: "51.0"
+    impact: "51.0",
+    url: "https://google.com"
   };
   const { toast } = useToast();
 
@@ -66,7 +66,7 @@ export const EditableOrganizationCard2 = () => {
           className="w-full text-xs border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 hover:text-yellow-300 hover:border-yellow-400/70 transition-all"
           asChild
         >
-          <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+          <a href={organization.url} target="_blank" rel="noopener noreferrer">
             Learn More
             <ExternalLink className="w-3 h-3 ml-1" />
           </a>
