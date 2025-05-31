@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -60,7 +59,7 @@ const Index = () => {
           {/* Image container */}
           <div className="mx-auto max-w-2xl mb-8">
             <div className="aspect-video rounded-xl overflow-hidden">
-              <img src="/lovable-uploads/84863232-7298-4ab5-9c6a-f3e72f8f2427.png" alt="Bitaxe Bitcoin miners" className="w-full h-full object-cover" />
+              <img alt="Bitaxe Bitcoin miners" className="w-full h-full object-cover" src="/lovable-uploads/889526d5-d5e3-4fcc-ba16-85672464fd6f.png" />
             </div>
           </div>
 
@@ -120,10 +119,7 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
       </section>
 
       {/* Section Separator */}
-      <SectionSeparator 
-        imageUrl="/lovable-uploads/a96e0b77-b82a-4c10-804b-626f027c29de.png"
-        alt="Global Bitcoin network with mining nodes and lightning connections"
-      />
+      <SectionSeparator imageUrl="/lovable-uploads/a96e0b77-b82a-4c10-804b-626f027c29de.png" alt="Global Bitcoin network with mining nodes and lightning connections" />
 
       {/* Step-by-Step Guide */}
       <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
