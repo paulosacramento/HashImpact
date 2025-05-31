@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink, Zap } from "lucide-react";
@@ -25,8 +26,20 @@ export const EditableOrganizationCard1 = () => {
     <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm h-full hover:bg-slate-700/80">
       <CardHeader className="pb-4">
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-            <Zap className="w-5 h-5 text-black" />
+          <div className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform relative overflow-hidden">
+            {/* Burundi flag background */}
+            <div className="absolute inset-0 flex flex-col">
+              <div className="flex-1 bg-red-600"></div>
+              <div className="flex-1 bg-white"></div>
+              <div className="flex-1 bg-green-600"></div>
+            </div>
+            {/* White circle with stars */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-6 h-6 bg-white rounded-full border border-red-600 flex items-center justify-center">
+                <div className="text-red-600 text-xs font-bold">★</div>
+              </div>
+            </div>
+            <Zap className="w-5 h-5 text-black relative z-10" />
           </div>
           <CardTitle className="text-lg font-semibold text-white leading-tight">
             {organization.name}
