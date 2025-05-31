@@ -297,7 +297,7 @@ const Index = () => {
                   </div>
                 </div>
                 <CardTitle className="text-xl font-semibold text-white">
-                  Choose Braiins Mining Pool
+                  Set Up Braiins as Your Mining Pool
                 </CardTitle>
               </CardHeader>
               <CardContent>
