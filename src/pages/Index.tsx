@@ -2,9 +2,12 @@ import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCir
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
-import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { PartnerCard } from "@/components/PartnerCard";
+import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
+import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
+import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -221,7 +224,9 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {featuredOrganizations.map((org, index) => <OrganizationCard key={index} organization={org} />)}
+            <EditableOrganizationCard1 />
+            <EditableOrganizationCard2 />
+            <EditableOrganizationCard3 />
           </div>
 
           <div className="text-center">
