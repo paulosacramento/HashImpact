@@ -1,7 +1,6 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Copy, ExternalLink, Zap } from "lucide-react";
+import { Copy, ExternalLink } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const EditableOrganizationCard1 = () => {
@@ -39,7 +38,6 @@ export const EditableOrganizationCard1 = () => {
                 <div className="text-red-600 text-xs font-bold">★</div>
               </div>
             </div>
-            <Zap className="w-5 h-5 text-black relative z-10" />
           </div>
           <CardTitle className="text-lg font-semibold text-white leading-tight">
             {organization.name}
