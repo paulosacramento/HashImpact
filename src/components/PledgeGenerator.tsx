@@ -140,7 +140,7 @@ export const PledgeGenerator = () => {
           <div className="flex gap-3 justify-center flex-wrap">
             <Button onClick={handleCopyPledge} className="bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700">
               <Copy className="w-4 h-4 mr-2" />
-              Copy Pledge
+              Copy Pledge Text
             </Button>
             {generatedImage && (
               <Button onClick={handleDownloadImage} variant="outline">
