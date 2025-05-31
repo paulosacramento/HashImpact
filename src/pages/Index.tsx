@@ -1,10 +1,74 @@
-import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
+
+import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle, Edit2, Save, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
+import { useState, useEffect } from "react";
+
 const Index = () => {
+  // Editable content state
+  const [editableContent, setEditableContent] = useState({
+    mission: {
+      title: "Mission: Turn Hobby Mining into Meaningful Support",
+      description: "Your Bitcoin miner can do more than earn sats — it can help fund education, support communities, and onboard new users in underserved regions. We help hobby miners direct their rewards to trusted Bitcoin-related non-profits."
+    },
+    problem: {
+      title: "Problem: Limited Value, Missed Opportunity",
+      description: "In high-income countries, mining rewards are often too small to matter. But those same sats could go much further in regions with weaker currencies and greater need — where Bitcoin can truly empower."
+    },
+    solution: {
+      title: "Solution: Simple Setup, Maximum Impact",
+      description: "Easy Setup – Step-by-step guides to get your miner ready.\nSmart Matching – Choose an org based on values, region, or economic impact.\nSeamless Giving – Use Lightning addresses to send rewards with minimal fees."
+    },
+    impact: {
+      title: "Impact: Mining That Matters",
+      description: "Support vital work in hard-to-reach areas.\nStrengthen circular Bitcoin economies.\nShow the world that mining can be for good — not just profit."
+    }
+  });
+
+  const [editingCard, setEditingCard] = useState<string | null>(null);
+  const [tempContent, setTempContent] = useState({ title: "", description: "" });
+
+  // Load content from localStorage on component mount
+  useEffect(() => {
+    const saved = localStorage.getItem('hashimpact-editable-content');
+    if (saved) {
+      try {
+        setEditableContent(JSON.parse(saved));
+      } catch (error) {
+        console.error('Failed to parse saved content:', error);
+      }
+    }
+  }, []);
+
+  // Save content to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('hashimpact-editable-content', JSON.stringify(editableContent));
+  }, [editableContent]);
+
+  const startEditing = (cardKey: string) => {
+    setEditingCard(cardKey);
+    setTempContent(editableContent[cardKey as keyof typeof editableContent]);
+  };
+
+  const saveEdit = () => {
+    if (editingCard) {
+      setEditableContent(prev => ({
+        ...prev,
+        [editingCard]: tempContent
+      }));
+    }
+    setEditingCard(null);
+    setTempContent({ title: "", description: "" });
+  };
+
+  const cancelEdit = () => {
+    setEditingCard(null);
+    setTempContent({ title: "", description: "" });
+  };
+
   const steps = [{
     number: "01",
     title: "Get Your Gear Ready",
@@ -26,6 +90,7 @@ const Index = () => {
     description: "Power up your miner, confirm it's hashing, and let it run. The rewards go directly to the chosen organization — no intermediaries needed.",
     icon: <Zap className="w-8 h-8 text-purple-500" />
   }];
+
   const featuredOrganizations = [{
     name: "Bitcoin Education Initiative",
     description: "Teaching Bitcoin fundamentals in developing regions",
@@ -42,6 +107,82 @@ const Index = () => {
     lightningAddress: "support@lnadopt.com",
     impact: "200+ merchants onboarded"
   }];
+
+  const renderEditableCard = (cardKey: string, icon: React.ReactNode, iconBgClass: string, iconColorClass: string) => {
+    const content = editableContent[cardKey as keyof typeof editableContent];
+    const isEditing = editingCard === cardKey;
+
+    return (
+      <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80 relative">
+        <CardHeader className="pb-4">
+          <div className="flex items-center gap-4 mb-4">
+            <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-br ${iconBgClass} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+              {icon}
+            </div>
+            {!isEditing && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => startEditing(cardKey)}
+                className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <Edit2 className="w-4 h-4" />
+              </Button>
+            )}
+          </div>
+          {isEditing ? (
+            <div className="space-y-3">
+              <input
+                type="text"
+                value={tempContent.title}
+                onChange={(e) => setTempContent(prev => ({ ...prev, title: e.target.value }))}
+                className="w-full bg-slate-700 text-white text-xl font-semibold border border-slate-600 rounded-md px-3 py-2"
+              />
+              <div className="flex gap-2">
+                <Button onClick={saveEdit} size="sm" className="bg-green-600 hover:bg-green-700">
+                  <Save className="w-4 h-4 mr-1" />
+                  Save
+                </Button>
+                <Button onClick={cancelEdit} size="sm" variant="outline">
+                  <X className="w-4 h-4 mr-1" />
+                  Cancel
+                </Button>
+              </div>
+            </div>
+          ) : (
+            <CardTitle className="text-2xl font-semibold text-white">
+              {content.title}
+            </CardTitle>
+          )}
+        </CardHeader>
+        <CardContent>
+          {isEditing ? (
+            <textarea
+              value={tempContent.description}
+              onChange={(e) => setTempContent(prev => ({ ...prev, description: e.target.value }))}
+              className="w-full h-32 bg-slate-700 text-gray-300 border border-slate-600 rounded-md px-3 py-2 resize-none"
+            />
+          ) : (
+            <div className="text-gray-300 leading-relaxed">
+              {content.description.split('\n').map((line, index) => (
+                <div key={index} className={line.trim().startsWith('-') || line.trim().startsWith('•') ? "flex items-start gap-3 mb-2" : "mb-2"}>
+                  {line.trim().startsWith('-') || line.trim().startsWith('•') ? (
+                    <>
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                      <span>{line.replace(/^[-•]\s*/, '')}</span>
+                    </>
+                  ) : (
+                    <span>{line}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    );
+  };
+
   return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
@@ -96,100 +237,16 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Mission */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Target className="w-6 h-6 text-yellow-400" />
-                  </div>
-                </div>
-                <CardTitle className="text-2xl font-semibold text-white">
-                  Mission: Turn Hobby Mining into Meaningful Support
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 leading-relaxed font-normal">Your Bitcoin miner can do more than earn sats — it can help fund education, support communities, and onboard new users in underserved regions. We help hobby miners direct their rewards to trusted Bitcoin-related non-profits.</p>
-              </CardContent>
-            </Card>
+            {renderEditableCard('mission', <Target className="w-6 h-6 text-yellow-400" />, 'from-yellow-500/20 to-amber-500/20 border border-yellow-500/30', 'text-yellow-400')}
 
             {/* Problem */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <AlertCircle className="w-6 h-6 text-red-400" />
-                  </div>
-                </div>
-                <CardTitle className="text-2xl font-semibold text-white">
-                  Problem: Limited Value, Missed Opportunity
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 leading-relaxed">
-                  In high-income countries, mining rewards are often too small to matter. But those same sats could go much further in regions with weaker currencies and greater need — where Bitcoin can truly empower.
-                </p>
-              </CardContent>
-            </Card>
+            {renderEditableCard('problem', <AlertCircle className="w-6 h-6 text-red-400" />, 'from-red-500/20 to-orange-500/20 border border-red-500/30', 'text-red-400')}
 
             {/* Solution */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Zap className="w-6 h-6 text-blue-400" />
-                  </div>
-                </div>
-                <CardTitle className="text-2xl font-semibold text-white">
-                  Solution: Simple Setup, Maximum Impact
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span><strong>Easy Setup</strong> – Step-by-step guides to get your miner ready.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span><strong>Smart Matching</strong> – Choose an org based on values, region, or economic impact.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span><strong>Seamless Giving</strong> – Use Lightning addresses to send rewards with minimal fees.</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            {renderEditableCard('solution', <Zap className="w-6 h-6 text-blue-400" />, 'from-blue-500/20 to-cyan-500/20 border border-blue-500/30', 'text-blue-400')}
 
             {/* Impact */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Users className="w-6 h-6 text-green-400" />
-                  </div>
-                </div>
-                <CardTitle className="text-2xl font-semibold text-white">
-                  Impact: Mining That Matters
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span>Support vital work in hard-to-reach areas.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span>Strengthen circular Bitcoin economies.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span>Show the world that mining can be for good — not just profit.</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+            {renderEditableCard('impact', <Users className="w-6 h-6 text-green-400" />, 'from-green-500/20 to-emerald-500/20 border border-green-500/30', 'text-green-400')}
           </div>
         </div>
       </section>
