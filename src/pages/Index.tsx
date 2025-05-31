@@ -1,4 +1,3 @@
-
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -47,6 +46,21 @@ const Index = () => {
     lightningAddress: "support@lnadopt.com",
     impact: "200+ merchants onboarded"
   }];
+  // Random company logos
+  const companyLogos = [
+    {
+      name: "TechCorp",
+      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop&crop=center"
+    },
+    {
+      name: "DataFlow",
+      logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop&crop=center"
+    },
+    {
+      name: "CloudTech",
+      logo: "https://images.unsplash.com/photo-1560472355-536de3962603?w=200&h=100&fit=crop&crop=center"
+    }
+  ];
   const partners = [{
     title: "Braiins Pool",
     description: "Leading mining pool that enables custom Lightning address payouts, making this project possible.",
@@ -404,8 +418,16 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {partners.map((partner, index) => <PartnerCard key={index} partner={partner} partnerId={`partner-${index}`} />)}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {companyLogos.map((company, index) => (
+              <div key={index} className="flex items-center justify-center p-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <img 
+                  src={company.logo} 
+                  alt={`${company.name} logo`}
+                  className="max-h-16 w-auto object-contain"
+                />
+              </div>
+            ))}
           </div>
 
           <div className="text-center">
