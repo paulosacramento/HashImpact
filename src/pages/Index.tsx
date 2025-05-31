@@ -1,3 +1,4 @@
+
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -256,38 +257,105 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {steps.map((step, index) => <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
-                      {step.number}
-                    </div>
-                    <div className="group-hover:scale-110 transition-transform">
-                      {step.icon}
-                    </div>
+            {/* Step 1 */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
+                    01
                   </div>
-                  <CardTitle className="text-xl font-semibold text-white">
-                    {step.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 leading-relaxed">
-                    {step.description}
-                  </p>
-                  {step.title.includes("Get Your Gear Ready") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
-                      <a href="https://www.youtube.com/watch?v=QAwSXZ3L7Pc&t=1424s" target="_blank" rel="noopener noreferrer">
-                        Video tutorial
-                        <ExternalLink className="w-4 h-4 ml-1" />
-                      </a>
-                    </Button>}
-                  {step.title.includes("Braiins") && <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
-                      <a href="https://youtu.be/jC-Wp4J4Jb4?si=51H-LAqZnRlrRL1G&t=1292" target="_blank" rel="noopener noreferrer">
-                        View full Braiins tutorial
-                        <ExternalLink className="w-4 h-4 ml-1" />
-                      </a>
-                    </Button>}
-                </CardContent>
-              </Card>)}
+                  <div className="group-hover:scale-110 transition-transform">
+                    <Zap className="w-8 h-8 text-orange-500" />
+                  </div>
+                </div>
+                <CardTitle className="text-xl font-semibold text-white">
+                  Get Your Gear Ready
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed">
+                  You'll need a low-power Bitcoin miner — something like a Bitaxe is perfect. These devices are energy-efficient, quiet, and ideal for home use.
+                </p>
+                <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
+                  <a href="https://www.youtube.com/watch?v=QAwSXZ3L7Pc&t=1424s" target="_blank" rel="noopener noreferrer">
+                    Video tutorial
+                    <ExternalLink className="w-4 h-4 ml-1" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Step 2 */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
+                    02
+                  </div>
+                  <div className="group-hover:scale-110 transition-transform">
+                    <Target className="w-8 h-8 text-blue-500" />
+                  </div>
+                </div>
+                <CardTitle className="text-xl font-semibold text-white">
+                  Choose Braiins Mining Pool
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed">
+                  Pick a mining pool that lets you set a custom payout Lightning address, such as Braiins.
+                </p>
+                <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
+                  <a href="https://youtu.be/jC-Wp4J4Jb4?si=51H-LAqZnRlrRL1G&t=1292" target="_blank" rel="noopener noreferrer">
+                    View full Braiins tutorial
+                    <ExternalLink className="w-4 h-4 ml-1" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Step 3 */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
+                    03
+                  </div>
+                  <div className="group-hover:scale-110 transition-transform">
+                    <Users className="w-8 h-8 text-green-500" />
+                  </div>
+                </div>
+                <CardTitle className="text-xl font-semibold text-white">
+                  Enter the Organization's Lightning Address
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed">
+                  In the pool configuration, set the Lightning address of the non-profit you want to support.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Step 4 */}
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
+              <CardHeader className="pb-4">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
+                    04
+                  </div>
+                  <div className="group-hover:scale-110 transition-transform">
+                    <Zap className="w-8 h-8 text-purple-500" />
+                  </div>
+                </div>
+                <CardTitle className="text-xl font-semibold text-white">
+                  Start Mining
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 leading-relaxed">
+                  Power up your miner, confirm it's hashing, and let it run. The rewards go directly to the chosen organization — no intermediaries needed.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
