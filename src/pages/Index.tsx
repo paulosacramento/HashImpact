@@ -1,3 +1,4 @@
+
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -415,8 +416,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {companyLogos.map((company, index) => 
               <div key={index} className="flex flex-col items-center">
-                <div className="flex items-center justify-center p-2 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
-                  <img src={company.logo} alt={`${company.name} logo`} className="w-16 h-16 object-cover rounded-lg" />
+                <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
+                  <img src={company.logo} alt={`${company.name} logo`} className="w-24 h-24 object-cover rounded-lg" />
                 </div>
                 <input 
                   type="text" 
