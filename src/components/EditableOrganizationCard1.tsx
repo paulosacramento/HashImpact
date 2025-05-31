@@ -6,8 +6,8 @@ import { useToast } from "@/hooks/use-toast";
 
 export const EditableOrganizationCard1 = () => {
   const organization = {
-    name: "Bitcoin Education Initiative",
-    description: "Teaching Bitcoin fundamentals in developing regions",
+    name: "BTC Schule",
+    description: "Burundi",
     lightningAddress: "donate@bitcoinedu.org",
     impact: "500+ students educated"
   };
