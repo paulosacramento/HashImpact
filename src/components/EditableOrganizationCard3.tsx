@@ -61,9 +61,8 @@ export const EditableOrganizationCard3 = () => {
         </div>
 
         <Button 
-          variant="outline" 
           size="sm" 
-          className="w-full text-xs border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 hover:text-yellow-300 hover:border-yellow-400/70 transition-all"
+          className="w-full text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all"
           asChild
         >
           <a href={organization.url} target="_blank" rel="noopener noreferrer">
