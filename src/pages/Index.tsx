@@ -153,7 +153,7 @@ It's easy to set up, requires no previous experience, and turns energy into mean
                   </div>
                   <div className="flex items-start gap-3 mb-2">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                    <span>Smart Matching – Choose an org based on values, region, or economic impact.</span>
+                    <span>Smart Matching – Choose an org based on the type on region or economic impact.</span>
                   </div>
                   <div className="flex items-start gap-3 mb-2">
                     <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
