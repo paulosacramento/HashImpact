@@ -1,11 +1,9 @@
-
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -28,7 +26,6 @@ const Index = () => {
     description: "Power up your miner, confirm it's hashing, and let it run. The rewards go directly to the chosen organization — no intermediaries needed.",
     icon: <Zap className="w-8 h-8 text-purple-500" />
   }];
-
   const featuredOrganizations = [{
     name: "Bitcoin Education Initiative",
     description: "Teaching Bitcoin fundamentals in developing regions",
@@ -45,7 +42,6 @@ const Index = () => {
     lightningAddress: "support@lnadopt.com",
     impact: "200+ merchants onboarded"
   }];
-
   return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
@@ -68,7 +64,7 @@ const Index = () => {
           </div>
 
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
-            <p className="text-2xl">What if your Bitcoin miner could fund education and help onboard new users to Bitcoin in underprivileged regions?</p>
+            <p className="text-2xl">What if your hobby Bitcoin miner could power real change in underprivileged regions?</p>
             <p>This guide shows you how to direct the rewards from your low-power Bitcoin miner to vetted organizations using Lightning addresses.
 
 
@@ -418,5 +414,4 @@ It's easy to set up, requires no prior coding experience, and turns energy into 
       </footer>
     </div>;
 };
-
 export default Index;
