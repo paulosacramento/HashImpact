@@ -6,9 +6,10 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Calendar, Upload, Copy, Share2, Zap } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 export const PledgeGenerator = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     organization: "",
     monthsOfSupport: "",
@@ -18,15 +19,7 @@ export const PledgeGenerator = () => {
     minerName: ""
   });
   const [showPledge, setShowPledge] = useState(false);
-
-  const organizations = [
-    "Bitcoin Education Initiative",
-    "Open Source Bitcoin Tools", 
-    "Lightning Network Adoption",
-    "Bitcoin Privacy Research",
-    "African Bitcoin Network"
-  ];
-
+  const organizations = ["Bitcoin Education Initiative", "Open Source Bitcoin Tools", "Lightning Network Adoption", "Bitcoin Privacy Research", "African Bitcoin Network"];
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.organization || !formData.monthsOfSupport || !formData.startDate || !formData.endDate) {
@@ -40,22 +33,19 @@ export const PledgeGenerator = () => {
     setShowPledge(true);
     toast({
       title: "Pledge Created!",
-      description: "Your commitment to mining for good has been generated.",
+      description: "Your commitment to mining for good has been generated."
     });
   };
-
   const handleCopyPledge = () => {
     const pledgeText = `🚀 I'm pledging my Bitcoin mining hashrate to support ${formData.organization} for ${formData.monthsOfSupport} months from ${formData.startDate} to ${formData.endDate}! Join me in turning mining power into positive change. #HashImpact #Bitcoin4Good`;
     navigator.clipboard.writeText(pledgeText);
     toast({
       title: "Copied to Clipboard!",
-      description: "Share your pledge on social media to inspire others.",
+      description: "Share your pledge on social media to inspire others."
     });
   };
-
   if (showPledge) {
-    return (
-      <Card className="max-w-2xl mx-auto bg-gradient-to-br from-orange-50 to-purple-50 border-2 border-orange-200">
+    return <Card className="max-w-2xl mx-auto bg-gradient-to-br from-orange-50 to-purple-50 border-2 border-orange-200">
         <CardHeader className="text-center pb-4">
           <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
             <Zap className="w-8 h-8 text-white" />
@@ -89,12 +79,10 @@ export const PledgeGenerator = () => {
               </div>
             </div>
 
-            {formData.minerName && (
-              <div className="bg-white rounded-lg p-4 shadow-sm">
+            {formData.minerName && <div className="bg-white rounded-lg p-4 shadow-sm">
                 <h4 className="text-sm font-medium text-gray-700 mb-1">Miner Setup</h4>
                 <p className="text-lg font-semibold text-gray-900">{formData.minerName}</p>
-              </div>
-            )}
+              </div>}
           </div>
 
           <div className="flex gap-3 justify-center">
@@ -107,12 +95,9 @@ export const PledgeGenerator = () => {
             </Button>
           </div>
         </CardContent>
-      </Card>
-    );
+      </Card>;
   }
-
-  return (
-    <Card className="max-w-2xl mx-auto bg-white/80 backdrop-blur-sm">
+  return <Card className="max-w-2xl mx-auto bg-white/80 backdrop-blur-sm">
       <CardHeader>
         <CardTitle className="text-2xl text-center text-gray-900">
           Create Your Mining Pledge
@@ -124,70 +109,46 @@ export const PledgeGenerator = () => {
             <Label htmlFor="organization" className="text-sm font-medium text-gray-700">
               Organization Name *
             </Label>
-            <Input
-              id="organization"
-              placeholder="Enter organization name (e.g., Bitcoin Education Initiative)"
-              value={formData.organization}
-              onChange={(e) => setFormData(prev => ({...prev, organization: e.target.value}))}
-              className="w-full"
-            />
+            <Input id="organization" placeholder="Enter organization name (e.g., Bitcoin Education Initiative)" value={formData.organization} onChange={e => setFormData(prev => ({
+            ...prev,
+            organization: e.target.value
+          }))} className="w-full" />
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="monthsOfSupport" className="text-sm font-medium text-gray-700">
               Months of Support *
             </Label>
-            <Select value={formData.monthsOfSupport} onValueChange={(value) => setFormData(prev => ({...prev, monthsOfSupport: value}))}>
+            <Select value={formData.monthsOfSupport} onValueChange={value => setFormData(prev => ({
+            ...prev,
+            monthsOfSupport: value
+          }))}>
               <SelectTrigger>
                 <SelectValue placeholder="Select duration of support" />
               </SelectTrigger>
               <SelectContent>
-                {Array.from({ length: 12 }, (_, i) => i + 1).map((month) => (
-                  <SelectItem key={month} value={month.toString()}>
+                {Array.from({
+                length: 12
+              }, (_, i) => i + 1).map(month => <SelectItem key={month} value={month.toString()}>
                     {month} {month === 1 ? 'month' : 'months'}
-                  </SelectItem>
-                ))}
+                  </SelectItem>)}
               </SelectContent>
             </Select>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="startDate" className="text-sm font-medium text-gray-700">
-                Start Date *
-              </Label>
-              <Input
-                id="startDate"
-                type="date"
-                value={formData.startDate}
-                onChange={(e) => setFormData(prev => ({...prev, startDate: e.target.value}))}
-                className="w-full"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="endDate" className="text-sm font-medium text-gray-700">
-                End Date *
-              </Label>
-              <Input
-                id="endDate"
-                type="date"
-                value={formData.endDate}
-                onChange={(e) => setFormData(prev => ({...prev, endDate: e.target.value}))}
-                className="w-full"
-              />
-            </div>
+            
+            
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="minerName" className="text-sm font-medium text-gray-700">
               Miner Name/Model (Optional)
             </Label>
-            <Input
-              id="minerName"
-              placeholder="e.g., Bitaxe Ultra, Raspberry Pi Setup"
-              value={formData.minerName}
-              onChange={(e) => setFormData(prev => ({...prev, minerName: e.target.value}))}
-            />
+            <Input id="minerName" placeholder="e.g., Bitaxe Ultra, Raspberry Pi Setup" value={formData.minerName} onChange={e => setFormData(prev => ({
+            ...prev,
+            minerName: e.target.value
+          }))} />
           </div>
 
           <div className="space-y-2">
@@ -199,23 +160,17 @@ export const PledgeGenerator = () => {
               <p className="text-sm text-gray-600">
                 Drop your miner photo here or click to upload
               </p>
-              <Input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                onChange={(e) => setFormData(prev => ({...prev, minerPhoto: e.target.files?.[0] || null}))}
-              />
+              <Input type="file" accept="image/*" className="hidden" onChange={e => setFormData(prev => ({
+              ...prev,
+              minerPhoto: e.target.files?.[0] || null
+            }))} />
             </div>
           </div>
 
-          <Button 
-            type="submit" 
-            className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white py-3 text-lg"
-          >
+          <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white py-3 text-lg">
             Create My Pledge
           </Button>
         </form>
       </CardContent>
-    </Card>
-  );
+    </Card>;
 };
