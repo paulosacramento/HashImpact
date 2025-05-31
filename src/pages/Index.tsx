@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { SectionSeparator } from "@/components/SectionSeparator";
+import { PartnerCard } from "@/components/PartnerCard";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -42,6 +44,27 @@ const Index = () => {
     lightningAddress: "support@lnadopt.com",
     impact: "200+ merchants onboarded"
   }];
+  const partners = [
+    {
+      title: "Braiins Pool",
+      description: "Leading mining pool that enables custom Lightning address payouts, making this project possible.",
+      linkText: "Visit Braiins Pool",
+      icon: <Zap className="w-6 h-6 text-blue-400" />
+    },
+    {
+      title: "Bitcoin Community",
+      description: "Built by and for the Bitcoin community. Open source and transparent.",
+      linkText: "Join the Community",
+      icon: <Users className="w-6 h-6 text-green-400" />
+    },
+    {
+      title: "Technical Contributors",
+      description: "Special thanks to developers and technical contributors who help maintain this project.",
+      linkText: "Contribute on GitHub",
+      icon: <Target className="w-6 h-6 text-purple-400" />
+    }
+  ];
+
   return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8">
@@ -312,74 +335,9 @@ It's easy to set up, requires no previous experience, and turns energy into mean
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* Braiins Partnership */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Zap className="w-6 h-6 text-blue-400" />
-                  </div>
-                </div>
-                <CardTitle className="text-xl font-semibold text-white">
-                  Braiins Pool
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Leading mining pool that enables custom Lightning address payouts, making this project possible.
-                </p>
-                <Button variant="link" className="p-0 h-auto text-yellow-400 hover:text-yellow-300">
-                  Visit Braiins Pool
-                  <ExternalLink className="w-4 h-4 ml-1" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Community Support */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Users className="w-6 h-6 text-green-400" />
-                  </div>
-                </div>
-                <CardTitle className="text-xl font-semibold text-white">
-                  Bitcoin Community
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Built by and for the Bitcoin community. Open source and transparent.
-                </p>
-                <Button variant="link" className="p-0 h-auto text-yellow-400 hover:text-yellow-300">
-                  Join the Community
-                  <ExternalLink className="w-4 h-4 ml-1" />
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Technical Support */}
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
-              <CardHeader className="pb-4">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Target className="w-6 h-6 text-purple-400" />
-                  </div>
-                </div>
-                <CardTitle className="text-xl font-semibold text-white">
-                  Technical Contributors
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  Special thanks to developers and technical contributors who help maintain this project.
-                </p>
-                <Button variant="link" className="p-0 h-auto text-yellow-400 hover:text-yellow-300">
-                  Contribute on GitHub
-                  <ExternalLink className="w-4 h-4 ml-1" />
-                </Button>
-              </CardContent>
-            </Card>
+            {partners.map((partner, index) => (
+              <PartnerCard key={index} partner={partner} partnerId={`partner-${index}`} />
+            ))}
           </div>
 
           <div className="text-center">
@@ -414,4 +372,5 @@ It's easy to set up, requires no previous experience, and turns energy into mean
       </footer>
     </div>;
 };
+
 export default Index;
