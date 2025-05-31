@@ -269,12 +269,12 @@ const Index = () => {
                   </div>
                 </div>
                 <CardTitle className="text-xl font-semibold text-white">
-                  Get Your Gear Ready
+                  Get Your Bitaxe Ready
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 leading-relaxed">
-                  You'll need a low-power Bitcoin miner — something like a Bitaxe is perfect. These devices are energy-efficient, quiet, and ideal for home use.
+                  You'll need a low-power Bitcoin miner — something like a Bitaxe is perfect. These devices are energy-efficient, quiet, and ideal for home use. Watch the video until 30:00.
                 </p>
                 <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
                   <a href="https://www.youtube.com/watch?v=QAwSXZ3L7Pc&t=1424s" target="_blank" rel="noopener noreferrer">
