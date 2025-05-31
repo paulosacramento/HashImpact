@@ -47,8 +47,8 @@ const Index = () => {
   }];
   // Random company logos with 1:1 aspect ratio
   const companyLogos = [{
-    name: "TechCorp",
-    logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=200&fit=crop&crop=center"
+    name: "Bitcoin Design Community",
+    logo: "/lovable-uploads/ac2c1c00-76fb-4ea0-b819-92b9515ef4d1.png"
   }, {
     name: "DataFlow",
     logo: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=200&h=200&fit=crop&crop=center"
