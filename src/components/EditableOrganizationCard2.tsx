@@ -9,7 +9,7 @@ export const EditableOrganizationCard2 = () => {
     description: "Zambia",
     lightningAddress: "funding@btctools.dev",
     impact: "51.0",
-    url: "https://google.com"
+    url: "https://bitcoinzambia.org/"
   };
   const { toast } = useToast();
 
