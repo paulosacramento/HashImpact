@@ -7,6 +7,7 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -412,9 +413,19 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {companyLogos.map((company, index) => <div key={index} className="flex items-center justify-center p-8 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <img src={company.logo} alt={`${company.name} logo`} className="w-16 h-16 object-cover rounded-lg" />
-              </div>)}
+            {companyLogos.map((company, index) => 
+              <div key={index} className="flex flex-col items-center">
+                <div className="flex items-center justify-center p-2 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
+                  <img src={company.logo} alt={`${company.name} logo`} className="w-16 h-16 object-cover rounded-lg" />
+                </div>
+                <input 
+                  type="text" 
+                  defaultValue={company.name}
+                  className="w-full max-w-xs text-center text-sm text-gray-300 bg-slate-800/50 border border-gray-600 rounded px-3 py-2 focus:outline-none focus:border-yellow-500 focus:text-white"
+                  placeholder="Organization name"
+                />
+              </div>
+            )}
           </div>
 
           <div className="text-center">
