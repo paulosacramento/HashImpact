@@ -46,19 +46,19 @@ const Index = () => {
     lightningAddress: "support@lnadopt.com",
     impact: "200+ merchants onboarded"
   }];
-  // Random company logos
+  // Random company logos with 1:1 aspect ratio
   const companyLogos = [
     {
       name: "TechCorp",
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&h=100&fit=crop&crop=center"
+      logo: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=200&fit=crop&crop=center"
     },
     {
-      name: "DataFlow",
-      logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=200&h=100&fit=crop&crop=center"
+      name: "DataFlow", 
+      logo: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=200&h=200&fit=crop&crop=center"
     },
     {
       name: "CloudTech",
-      logo: "https://images.unsplash.com/photo-1560472355-536de3962603?w=200&h=100&fit=crop&crop=center"
+      logo: "https://images.unsplash.com/photo-1438565434616-3ef039228b15?w=200&h=200&fit=crop&crop=center"
     }
   ];
   const partners = [{
@@ -424,7 +424,7 @@ const Index = () => {
                 <img 
                   src={company.logo} 
                   alt={`${company.name} logo`}
-                  className="max-h-16 w-auto object-contain"
+                  className="w-16 h-16 object-cover rounded-lg"
                 />
               </div>
             ))}
