@@ -39,7 +39,7 @@ export const EditableOrganizationCard2 = () => {
       
       <CardContent className="pt-0 space-y-4">
         <div className="bg-gradient-to-r from-amber-900/30 to-yellow-900/30 border border-yellow-500/20 rounded-lg p-3">
-          <p className="text-xs font-medium text-gray-300 mb-1">Impact So Far</p>
+          <p className="text-xs font-medium text-gray-300 mb-1">Price Level Index (2021)</p>
           <p className="text-sm font-semibold text-yellow-400">{organization.impact}</p>
         </div>
 
