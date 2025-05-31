@@ -53,8 +53,8 @@ const Index = () => {
     name: "256 Foundation",
     logo: "/lovable-uploads/954001e3-627d-40c4-a3bb-012085857025.png"
   }, {
-    name: "CloudTech",
-    logo: "https://images.unsplash.com/photo-1438565434616-3ef039228b15?w=200&h=200&fit=crop&crop=center"
+    name: "Federation of Bitcoin Circular Economies",
+    logo: "/lovable-uploads/b5695891-e91d-4d45-b94a-8a368df81de7.png"
   }];
   const partners = [{
     title: "Braiins Pool",
