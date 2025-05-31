@@ -81,7 +81,7 @@ const Index = () => {
           </div>
 
           <div className="mx-auto max-w-3xl space-y-6 text-lg leading-8 text-gray-300">
-            <p className="text-2xl">What if your hobby Bitcoin miner could power real change in underprivileged regions?</p>
+            <p className="text-2xl">What if your home Bitcoin miner could power real change in underprivileged regions?</p>
             <p>If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life.</p>
             <p>This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further.</p>
             
