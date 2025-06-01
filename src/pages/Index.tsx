@@ -426,9 +426,11 @@ const Index = () => {
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Are you running a non-profit that aligns with Bitcoin's mission? Apply to be included in our supported organizations list.
           </p>
-          <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold px-8 py-3 text-lg">
-            Submit Your Organization
-            <ExternalLink className="w-4 h-4 ml-2" />
+          <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold px-8 py-3 text-lg" asChild>
+            <a href="https://forms.gle/MFmXB3dkn6GYJbTr8" target="_blank" rel="noopener noreferrer">
+              Submit Your Organization
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </a>
           </Button>
         </div>
       </section>
