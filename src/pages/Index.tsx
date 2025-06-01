@@ -1,6 +1,7 @@
 import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { PartnerCard } from "@/components/PartnerCard";
@@ -275,7 +276,7 @@ const Index = () => {
       </section>
 
       {/* Section Separator */}
-      <SectionSeparator imageUrl="/lovable-uploads/a96e0b77-b82a-4c10-804b-626f027c29de.png" alt="Global Bitcoin network with mining nodes and lightning connections" />
+      <SectionSeparator imageUrl="/lovable-uploads/df2ee800-2458-4927-a3ce-2e39bf8d7ca0.png" alt="Global Bitcoin network with mining nodes and lightning connections" />
 
       {/* Step-by-Step Guide */}
       <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
@@ -416,6 +417,333 @@ const Index = () => {
               <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </Button>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Find answers to common questions about the HashImpact project
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-8">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  What is the HashImpact Project?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  HashImpact is a community-led initiative that helps hobby Bitcoin miners redirect their mining rewards—via Lightning—toward trusted, Bitcoin-focused nonprofits in lower-income regions, turning small amounts of hashrate into meaningful social impact.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  Why should I donate my mining rewards instead of keeping them?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  If you live in a high-income country, the sats you earn from a low-power miner often aren't life-changing. In many parts of the world, however, even a few dollars' worth of Bitcoin can fund school supplies, internet access, or community workshops—stretching your mining power far further than it would at home.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  Which miners are compatible?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  <p className="mb-3">The guide currently focuses on small, energy-efficient devices such as:</p>
+                  <ul className="list-disc list-inside space-y-1 mb-3">
+                    <li>Bitaxe series (Bitaxe Ultra, NerdQaxe, etc.)</li>
+                    <li>Canaan Avalon Nano, Mini 3, and Avalon Q</li>
+                  </ul>
+                  <p>But any miner that lets you set a custom payout Lightning address in the pool settings should work.</p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  What is a Lightning address, and is it safe to use?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  A Lightning address looks like an email (e.g., donate@bitcoinedu.org). It routes payments over the Lightning Network, which is fast, low-fee, and well suited for micro-donations. Using a nonprofit's Lightning address is as secure as sending any Lightning payment.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  Can I split rewards between myself and an organization?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  Not yet. The current workflow sends 100% of pool payouts to the nonprofit's Lightning address. If you need a split, you'd have to run multiple workers/miners.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  What if Bitcoin's price or network difficulty changes?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  Your miner's hashrate stays the same, but fiat value fluctuates. Think of the donation in sats, not dollars; organizations will receive the actual BTC amount you mine, regardless of price swings. You can always pause or adjust your pledge if economics change dramatically.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  How do I show my commitment publicly?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  Use the "Create My Pledge" form to generate a shareable pledge card. Fill in the organization, duration, miner model, and (optionally) a photo of your rig. Share the card on social media to inspire fellow miners.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  Can my nonprofit apply to be listed?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  Yes. If your initiative aligns with Bitcoin's mission—financial inclusion, education, or circular economies—click "Submit Your Organization." The HashImpact team will vet submissions for transparency and impact before adding them to the directory.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-9" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  Are donations tax-deductible?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  It depends on your jurisdiction and whether the recipient organization is registered as a charity there. Consult a local tax professional; HashImpact itself does not issue tax receipts.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-10" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  Organisations in what countries are eligible to be presented on the website?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  <p className="mb-3">HashImpact focuses on nonprofits operating in lower-income or emerging-market economies, where a modest Bitcoin stream can create outsized impact. The current eligibility list includes:</p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 text-sm">
+                    <span>Afghanistan</span>
+                    <span>Albania</span>
+                    <span>Algeria</span>
+                    <span>Angola</span>
+                    <span>Armenia</span>
+                    <span>Azerbaijan</span>
+                    <span>Bangladesh</span>
+                    <span>Belize</span>
+                    <span>Benin</span>
+                    <span>Bhutan</span>
+                    <span>Bolivia</span>
+                    <span>Bosnia and Herzegovina</span>
+                    <span>Botswana</span>
+                    <span>Brazil</span>
+                    <span>Burkina Faso</span>
+                    <span>Burundi</span>
+                    <span>Cambodia</span>
+                    <span>Cameroon</span>
+                    <span>Cape Verde</span>
+                    <span>Central African Republic</span>
+                    <span>Chad</span>
+                    <span>China</span>
+                    <span>Colombia</span>
+                    <span>Comoros</span>
+                    <span>Democratic Republic of the Congo</span>
+                    <span>Republic of the Congo</span>
+                    <span>Djibouti</span>
+                    <span>Dominica</span>
+                    <span>Ecuador</span>
+                    <span>Egypt</span>
+                    <span>El Salvador</span>
+                    <span>Equatorial Guinea</span>
+                    <span>Eritrea</span>
+                    <span>Eswatini</span>
+                    <span>Ethiopia</span>
+                    <span>Fiji</span>
+                    <span>Gabon</span>
+                    <span>Gambia</span>
+                    <span>Ghana</span>
+                    <span>Guatemala</span>
+                    <span>Guinea</span>
+                    <span>Guinea-Bissau</span>
+                    <span>Haiti</span>
+                    <span>Honduras</span>
+                    <span>India</span>
+                    <span>Indonesia</span>
+                    <span>Iran</span>
+                    <span>Iraq</span>
+                    <span>Ivory Coast</span>
+                    <span>Jamaica</span>
+                    <span>Jordan</span>
+                    <span>Kenya</span>
+                    <span>Kyrgyzstan</span>
+                    <span>Laos</span>
+                    <span>Lebanon</span>
+                    <span>Lesotho</span>
+                    <span>Liberia</span>
+                    <span>Libya</span>
+                    <span>Madagascar</span>
+                    <span>Malawi</span>
+                    <span>Mali</span>
+                    <span>Mauritania</span>
+                    <span>Moldova</span>
+                    <span>Mongolia</span>
+                    <span>Morocco</span>
+                    <span>Mozambique</span>
+                    <span>Myanmar</span>
+                    <span>Namibia</span>
+                    <span>Nepal</span>
+                    <span>Nicaragua</span>
+                    <span>Niger</span>
+                    <span>Nigeria</span>
+                    <span>North Macedonia</span>
+                    <span>Pakistan</span>
+                    <span>Paraguay</span>
+                    <span>Peru</span>
+                    <span>Philippines</span>
+                    <span>Rwanda</span>
+                    <span>São Tomé and Príncipe</span>
+                    <span>Senegal</span>
+                    <span>Sierra Leone</span>
+                    <span>Somalia</span>
+                    <span>South Africa</span>
+                    <span>South Sudan</span>
+                    <span>Sri Lanka</span>
+                    <span>Sudan</span>
+                    <span>Suriname</span>
+                    <span>Syria</span>
+                    <span>Tajikistan</span>
+                    <span>Tanzania</span>
+                    <span>Thailand</span>
+                    <span>Timor-Leste</span>
+                    <span>Togo</span>
+                    <span>Tunisia</span>
+                    <span>Turkmenistan</span>
+                    <span>Uganda</span>
+                    <span>Ukraine</span>
+                    <span>Uzbekistan</span>
+                    <span>Vietnam</span>
+                    <span>Zambia</span>
+                    <span>Zimbabwe</span>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-11" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  Organisations in what countries are not eligible?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  <p className="mb-3">Due to a significantly higher cost-of-living index—which would undermine the "small sats, big impact" thesis—nonprofits based in the following countries or territories are not currently featured:</p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 text-sm">
+                    <span>Andorra</span>
+                    <span>Antigua and Barbuda</span>
+                    <span>Argentina</span>
+                    <span>Aruba</span>
+                    <span>Australia</span>
+                    <span>Austria</span>
+                    <span>Bahamas, The</span>
+                    <span>Bahrain</span>
+                    <span>Barbados</span>
+                    <span>Belarus</span>
+                    <span>Belgium</span>
+                    <span>Bermuda</span>
+                    <span>Brunei Darussalam</span>
+                    <span>Bulgaria</span>
+                    <span>Canada</span>
+                    <span>Cayman Islands</span>
+                    <span>Chile</span>
+                    <span>Costa Rica</span>
+                    <span>Croatia</span>
+                    <span>Curaçao</span>
+                    <span>Cyprus</span>
+                    <span>Czechia</span>
+                    <span>Denmark</span>
+                    <span>Dominican Republic</span>
+                    <span>Estonia</span>
+                    <span>Faroe Islands</span>
+                    <span>Finland</span>
+                    <span>France</span>
+                    <span>Georgia</span>
+                    <span>Germany</span>
+                    <span>Greece</span>
+                    <span>Greenland</span>
+                    <span>Grenada</span>
+                    <span>Guyana</span>
+                    <span>Hong Kong SAR, China</span>
+                    <span>Hungary</span>
+                    <span>Iceland</span>
+                    <span>Ireland</span>
+                    <span>Israel</span>
+                    <span>Italy</span>
+                    <span>Japan</span>
+                    <span>Kazakhstan</span>
+                    <span>Kiribati</span>
+                    <span>Korea, Rep.</span>
+                    <span>Kosovo</span>
+                    <span>Kuwait</span>
+                    <span>Latvia</span>
+                    <span>Lithuania</span>
+                    <span>Luxembourg</span>
+                    <span>Macao SAR, China</span>
+                    <span>Malaysia</span>
+                    <span>Maldives</span>
+                    <span>Malta</span>
+                    <span>Marshall Islands</span>
+                    <span>Mauritius</span>
+                    <span>Mexico</span>
+                    <span>Micronesia, Fed. Sts.</span>
+                    <span>Montenegro</span>
+                    <span>Nauru</span>
+                    <span>Netherlands</span>
+                    <span>New Zealand</span>
+                    <span>Norway</span>
+                    <span>Oman</span>
+                    <span>Palau</span>
+                    <span>Panama</span>
+                    <span>Papua New Guinea</span>
+                    <span>Poland</span>
+                    <span>Portugal</span>
+                    <span>Puerto Rico</span>
+                    <span>Qatar</span>
+                    <span>Romania</span>
+                    <span>Russian Federation</span>
+                    <span>Samoa</span>
+                    <span>San Marino</span>
+                    <span>Saudi Arabia</span>
+                    <span>Serbia</span>
+                    <span>Seychelles</span>
+                    <span>Singapore</span>
+                    <span>Sint Maarten (Dutch part)</span>
+                    <span>Slovak Republic</span>
+                    <span>Slovenia</span>
+                    <span>Solomon Islands</span>
+                    <span>Spain</span>
+                    <span>St. Kitts and Nevis</span>
+                    <span>St. Lucia</span>
+                    <span>St. Vincent and the Grenadines</span>
+                    <span>Sweden</span>
+                    <span>Switzerland</span>
+                    <span>Tonga</span>
+                    <span>Trinidad and Tobago</span>
+                    <span>Turkiye</span>
+                    <span>Turks and Caicos Islands</span>
+                    <span>Tuvalu</span>
+                    <span>United Arab Emirates</span>
+                    <span>United Kingdom</span>
+                    <span>United States</span>
+                    <span>Uruguay</span>
+                    <span>Vanuatu</span>
+                    <span>Venezuela, RB</span>
+                    <span>Virgin Islands (U.S.)</span>
+                    <span>West Bank and Gaza</span>
+                    <span>Yemen, Rep.</span>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </div>
       </section>
 
