@@ -241,20 +241,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="bg-slate-800/40 rounded-xl p-6 border border-green-500/10">
-              <div className="text-2xl font-bold text-green-400 mb-2">10x</div>
-              <p className="text-gray-300">Bitaxe Miners</p>
-            </div>
-            <div className="bg-slate-800/40 rounded-xl p-6 border border-green-500/10">
-              <div className="text-2xl font-bold text-yellow-400 mb-2">365</div>
-              <p className="text-gray-300">Days Mining</p>
-            </div>
-            <div className="bg-slate-800/40 rounded-xl p-6 border border-green-500/10">
-              <div className="text-2xl font-bold text-blue-400 mb-2">24/7</div>
-              <p className="text-gray-300">Continuous Impact</p>
-            </div>
-          </div>
+          
         </div>
       </section>
 
