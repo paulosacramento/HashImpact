@@ -7,7 +7,6 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -102,9 +101,7 @@ const Index = () => {
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold px-8 py-3 text-lg">
-              Start Your Impact Journey
-            </Button>
+            
             
           </div>
         </div>
