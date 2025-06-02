@@ -8,6 +8,7 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -90,7 +91,7 @@ const Index = () => {
           {/* Image container */}
           <div className="mx-auto max-w-2xl mb-8">
             <div className="aspect-video rounded-xl overflow-hidden">
-              <img alt="Bitaxe Bitcoin miners" className="w-full h-full object-cover" src="/lovable-uploads/889526d5-d5e3-4fcc-ba16-85672464fd6f.png" />
+              <img alt="Global Bitcoin network with mining nodes and lightning connections" className="w-full h-full object-cover" src="/lovable-uploads/f6b69e8b-c5f7-47a7-bf95-09b323d53a38.png" />
             </div>
           </div>
 
@@ -727,18 +728,13 @@ const Index = () => {
                     <span>Switzerland</span>
                     <span>Tonga</span>
                     <span>Trinidad and Tobago</span>
-                    <span>Turkiye</span>
-                    <span>Turks and Caicos Islands</span>
-                    <span>Tuvalu</span>
-                    <span>United Arab Emirates</span>
-                    <span>United Kingdom</span>
-                    <span>United States</span>
-                    <span>Uruguay</span>
-                    <span>Vanuatu</span>
-                    <span>Venezuela, RB</span>
-                    <span>Virgin Islands (U.S.)</span>
-                    <span>West Bank and Gaza</span>
-                    <span>Yemen, Rep.</span>
+                    <span>Turkmenistan</span>
+                    <span>Uganda</span>
+                    <span>Ukraine</span>
+                    <span>Uzbekistan</span>
+                    <span>Vietnam</span>
+                    <span>Zambia</span>
+                    <span>Zimbabwe</span>
                   </div>
                 </AccordionContent>
               </AccordionItem>
