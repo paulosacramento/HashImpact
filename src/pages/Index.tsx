@@ -8,7 +8,6 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -242,7 +241,7 @@ const Index = () => {
           </h2>
           
           <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl border border-green-500/20 p-8 mb-6">
-            <div className="text-6xl font-bold text-green-400 mb-4">$180</div>
+            <div className="text-6xl font-bold text-green-400 mb-4">$400</div>
             <p className="text-xl text-gray-300 mb-4">
               Assuming a Bitcoin price of <span className="text-yellow-400 font-semibold">$100,000</span>, ten Bitaxes would collectively send approximately <span className="text-green-400 font-semibold">$180</span> over the course of one year.
             </p>
