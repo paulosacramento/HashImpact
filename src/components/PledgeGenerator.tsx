@@ -232,7 +232,7 @@ export const PledgeGenerator = () => {
 
           <Button 
             type="submit" 
-            className="w-full bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 text-white py-3 text-lg"
+            className="w-full bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold py-3 text-lg"
             disabled={isGeneratingImage}
           >
             {isGeneratingImage ? "Creating Your Pledge..." : "Create My Pledge"}
