@@ -80,7 +80,7 @@ const Index = () => {
           <div className="mb-8">
             <div className="inline-flex items-center rounded-full bg-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400 mb-6 border border-yellow-500/30">
               <Zap className="w-4 h-4 mr-2" />
-              HashImpact Project
+              HashImpact.Social
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
               Turn Mining Power Into Positive Change
