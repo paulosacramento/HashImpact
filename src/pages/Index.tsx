@@ -100,18 +100,11 @@ const Index = () => {
             <p>If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life.</p>
             
             {/* Standout Card */}
-            <Card className="group bg-gradient-to-r from-blue-900/40 to-purple-900/40 border-2 border-blue-400/50 backdrop-blur-sm hover:border-blue-400/70 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 transform hover:scale-[1.02] mx-auto max-w-2xl">
+            <Card className="group bg-gradient-to-r from-amber-900/60 to-yellow-900/60 border-2 border-yellow-400/60 backdrop-blur-sm hover:border-yellow-400/80 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/30 transform hover:scale-[1.02] mx-auto max-w-2xl">
               <CardContent className="p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500/30 to-purple-500/30 border border-blue-400/50 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Target className="w-6 h-6 text-blue-300" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-xl font-semibold text-white leading-relaxed">
-                      This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further.
-                    </p>
-                  </div>
-                </div>
+                <p className="text-xl font-bold text-yellow-100 leading-relaxed">
+                  This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further.
+                </p>
               </CardContent>
             </Card>
             
