@@ -91,7 +91,7 @@ const Index = () => {
           {/* Image container */}
           <div className="mx-auto max-w-2xl mb-8">
             <div className="aspect-video rounded-xl overflow-hidden">
-              <img alt="Global Bitcoin network with mining nodes and lightning connections" className="w-full h-full object-cover" src="/lovable-uploads/f6b69e8b-c5f7-47a7-bf95-09b323d53a38.png" />
+              <img alt="Global Bitcoin network with mining nodes and lightning connections" className="w-full h-full object-cover" src="/lovable-uploads/583c80b6-72cd-4922-b72e-21ff331f6d43.png" />
             </div>
           </div>
 
