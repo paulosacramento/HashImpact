@@ -243,7 +243,7 @@ const Index = () => {
           <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl border border-green-500/20 p-8 mb-6">
             <div className="text-6xl font-bold text-green-400 mb-4">$400</div>
             <p className="text-xl text-gray-300 mb-4">
-              Assuming a Bitcoin price of <span className="text-yellow-400 font-semibold">$100,000</span>, twenty Bitaxes would collectively send approximately <span className="text-green-400 font-semibold">$180</span> over the course of one year.
+              Assuming a Bitcoin price of <span className="text-yellow-400 font-semibold">$100,000</span>, <span className="text-green-400 font-semibold">twenty Bitaxes</span> would collectively send approximately <span className="text-green-400 font-semibold">$400</span> over the course of one year.
             </p>
             <p className="text-lg text-gray-400">
               While this might seem modest in a high-income country, it can make a significant difference in regions where the average daily income is much lower.
