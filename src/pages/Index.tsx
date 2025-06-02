@@ -100,9 +100,9 @@ const Index = () => {
             <p>If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life.</p>
             
             {/* Standout Card */}
-            <Card className="group bg-gradient-to-r from-amber-900/60 to-yellow-900/60 border-2 border-yellow-400/60 backdrop-blur-sm hover:border-yellow-400/80 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/30 transform hover:scale-[1.02] mx-auto max-w-2xl">
+            <Card className="group bg-gradient-to-r from-yellow-500 to-amber-600 border-2 border-yellow-400 backdrop-blur-sm hover:border-yellow-300 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/40 transform hover:scale-[1.02] mx-auto max-w-2xl">
               <CardContent className="p-8">
-                <p className="text-xl font-bold text-yellow-100 leading-relaxed">
+                <p className="text-xl font-bold text-black leading-relaxed">
                   This guide shows you how to redirect those rewards—via Lightning addresses—to trusted organizations in lower-income regions, where even small contributions can go much further.
                 </p>
               </CardContent>
