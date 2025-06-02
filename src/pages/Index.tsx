@@ -508,14 +508,7 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-8" className="border-gray-700">
-                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
-                  Can my nonprofit apply to be listed?
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-300 leading-relaxed">
-                  Yes. If your initiative aligns with Bitcoin's mission—financial inclusion, education, or circular economies—click "Submit Your Organization." The HashImpact team will vet submissions for transparency and impact before adding them to the directory.
-                </AccordionContent>
-              </AccordionItem>
+              
 
               <AccordionItem value="item-9" className="border-gray-700">
                 <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
