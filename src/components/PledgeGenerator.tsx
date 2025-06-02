@@ -206,7 +206,7 @@ export const PledgeGenerator = () => {
             </Label>
             <Input
               id="minerName"
-              placeholder="e.g., Bitaxe Ultra, Raspberry Pi Setup"
+              placeholder="e.g., Bitaxe 601"
               value={formData.minerName}
               onChange={(e) => setFormData(prev => ({ ...prev, minerName: e.target.value }))}
             />
