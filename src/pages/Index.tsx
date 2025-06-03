@@ -788,7 +788,7 @@ const Index = () => {
             <span>|</span>
             <a href="#privacy" className="hover:text-yellow-400 transition-colors">Privacy</a>
             <span>|</span>
-            <a href="#github" className="hover:text-yellow-400 transition-colors">GitHub</a>
+            <a href="https://github.com/paulosacramento/hashpower-for-good" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">GitHub</a>
           </div>
         </div>
       </footer>
