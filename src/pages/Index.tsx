@@ -8,6 +8,7 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -99,9 +100,9 @@ const Index = () => {
             <p>If you already own a BitAxe, NerdQaxe, or Canaan Avalon (Nano / Mini 3 / Q) and live in a high-income country, the rewards from your home Bitcoin miner likely don't make a significant difference in your life.</p>
             
             {/* Standout Card */}
-            <Card className="group bg-gradient-to-r from-yellow-500 to-amber-600 border-2 border-yellow-400 backdrop-blur-sm hover:border-yellow-300 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/40 transform hover:scale-[1.02] mx-auto max-w-2xl">
+            <Card className="group bg-gradient-to-r from-blue-600 to-blue-700 border-2 border-blue-400 backdrop-blur-sm hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/40 transform hover:scale-[1.02] mx-auto max-w-2xl">
               <CardContent className="p-8">
-                <p className="text-xl font-bold text-black leading-relaxed">HashImpact helps individual miners based in wealthy countries to channel their Bitcoin mining earnings into trusted organisations in underdeveloped regions.</p>
+                <p className="text-xl font-bold text-white leading-relaxed">HashImpact helps individual miners based in wealthy countries to channel their Bitcoin mining earnings into trusted organisations in underdeveloped regions.</p>
               </CardContent>
             </Card>
             
@@ -791,4 +792,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
