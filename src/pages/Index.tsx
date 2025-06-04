@@ -101,7 +101,7 @@ const Index = () => {
             {/* Standout Card */}
             <Card className="group bg-gradient-to-r from-yellow-500 to-amber-600 border-2 border-yellow-400 backdrop-blur-sm hover:border-yellow-300 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/40 transform hover:scale-[1.02] mx-auto max-w-2xl">
               <CardContent className="p-8">
-                <p className="text-xl font-bold text-black leading-relaxed">HashImpact helps individual miners based in wealthy countries to channel their Bitcoin mining earnings into trusted organisations in underdeveloped regions.</p>
+                <p className="text-xl font-bold text-black leading-relaxed">HashImpact helps individual miners based in wealthy countries to channel their Bitcoin mining earnings into trusted organisations in underdeveloped regions. HashImpact is NOT a pool.</p>
               </CardContent>
             </Card>
             
