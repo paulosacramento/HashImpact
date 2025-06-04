@@ -445,6 +445,21 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
+              <AccordionItem value="item-17" className="border-gray-700">
+                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
+                  Is HashImpact a mining pool?
+                </AccordionTrigger>
+                <AccordionContent className="text-gray-300 leading-relaxed">
+                  <p className="mb-3">No. HashImpact is not a mining pool and never takes custody of your hashrate or rewards. Instead, it serves as a coordination layer that:</p>
+                  <ul className="list-disc list-inside space-y-2 mb-3">
+                    <li>Curates a list of trusted, Bitcoin-aligned nonprofits in lower-income regions.</li>
+                    <li>Provides guides showing you how to point your existing miner to a third-party pool (e.g., Braiins) that supports Lightning payouts.</li>
+                    <li>Helps hobby miners create and publish pledge cards to publicly commit their hashrate to a chosen cause.</li>
+                    <li>Supplies the correct Lightning address for each eligible organization, so you know exactly where your mining rewards should be sent.</li>
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+
               <AccordionItem value="item-2" className="border-gray-700">
                 <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
                   Why should I donate my mining rewards instead of keeping them?
