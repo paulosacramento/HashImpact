@@ -7,8 +7,7 @@ export const EditableOrganizationCard1 = () => {
   const organization = {
     name: "BTC Shule",
     description: "Burundi",
-    lightningAddress: "btcshule@blink.sv
-",
+    lightningAddress: "btcshule@blink.sv",
     impact: "48.9",
     url: "https://btcshule.com/"
   };
