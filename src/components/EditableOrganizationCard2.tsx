@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Copy, ExternalLink } from "lucide-react";
+import { Copy, ExternalLink, Mail, Twitter } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const EditableOrganizationCard2 = () => {
@@ -9,7 +9,9 @@ export const EditableOrganizationCard2 = () => {
     description: "Zambia",
     lightningAddress: "mincingnorth25@walletofsatoshi.com",
     impact: "51.0",
-    url: "https://bitcoinzambia.org"
+    url: "https://bitcoinzambia.org",
+    email: "ndesanjo@gmail.com",
+    twitter: "https://x.com/BitcoinZambia"
   };
   const { toast } = useToast();
 
@@ -64,6 +66,31 @@ export const EditableOrganizationCard2 = () => {
               <Copy className="w-3 h-3" />
             </Button>
           </div>
+        </div>
+
+        <div className="flex gap-2">
+          <Button 
+            size="sm" 
+            variant="outline"
+            className="flex-1 text-xs border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/20"
+            asChild
+          >
+            <a href={`mailto:${organization.email}`}>
+              <Mail className="w-3 h-3 mr-1" />
+              Email
+            </a>
+          </Button>
+          <Button 
+            size="sm" 
+            variant="outline"
+            className="flex-1 text-xs border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/20"
+            asChild
+          >
+            <a href={organization.twitter} target="_blank" rel="noopener noreferrer">
+              <Twitter className="w-3 h-3 mr-1" />
+              X
+            </a>
+          </Button>
         </div>
 
         <Button 
