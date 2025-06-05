@@ -8,6 +8,7 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -268,15 +269,6 @@ const Index = () => {
             <EditableOrganizationCard1 />
             <EditableOrganizationCard2 />
             <EditableOrganizationCard3 />
-          </div>
-
-          <div className="text-center">
-            <Button size="lg" variant="outline" className="bg-slate-800/50 hover:bg-slate-700/50 px-8 py-3 text-lg border-2 border-yellow-500/50 text-yellow-400 hover:text-yellow-300" asChild>
-              <a href="https://docs.google.com/spreadsheets/d/1GQvSrFTnYREAJ-7rrAU9r9ky10ybeIdH7j0zz63YTwU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
-                📊 View All Listed Organizations
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
-            </Button>
           </div>
         </div>
       </section>
