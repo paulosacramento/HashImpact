@@ -8,7 +8,6 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -296,9 +295,7 @@ const Index = () => {
                     <Zap className="w-8 h-8 text-orange-500" />
                   </div>
                 </div>
-                <CardTitle className="text-xl font-semibold text-white">
-                  Get Your Bitaxe Ready
-                </CardTitle>
+                <CardTitle className="text-xl font-semibold text-white">Get Your Miner Ready</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 leading-relaxed">
