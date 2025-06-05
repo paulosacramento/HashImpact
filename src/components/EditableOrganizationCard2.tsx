@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink, Mail, Twitter } from "lucide-react";
@@ -71,8 +72,7 @@ export const EditableOrganizationCard2 = () => {
         <div className="flex gap-2">
           <Button 
             size="sm" 
-            variant="outline"
-            className="flex-1 text-xs border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/20"
+            className="flex-1 text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all"
             asChild
           >
             <a href={`mailto:${organization.email}`}>
@@ -82,8 +82,7 @@ export const EditableOrganizationCard2 = () => {
           </Button>
           <Button 
             size="sm" 
-            variant="outline"
-            className="flex-1 text-xs border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/20"
+            className="flex-1 text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all"
             asChild
           >
             <a href={organization.twitter} target="_blank" rel="noopener noreferrer">
