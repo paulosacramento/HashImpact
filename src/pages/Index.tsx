@@ -766,7 +766,7 @@ const Index = () => {
 
           <div className="text-center">
             <Button size="lg" variant="outline" className="bg-slate-800/50 hover:bg-slate-700/50 px-8 py-3 text-lg border-2 border-yellow-500/50 text-yellow-400 hover:text-yellow-300" asChild>
-              <a href="https://signal.me/#eu/bnRkjd73ME2K7HCY6S84pLJCtpJUyH0FkJPbbOegZNL0ePlxjcZL0KvegXtJpIfI" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:hashimpact@proton.me" target="_blank" rel="noopener noreferrer">
                 Get in Touch
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
