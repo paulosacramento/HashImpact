@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -430,6 +429,65 @@ const Privacy = () => {
               <li>Your infringement of third-party rights (including intellectual property or privacy rights).</li>
               <li>Any payment disputes or disputes with Donors involving Bitcoin transfers.</li>
             </ul>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">12. Termination</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Termination by HashImpact</h3>
+            
+            <p className="mb-4">
+              HashImpact may, at its sole discretion, suspend or terminate your access to the Platform (or any part thereof) at any time, with or without notice, for any reason, including but not limited to violation of these Terms, failure to pass the Background Check, or suspected fraud.
+            </p>
+            
+            <p className="mb-6">
+              <strong className="text-white">Immediate Removal:</strong> HashImpact may remove any Organization's listing or any Donor-related content (e.g., blockchain-derived donation records associated with a profile) from the Platform at any time, for any reason or no reason, without prior notice or explanation.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Effect of Termination</h3>
+            
+            <p className="mb-4">Upon termination:</p>
+            
+            <ul className="list-disc list-inside mb-6 space-y-2">
+              <li>The Organization's profile and associated Lightning Address will be removed from public view.</li>
+              <li>Donors will no longer be able to view or send Donations through the removed profiles.</li>
+              <li>Any outstanding Background Check or due-diligence processes related to the Organization will cease.</li>
+              <li>All licenses granted under these Terms will immediately terminate.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Survival</h3>
+            
+            <p className="mb-6">
+              Sections 3 (Background Check), 4 (Organizational Information), 5 (Donor Responsibilities & Disclosures), 7 (Payments and Lightning Addresses), 8 (Intellectual Property), 9 (Confidentiality & Data Security), 10 (Privacy Considerations), 11 (Disclaimers and Limitation of Liability), and 12.3 (Survival) survive any termination of these Terms.
+            </p>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">13. Governing Law and Dispute Resolution</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Governing Law</h3>
+            
+            <p className="mb-6">
+              These Terms shall be governed by and construed in accordance with the laws of the Federal Republic of Germany, without regard to conflicts of law principles.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Dispute Resolution</h3>
+            
+            <p className="mb-6">
+              Any dispute, controversy, or claim arising out of or relating to these Terms—between HashImpact, Organizations, or Donors, including the breach, termination, or validity thereof—shall be finally settled by binding arbitration in Berlin, Germany, under the Rules of Arbitration of the German Institution of Arbitration (DIS). The language of the arbitration shall be English.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Equitable Relief</h3>
+            
+            <p className="mb-6">
+              Notwithstanding the foregoing, HashImpact may seek injunctive or other equitable relief in any court of competent jurisdiction to protect its intellectual property or confidential information, without first exhausting arbitration remedies.
+            </p>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">14. Amendments and Updates</h2>
+            
+            <p className="mb-4">
+              We may revise these Terms at any time by posting an updated version on the Platform. The "Last updated" date at the top indicates when the most recent changes took effect.
+            </p>
+            
+            <p className="mb-6">
+              If changes materially affect your rights or obligations—whether you are an Organization or a Donor—we will use reasonable efforts to notify you (e.g., via email or prominent notice on the Platform). Continued use after notice constitutes acceptance of the updated Terms.
+            </p>
 
             <div className="text-center mt-12 pt-8 border-t border-gray-600">
               <p className="text-gray-400 mb-4">
