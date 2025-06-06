@@ -489,6 +489,66 @@ const Privacy = () => {
               If changes materially affect your rights or obligations—whether you are an Organization or a Donor—we will use reasonable efforts to notify you (e.g., via email or prominent notice on the Platform). Continued use after notice constitutes acceptance of the updated Terms.
             </p>
 
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">15. Miscellaneous</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Entire Agreement</h3>
+            
+            <p className="mb-6">
+              These Terms (including any referenced policies) constitute the entire agreement between you (Organization or Donor) and HashImpact regarding your use of the Platform, superseding all prior or contemporaneous agreements, whether written or oral.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Severability</h3>
+            
+            <p className="mb-6">
+              If any provision of these Terms is held invalid or unenforceable, that provision shall be deemed superseded to the minimum extent necessary to make the remainder of these Terms valid and enforceable.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Waiver</h3>
+            
+            <p className="mb-6">
+              No waiver of any term or breach shall be deemed a waiver of any prior or subsequent breach. All waivers must be in writing and signed by a duly authorized representative of HashImpact.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Assignment</h3>
+            
+            <p className="mb-6">
+              Organizations and Donors may not assign or transfer their rights or obligations under these Terms, in whole or in part, without HashImpact's prior written consent. HashImpact may assign its rights and obligations under these Terms at any time without notice.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Notices</h3>
+            
+            <p className="mb-4">
+              All notices under these Terms shall be in writing. Notices to Organizations or Donors may be delivered by posting on the Platform or via any blockchain-related communication mechanisms only for Organizations. Notices to HashImpact should be sent to:
+            </p>
+            
+            <div className="bg-slate-700/50 p-4 rounded-lg mb-6">
+              <p className="text-white font-medium">HashImpact Team</p>
+              <p className="text-gray-300">Email: hashimpact@proton.me</p>
+            </div>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Third-Party Beneficiaries</h3>
+            
+            <p className="mb-6">
+              Nothing in these Terms, express or implied, is intended to confer any rights or remedies on any person other than the parties to these Terms (HashImpact, Organizations, and Donors).
+            </p>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">16. Contact Information</h2>
+            
+            <p className="mb-4">
+              If you have any questions or concerns about these Terms, the Privacy Considerations, or the Platform in general, please contact us at:
+            </p>
+            
+            <div className="bg-slate-700/50 p-6 rounded-lg mb-6">
+              <p className="text-white font-medium text-lg">HashImpact Team</p>
+              <p className="text-gray-300">Email: hashimpact@proton.me</p>
+            </div>
+            
+            <div className="bg-yellow-500/10 border border-yellow-500/30 p-6 rounded-lg mb-8">
+              <p className="text-yellow-100 font-medium">
+                By accessing the Platform or sending Donations, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions and the accompanying Privacy Considerations.
+              </p>
+            </div>
+
             <div className="text-center mt-12 pt-8 border-t border-gray-600">
               <p className="text-gray-400 mb-4">
                 This is a condensed version of our terms. For the complete terms and conditions, please contact us.
