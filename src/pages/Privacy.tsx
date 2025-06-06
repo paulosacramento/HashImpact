@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -139,7 +138,97 @@ const Privacy = () => {
               <li><strong className="text-white">No Warranty:</strong> HashImpact does not guarantee the accuracy or completeness of any information about Organizations. Donors should conduct their own due diligence before contributing.</li>
             </ul>
 
-            {/* Continue with remaining sections... */}
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">4. Organizational Information and Public Display</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Representation of Information</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>By registering, the Organization authorizes HashImpact to display all submitted User Information (e.g., name, mission, Bitcoin-related activities, key participants, Lightning Address) on the Platform, accessible to visitors worldwide.</li>
+              <li>The Organization guarantees it holds all necessary rights to share the information and that publication will not infringe third-party rights.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Accuracy and Updates</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>The Organization is responsible for ensuring its displayed information remains accurate and up to date, including any changes in mission, Bitcoin-related initiatives, leadership, contact details, or Lightning Address.</li>
+              <li>If any material fact changes (e.g., dissolution of the group, change of Lightning Address), the Organization must notify HashImpact.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Lightning Address Publication</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>To receive Bitcoin Lightning Donations from Donors via the Platform, the Organization agrees to have its Lightning Address publicly listed.</li>
+              <li>HashImpact is not responsible for unauthorized use of the Lightning Address or any payments sent to an incorrect address. The Organization is solely responsible for monitoring its Lightning wallet.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Right to Modify or Remove Information</h3>
+            
+            <ul className="list-disc list-inside mb-6 space-y-2">
+              <li>HashImpact may, at any time and for any reason, modify, suspend, or remove any portion of an Organization's publicly displayed information—including the Lightning Address—without notice or explanation.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">5. Donor Responsibilities & Disclosures</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Donor Conduct and Awareness</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li><strong className="text-white">Sole Responsibility:</strong> Donors acknowledge they are solely responsible for deciding whether to make, continue, or stop any Donations. HashImpact does not endorse or guarantee any Organization's actions, and Donors remain free to cease contributions at any time.</li>
+              <li><strong className="text-white">Independent Judgment:</strong> Donors should exercise independent judgment and research before sending Bitcoin. HashImpact does not provide investment, tax, legal, or financial advice.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Donation Process</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Donors will select an Organization's Lightning Address listed on its profile and send any amount of Bitcoin via Lightning Network.</li>
+              <li>HashImpact acts solely as an information provider and does not intermediate, custody, or process the funds. Donations are peer-to-peer transfers directly from the Donor's Lightning wallet to the Organization's Lightning wallet.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Irreversibility and Risk</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Bitcoin Lightning transactions are irreversible. Once a Donation is sent, it cannot be reversed, refunded, or cancelled by HashImpact or by the Organization.</li>
+              <li>Donors are aware that the Organization may misuse funds, act contrary to its stated purpose, or cease operating at any time. HashImpact disclaims any liability for such misuse or misconduct.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Tax and Legal Considerations</h3>
+            
+            <ul className="list-disc list-inside mb-6 space-y-2">
+              <li>Donors are solely responsible for determining the tax and legal implications of their Donations in their jurisdiction. HashImpact is not a tax advisor and does not provide legal or financial advice.</li>
+              <li>Donors should consult their own tax professionals regarding the deductible status of Bitcoin donations or reporting requirements.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">6. Use of the Platform & Prohibited Conduct</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Permitted Use</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Organizations may use the Platform to share mission statements, detailed descriptions of Bitcoin-related projects, request Bitcoin-denominated funding via Lightning Address, and connect with Donors.</li>
+              <li>Donors may use the Platform to discover, evaluate, and send Bitcoin Lightning Donations to Organizations without providing personal information.</li>
+              <li>All users agree to comply with local, national, and international laws regarding cryptocurrency transactions and non-profit or charitable activity.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Prohibited Activities</h3>
+            
+            <p className="mb-4">
+              <strong className="text-white">You shall not:</strong>
+            </p>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Submit false, misleading, or fraudulent information as an Organization or Donor.</li>
+              <li>Impersonate any person or misrepresent your affiliation, non-profit orientation, or Bitcoin-related role.</li>
+              <li>Use the Platform to promote hate speech, violence, illegal activities, or content that infringes on others' rights.</li>
+              <li>Attempt to hack, reverse engineer, or otherwise tamper with the Platform's security or features.</li>
+              <li>Harvest or collect information about other users or Organizations for unauthorized purposes.</li>
+              <li>Solicit or accept Donations in currencies other than Bitcoin if representing an Organization on the Platform.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Consequences of Prohibited Conduct</h3>
+            
+            <ul className="list-disc list-inside mb-6 space-y-2">
+              <li>Violation of these Terms may result in immediate suspension or removal from the Platform, with or without notice.</li>
+              <li>HashImpact reserves the right to report any illicit or illegal activities to law enforcement and regulatory authorities.</li>
+            </ul>
+
             <div className="text-center mt-12 pt-8 border-t border-gray-600">
               <p className="text-gray-400 mb-4">
                 This is a condensed version of our terms. For the complete terms and conditions, please contact us.
