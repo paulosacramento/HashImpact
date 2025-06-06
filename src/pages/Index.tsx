@@ -8,7 +8,6 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
-import { Link } from "react-router-dom";
 const Index = () => {
   const steps = [{
     number: "01",
@@ -788,8 +787,8 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
             <a href="mailto:hashimpact@proton.me" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">Contact</a>
             <span>|</span>
-            <Link to="/privacy" className="hover:text-yellow-400 transition-colors">Privacy</Link>
-            <span>|</span>
+            <a href="#privacy" className="hover:text-yellow-400 transition-colors">Privacy</a>
+            <span className="">|</span>
             <a href="https://github.com/paulosacramento/HashImpact" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">GitHub</a>
           </div>
         </div>
