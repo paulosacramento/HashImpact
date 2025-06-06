@@ -326,7 +326,7 @@ const Index = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 leading-relaxed">Pick a mining pool that lets you set a custom payout Lightning address, such as Braiins. Watch the video until 29:10. IMPORTANT: Instructions for connecting to the Ocean pool are currently being prepared, as it offers a more decentralized alternative to Braiins.</p>
+                <p className="text-gray-300 leading-relaxed">Pick a mining pool that lets you set a custom payout Lightning address, such as Braiins. Watch the video until 29:10.</p>
                 <Button variant="link" className="mt-3 p-0 h-auto text-yellow-400 hover:text-yellow-300" asChild>
                   <a href="https://youtu.be/jC-Wp4J4Jb4?si=2CY4vADA8fnIefVe&t=1294" target="_blank" rel="noopener noreferrer">
                     View full Braiins tutorial
