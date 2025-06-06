@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -390,6 +391,45 @@ const Privacy = () => {
             <p className="mb-6">
               Because HashImpact operates globally, personal data collected may be stored and processed outside your country of residence. By using the Platform, you consent to such transfers. We take steps to ensure data receives adequate protection per applicable laws.
             </p>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">11. Disclaimers and Limitation of Liability</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">No Warranties</h3>
+            
+            <p className="mb-6">
+              The Platform is provided "as is" and "as available." HashImpact makes no warranties or representations of any kind, whether express or implied, regarding the operation of the Platform, accuracy of content, or freedom from viruses or other harmful components.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Limitation of Liability</h3>
+            
+            <p className="mb-4">
+              To the fullest extent permitted by law, in no event shall HashImpact, its affiliates, officers, directors, employees, or agents be liable for any indirect, incidental, consequential, special, or punitive damages (including lost Bitcoin donations, lost goodwill, or data) arising out of or in connection with these Terms or your use of (or inability to use) the Platform.
+            </p>
+            
+            <p className="mb-4">
+              In no event shall HashImpact's total liability to you for all damages, losses, and causes of action arising out of or relating to these Terms exceed USD 1,000.
+            </p>
+            
+            <p className="mb-4">
+              <strong className="text-white">No Liability for Misuse by Organizations:</strong> HashImpact endeavors to vet Organizations via a reputation-based approach, but cannot guarantee they will use funds responsibly. HashImpact is not liable for any Organization's misuse of funds, nor for any consequences resulting from Donors' decisions to contribute.
+            </p>
+            
+            <p className="mb-6">
+              <strong className="text-white">Donor Responsibility:</strong> Donors are solely responsible for deciding to make, continue, or stop any Donations. HashImpact disclaims all liability for contributions that Donors make to Organizations.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Indemnification</h3>
+            
+            <p className="mb-4">
+              You agree to indemnify, defend, and hold harmless HashImpact and its officers, directors, employees, agents, successors, and assigns from and against any and all claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or in any way connected with:
+            </p>
+            
+            <ul className="list-disc list-inside mb-6 space-y-2">
+              <li>Your breach of these Terms.</li>
+              <li>Your violation of any applicable law or regulation.</li>
+              <li>Your infringement of third-party rights (including intellectual property or privacy rights).</li>
+              <li>Any payment disputes or disputes with Donors involving Bitcoin transfers.</li>
+            </ul>
 
             <div className="text-center mt-12 pt-8 border-t border-gray-600">
               <p className="text-gray-400 mb-4">
