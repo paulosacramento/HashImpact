@@ -8,7 +8,6 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
-import { Link } from "react-router-dom";
 const Index = () => {
   const steps = [{
     number: "01",
@@ -767,7 +766,7 @@ const Index = () => {
 
           <div className="text-center">
             <Button size="lg" variant="outline" className="bg-slate-800/50 hover:bg-slate-700/50 px-8 py-3 text-lg border-2 border-yellow-500/50 text-yellow-400 hover:text-yellow-300" asChild>
-              <a href="mailto:hashimpact@proton.me">
+              <a href="https://signal.me/#eu/bnRkjd73ME2K7HCY6S84pLJCtpJUyH0FkJPbbOegZNL0ePlxjcZL0KvegXtJpIfI" target="_blank" rel="noopener noreferrer">
                 Get in Touch
                 <ExternalLink className="w-4 h-4 ml-2" />
               </a>
@@ -788,7 +787,7 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
             <a href="mailto:hashimpact@proton.me" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">Contact</a>
             <span>|</span>
-            <Link to="/privacy" className="hover:text-yellow-400 transition-colors">Privacy</Link>
+            <a href="#privacy" className="hover:text-yellow-400 transition-colors">Terms & Conditions</a>
             <span>|</span>
             <a href="https://github.com/paulosacramento/HashImpact" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">GitHub</a>
           </div>
