@@ -229,6 +229,168 @@ const Privacy = () => {
               <li>HashImpact reserves the right to report any illicit or illegal activities to law enforcement and regulatory authorities.</li>
             </ul>
 
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">7. Payments and Lightning Addresses</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Payment Mechanism</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>All Donations facilitated through the Platform occur over the Bitcoin Lightning Network, using the Lightning Address provided by the Organization.</li>
+              <li>HashImpact does not custody, process, or intermediate any funds; all funds transmitted via Lightning are sent directly from the Donor's wallet to the Organization's wallet.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Fees</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>HashImpact does not charge any listing or platform fees for Organizations or Donors. However, individual payment processors or Lightning node operators may apply network fees when sending or receiving Lightning payments.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Disclaimers</h3>
+            
+            <p className="mb-4">
+              <strong className="text-white">HashImpact is not responsible for:</strong>
+            </p>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Technical issues on the Lightning Network or Bitcoin blockchain.</li>
+              <li>Failed or incorrect Donations due to user error (e.g., mistyped Lightning Address).</li>
+              <li>Volatility of Bitcoin's price or exchange rates between Bitcoin and fiat currencies.</li>
+            </ul>
+            
+            <p className="mb-4">
+              <strong className="text-white">No Liability for Misuse by Organizations:</strong> HashImpact endeavors to vet Organizations via a reputation-based approach, but cannot guarantee they will use funds responsibly. HashImpact is not liable for any Organization's misuse of funds, nor for any consequences resulting from Donors' decisions to contribute.
+            </p>
+            
+            <p className="mb-4">
+              <strong className="text-white">Donor Responsibility:</strong> Donors are solely responsible for deciding to make, continue, or stop any Donations. HashImpact disclaims all liability for contributions that Donors make to Organizations.
+            </p>
+            
+            <p className="mb-6">
+              The Organization indemnifies and holds HashImpact harmless from any claim, liability, loss, or expense arising from payment disputes or errors.
+            </p>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">8. Intellectual Property</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Open Source Software (MIT License)</h3>
+            
+            <p className="mb-6">
+              The core Platform software—its source code, libraries, and associated scripts—is made available under the MIT License. You are free to view, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, provided that you include the original MIT License text and copyright notice in all substantial portions of the software.
+            </p>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">9. Confidentiality & Data Security</h2>
+            
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Confidential Information</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>Confidential Information includes (but is not limited to) any non-public business, financial, or technical information disclosed by either party during the Background Check or Platform interactions (e.g., budgets, internal Bitcoin infrastructure plans).</li>
+              <li>Each party agrees to keep the other's Confidential Information confidential and to use it solely to fulfill its obligations under these Terms.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Data Security Measures</h3>
+            
+            <p className="mb-4">
+              HashImpact implements reasonable administrative, technical, and physical safeguards to protect User Information—both Organizations' and any limited metadata from Donations—against unauthorized access, disclosure, or misuse. However, no system is completely secure, and we cannot guarantee absolute security.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">Breach Notification</h3>
+            
+            <p className="mb-6">
+              In the event of a data breach affecting Users' personal data, HashImpact will notify affected parties and relevant authorities in accordance with applicable laws and regulations.
+            </p>
+
+            <h2 className="text-2xl font-bold text-yellow-400 mt-8 mb-4">10. Privacy Considerations</h2>
+            
+            <p className="mb-6">
+              HashImpact commits to protecting the privacy of Organizations and maintaining that Donors remain anonymous. This section summarizes how we handle any data on the Platform.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">10.1. Information We Collect</h3>
+            
+            <h4 className="text-lg font-semibold text-yellow-300 mt-4 mb-2">Organizations:</h4>
+            
+            <p className="mb-4">
+              We collect Organization-provided data: name, mission statement, description of Bitcoin-related activities, website or social-media links (if available), leadership or key participant contact details (names, email addresses), Lightning Address, and any additional onboarding information (e.g., letters of support, project reports).
+            </p>
+            
+            <h4 className="text-lg font-semibold text-yellow-300 mt-4 mb-2">Donors:</h4>
+            
+            <p className="mb-6">
+              HashImpact does not collect, store, or track any personal information about Donors.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">10.2. How We Use Information</h3>
+            
+            <h4 className="text-lg font-semibold text-yellow-300 mt-4 mb-2">Organizations:</h4>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>To verify Bitcoin-related non-profit orientation, display Organization profiles, and facilitate receipt of Bitcoin Lightning Donations.</li>
+              <li>To send registration confirmations, security alerts, and other transactional messages.</li>
+            </ul>
+            
+            <h4 className="text-lg font-semibold text-yellow-300 mt-4 mb-2">Donors:</h4>
+            
+            <p className="mb-4">
+              Since no personal data is collected, HashImpact does not use donor information. Donations occur peer-to-peer on Lightning.
+            </p>
+            
+            <h4 className="text-lg font-semibold text-yellow-300 mt-4 mb-2">Platform Improvement:</h4>
+            
+            <p className="mb-4">
+              Usage patterns from Organizations and anonymous analytics help us troubleshoot issues and improve the Platform.
+            </p>
+            
+            <h4 className="text-lg font-semibold text-yellow-300 mt-4 mb-2">Legal Compliance:</h4>
+            
+            <p className="mb-6">
+              To comply with legal obligations, respond to lawful requests from public authorities, or establish, exercise, or defend legal claims.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">10.3. How We Share Information</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li><strong className="text-white">Public Display:</strong> The Organization's profile information (e.g., mission statement, Bitcoin-related activities, Lightning Address) will be publicly accessible on the Platform.</li>
+              <li><strong className="text-white">Service Providers:</strong> We may share limited Organization data with third-party service providers who perform functions on our behalf (e.g., hosting, analytics, Background Check vendors). These providers are contractually obligated to protect your data and use it only for specified purposes.</li>
+              <li><strong className="text-white">Legal Disclosures:</strong> We may disclose information if required by law, regulation, legal process, or government request, or to protect our rights, privacy, safety, or property.</li>
+              <li><strong className="text-white">Donor Anonymity:</strong> We do not share any donor-related data with any third parties.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">10.4. Data Retention</h3>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li>We retain Organization data only as long as necessary to fulfill the purposes outlined in this Policy, including ongoing compliance, legal obligations, dispute resolution, and enforcement of our agreements.</li>
+              <li>Donor information is not stored; any blockchain records remain in the Bitcoin Lightning ecosystem and are not held by HashImpact.</li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">10.5. Your Rights</h3>
+            
+            <p className="mb-4">
+              Subject to applicable law, Organizations may have the right to:
+            </p>
+            
+            <ul className="list-disc list-inside mb-4 space-y-2">
+              <li><strong className="text-white">Access:</strong> Request a copy of the personal data we hold about organization representatives.</li>
+              <li><strong className="text-white">Rectify:</strong> Correct inaccuracies in personal data.</li>
+              <li><strong className="text-white">Erase:</strong> Request deletion of personal data in certain circumstances.</li>
+              <li><strong className="text-white">Restrict Processing:</strong> Request that we limit how we use personal data.</li>
+              <li><strong className="text-white">Data Portability:</strong> Obtain a copy of personal data in a structured, machine-readable format.</li>
+              <li><strong className="text-white">Object:</strong> Object to processing for direct marketing or profiling.</li>
+            </ul>
+            
+            <p className="mb-6">
+              To exercise these rights, please contact privacy@hashimpact.org. We may require verification of identity before processing such requests.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">10.6. Children's Privacy</h3>
+            
+            <p className="mb-6">
+              The Platform is not intended for organizations or individuals under the age of 16. We do not knowingly collect personal data from minors.
+            </p>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">10.7. International Data Transfers</h3>
+            
+            <p className="mb-6">
+              Because HashImpact operates globally, personal data collected may be stored and processed outside your country of residence. By using the Platform, you consent to such transfers. We take steps to ensure data receives adequate protection per applicable laws.
+            </p>
+
             <div className="text-center mt-12 pt-8 border-t border-gray-600">
               <p className="text-gray-400 mb-4">
                 This is a condensed version of our terms. For the complete terms and conditions, please contact us.
