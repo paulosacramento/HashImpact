@@ -785,7 +785,7 @@ const Index = () => {
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-            <a href="hashimpact@proton.me" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">Contact</a>
+            <a href="mailto:hashimpact@proton.me" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">Contact</a>
             <span>|</span>
             <a href="#privacy" className="hover:text-yellow-400 transition-colors">Privacy</a>
             <span>|</span>
