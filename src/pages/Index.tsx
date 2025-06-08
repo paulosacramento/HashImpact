@@ -8,7 +8,9 @@ import { PartnerCard } from "@/components/PartnerCard";
 import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
 import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
+import { ScrollIndicator } from "@/components/ScrollIndicator";
 import { Link } from "react-router-dom";
+
 const Index = () => {
   const steps = [{
     number: "01",
@@ -120,6 +122,9 @@ const Index = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-amber-400/20 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)]"></div>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <ScrollIndicator variant="primary" />
       </section>
 
       {/* Mission Section */}
@@ -225,6 +230,9 @@ const Index = () => {
             </Card>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <ScrollIndicator variant="secondary" />
       </section>
 
       {/* Impact Calculation Section */}
@@ -382,6 +390,9 @@ const Index = () => {
             </Card>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <ScrollIndicator variant="primary" className="text-amber-400 hover:text-amber-300" />
       </section>
 
       {/* Pledge Generator */}
@@ -796,4 +807,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
