@@ -10,7 +10,6 @@ import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard
 import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
 import { ScrollIndicator } from "@/components/ScrollIndicator";
 import { Link } from "react-router-dom";
-
 const Index = () => {
   const steps = [{
     number: "01",
@@ -638,7 +637,9 @@ const Index = () => {
                   Organisations in what countries are not eligible?
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300 leading-relaxed">
-                  <p className="mb-3">Due to a significantly higher cost-of-living index—which would undermine the "small sats, big impact" thesis—nonprofits based in the following countries or territories are not currently featured:</p>
+                  <p className="mb-3">Hashimpact primarily evaluates candidates based on the cost-of-living index of the country in which they operate. When the cost-of-living index is relatively high, our contribution model cannot deliver meaningful impact, so organisations from those countries are excluded.
+
+We also do not consider organisations based in countries under UN Security Council or U.S. OFAC sanctions, in order to avoid providing any form of support or legitimisation to regimes associated with war, violence or repression. The list of ineligible countries is as follows:</p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 text-sm">
                     <span>Afghanistan</span>
                     <span>Andorra</span>
@@ -807,5 +808,4 @@ const Index = () => {
       </footer>
     </div>;
 };
-
 export default Index;
