@@ -538,7 +538,6 @@ const Index = () => {
                 <AccordionContent className="text-gray-300 leading-relaxed">
                   <p className="mb-3">HashImpact focuses on nonprofits operating in lower-income or emerging-market economies, where a modest Bitcoin stream can create outsized impact. The current eligibility list includes:</p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 text-sm">
-                    <span>Afghanistan</span>
                     <span>Albania</span>
                     <span>Algeria</span>
                     <span>Angola</span>
@@ -557,12 +556,10 @@ const Index = () => {
                     <span>Cambodia</span>
                     <span>Cameroon</span>
                     <span>Cape Verde</span>
-                    <span>Central African Republic</span>
                     <span>Chad</span>
                     <span>China</span>
                     <span>Colombia</span>
                     <span>Comoros</span>
-                    <span>Democratic Republic of the Congo</span>
                     <span>Republic of the Congo</span>
                     <span>Djibouti</span>
                     <span>Dominica</span>
@@ -584,18 +581,14 @@ const Index = () => {
                     <span>Honduras</span>
                     <span>India</span>
                     <span>Indonesia</span>
-                    <span>Iran</span>
-                    <span>Iraq</span>
                     <span>Ivory Coast</span>
                     <span>Jamaica</span>
                     <span>Jordan</span>
                     <span>Kenya</span>
                     <span>Kyrgyzstan</span>
                     <span>Laos</span>
-                    <span>Lebanon</span>
                     <span>Lesotho</span>
                     <span>Liberia</span>
-                    <span>Libya</span>
                     <span>Madagascar</span>
                     <span>Malawi</span>
                     <span>Mali</span>
@@ -619,11 +612,8 @@ const Index = () => {
                     <span>São Tomé and Príncipe</span>
                     <span>Senegal</span>
                     <span>Sierra Leone</span>
-                    <span>Somalia</span>
                     <span>South Africa</span>
-                    <span>South Sudan</span>
                     <span>Sri Lanka</span>
-                    <span>Sudan</span>
                     <span>Suriname</span>
                     <span>Syria</span>
                     <span>Tajikistan</span>
@@ -650,6 +640,7 @@ const Index = () => {
                 <AccordionContent className="text-gray-300 leading-relaxed">
                   <p className="mb-3">Due to a significantly higher cost-of-living index—which would undermine the "small sats, big impact" thesis—nonprofits based in the following countries or territories are not currently featured:</p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-1 text-sm">
+                    <span>Afghanistan</span>
                     <span>Andorra</span>
                     <span>Antigua and Barbuda</span>
                     <span>Argentina</span>
@@ -666,12 +657,14 @@ const Index = () => {
                     <span>Bulgaria</span>
                     <span>Canada</span>
                     <span>Cayman Islands</span>
+                    <span>Central African Republic</span>
                     <span>Chile</span>
                     <span>Costa Rica</span>
                     <span>Croatia</span>
                     <span>Curaçao</span>
                     <span>Cyprus</span>
                     <span>Czechia</span>
+                    <span>Democratic Republic of the Congo</span>
                     <span>Denmark</span>
                     <span>Dominican Republic</span>
                     <span>Estonia</span>
@@ -687,6 +680,8 @@ const Index = () => {
                     <span>Hong Kong SAR, China</span>
                     <span>Hungary</span>
                     <span>Iceland</span>
+                    <span>Iran</span>
+                    <span>Iraq</span>
                     <span>Ireland</span>
                     <span>Israel</span>
                     <span>Italy</span>
@@ -697,6 +692,8 @@ const Index = () => {
                     <span>Kosovo</span>
                     <span>Kuwait</span>
                     <span>Latvia</span>
+                    <span>Lebanon</span>
+                    <span>Libya</span>
                     <span>Lithuania</span>
                     <span>Luxembourg</span>
                     <span>Macao SAR, China</span>
@@ -732,10 +729,13 @@ const Index = () => {
                     <span>Slovak Republic</span>
                     <span>Slovenia</span>
                     <span>Solomon Islands</span>
+                    <span>Somalia</span>
+                    <span>South Sudan</span>
                     <span>Spain</span>
                     <span>St. Kitts and Nevis</span>
                     <span>St. Lucia</span>
                     <span>St. Vincent and the Grenadines</span>
+                    <span>Sudan</span>
                     <span>Sweden</span>
                     <span>Switzerland</span>
                     <span>Tonga</span>
