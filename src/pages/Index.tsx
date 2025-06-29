@@ -483,14 +483,7 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-4" className="border-gray-700">
-                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
-                  What is a Lightning address, and is it safe to use?
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-300 leading-relaxed">
-                  A Lightning address looks like an email (e.g., donate@bitcoinedu.org). It routes payments over the Lightning Network, which is fast, low-fee, and well suited for micro-donations. Using a nonprofit's Lightning address is as secure as sending any Lightning payment.
-                </AccordionContent>
-              </AccordionItem>
+              
 
               <AccordionItem value="item-5" className="border-gray-700">
                 <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
@@ -501,14 +494,7 @@ const Index = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="item-6" className="border-gray-700">
-                <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
-                  What if Bitcoin's price or network difficulty changes?
-                </AccordionTrigger>
-                <AccordionContent className="text-gray-300 leading-relaxed">
-                  Your miner's hashrate stays the same, but fiat value fluctuates. Think of the donation in sats, not dollars; organizations will receive the actual BTC amount you mine, regardless of price swings. You can always pause or adjust your pledge if economics change dramatically.
-                </AccordionContent>
-              </AccordionItem>
+              
 
               <AccordionItem value="item-7" className="border-gray-700">
                 <AccordionTrigger className="text-white hover:text-yellow-400 text-left">
