@@ -752,15 +752,15 @@ We also do not consider organisations based in countries under UN Security Counc
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {companyLogos.map((company, index) => <div key={index} className="flex flex-col items-center">
-                <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
-                  <img src={company.logo} alt={`${company.name} logo`} className="w-24 h-24 object-cover rounded-lg" />
-                </div>
-                <p className="text-center text-sm text-gray-300 max-w-xs">
-                  {company.name}
-                </p>
-              </div>)}
+          <div className="flex justify-center mb-12">
+            <div className="flex flex-col items-center">
+              <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
+                <img src={companyLogos[0].logo} alt={`${companyLogos[0].name} logo`} className="w-24 h-24 object-cover rounded-lg" />
+              </div>
+              <p className="text-center text-sm text-gray-300 max-w-xs">
+                {companyLogos[0].name}
+              </p>
+            </div>
           </div>
 
           <div className="text-center">
