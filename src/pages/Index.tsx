@@ -124,11 +124,11 @@ const Index = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <ScrollIndicator variant="primary" />
+        <ScrollIndicator variant="primary" targetId="mission" />
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
+      <section id="mission" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Mission */}
@@ -232,11 +232,11 @@ const Index = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <ScrollIndicator variant="secondary" />
+        <ScrollIndicator variant="secondary" targetId="organizations" />
       </section>
 
       {/* Impact Calculation Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-y border-green-500/20">
+      <section id="impact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-y border-green-500/20">
         <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center rounded-full bg-green-500/20 px-6 py-3 text-sm font-medium text-green-400 mb-8 border border-green-500/30">
             <Target className="w-5 h-5 mr-2" />
@@ -262,7 +262,7 @@ const Index = () => {
       </section>
 
       {/* Featured Organizations - Moved to second position */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
+      <section id="organizations" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
@@ -392,11 +392,11 @@ const Index = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <ScrollIndicator variant="primary" className="text-amber-400 hover:text-amber-300" />
+        <ScrollIndicator variant="primary" className="text-amber-400 hover:text-amber-300" targetId="pledge" />
       </section>
 
       {/* Pledge Generator */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
+      <section id="pledge" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Make Your Pledge</h2>
