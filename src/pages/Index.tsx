@@ -50,8 +50,9 @@ const Index = () => {
   }];
   // Random company logos with 1:1 aspect ratio
   const companyLogos = [{
-    name: "Bitcoin Design Community",
-    logo: "/lovable-uploads/ac2c1c00-76fb-4ea0-b819-92b9515ef4d1.png"
+    name: "Geyser Fund",
+    logo: "/lovable-uploads/c84394c5-6d82-4f32-a3a4-905851d3141e.png",
+    url: "https://geyser.fund"
   }, {
     name: "256 Foundation",
     logo: "/lovable-uploads/954001e3-627d-40c4-a3bb-012085857025.png"
@@ -754,9 +755,9 @@ We also do not consider organisations based in countries under UN Security Counc
 
           <div className="flex justify-center mb-12">
             <div className="flex flex-col items-center">
-              <div className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
+              <a href={companyLogos[0].url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow mb-4">
                 <img src={companyLogos[0].logo} alt={`${companyLogos[0].name} logo`} className="w-24 h-24 object-cover rounded-lg" />
-              </div>
+              </a>
               <p className="text-center text-sm text-gray-300 max-w-xs">
                 {companyLogos[0].name}
               </p>
