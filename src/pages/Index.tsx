@@ -238,10 +238,7 @@ const Index = () => {
       {/* Impact Calculation Section */}
       <section id="impact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-y border-green-500/20">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center rounded-full bg-green-500/20 px-6 py-3 text-sm font-medium text-green-400 mb-8 border border-green-500/30">
-            <Target className="w-5 h-5 mr-2" />
-            Real Impact Calculator
-          </div>
+          
           
           <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Small Contributions Add Up</h2>
           
