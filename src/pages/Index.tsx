@@ -395,7 +395,7 @@ const Index = () => {
       </section>
 
       {/* Pledge Generator */}
-      <section id="pledge" className="px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20 py-[32px]">
+      <section id="pledge" className="px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/20 to-indigo-900/20 py-[32px]">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Make Your Pledge</h2>
