@@ -280,7 +280,7 @@ const Index = () => {
       <SectionSeparator imageUrl="/lovable-uploads/df2ee800-2458-4927-a3ce-2e39bf8d7ca0.png" alt="Global Bitcoin network with mining nodes and lightning connections" />
 
       {/* Step-by-Step Guide */}
-      <section id="guide" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20">
+      <section id="guide" className="px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-900/20 to-yellow-900/20 py-0">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Step-by-Step Guide</h2>
