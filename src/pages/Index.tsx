@@ -130,6 +130,10 @@ const Index = () => {
       {/* Mission Section */}
       <section id="mission" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Our Mission & Impact</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Transforming home Bitcoin mining into a force for positive change in underserved communities worldwide</p>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Mission */}
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
