@@ -243,9 +243,7 @@ const Index = () => {
             Real Impact Calculator
           </div>
           
-          <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-            Your Mining Power in Action
-          </h2>
+          <h2 className="text-4xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Small Contributions Add Up</h2>
           
           <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl border border-green-500/20 p-8 mb-6">
             <div className="text-6xl font-bold text-green-400 mb-4">$400</div>
