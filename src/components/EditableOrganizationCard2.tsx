@@ -1,9 +1,7 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, ExternalLink, Mail, Twitter } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 export const EditableOrganizationCard2 = () => {
   const organization = {
     name: "Bitcoin Zambia",
@@ -14,18 +12,17 @@ export const EditableOrganizationCard2 = () => {
     email: "ndesanjo@gmail.com",
     twitter: "https://x.com/BitcoinZambia"
   };
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleCopyAddress = () => {
     navigator.clipboard.writeText(organization.lightningAddress);
     toast({
       title: "Lightning Address Copied!",
-      description: `${organization.lightningAddress} is ready to paste in your mining pool configuration.`,
+      description: `${organization.lightningAddress} is ready to paste in your mining pool configuration.`
     });
   };
-
-  return (
-    <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm h-full hover:bg-slate-700/80">
+  return <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm h-full hover:bg-slate-700/80">
       <CardHeader className="pb-4">
         <div className="flex items-center gap-3 mb-3">
           <div className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform relative overflow-hidden">
@@ -58,51 +55,27 @@ export const EditableOrganizationCard2 = () => {
             <code className="text-xs text-gray-300 flex-1 truncate">
               {organization.lightningAddress}
             </code>
-            <Button
-              size="sm"
-              variant="ghost"
-              onClick={handleCopyAddress}
-              className="h-6 w-6 p-0 hover:bg-yellow-500/20 text-yellow-400"
-            >
+            <Button size="sm" variant="ghost" onClick={handleCopyAddress} className="h-6 w-6 p-0 hover:bg-yellow-500/20 text-yellow-400">
               <Copy className="w-3 h-3" />
             </Button>
           </div>
         </div>
 
         <div className="flex gap-2">
-          <Button 
-            size="sm" 
-            className="flex-1 text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all"
-            asChild
-          >
-            <a href={`mailto:${organization.email}`}>
-              <Mail className="w-3 h-3 mr-1" />
-              Email
-            </a>
+          <Button size="sm" className="flex-1 text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all" asChild>
+            
           </Button>
-          <Button 
-            size="sm" 
-            className="flex-1 text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all"
-            asChild
-          >
-            <a href={organization.twitter} target="_blank" rel="noopener noreferrer">
-              <Twitter className="w-3 h-3 mr-1" />
-              X
-            </a>
+          <Button size="sm" className="flex-1 text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all" asChild>
+            
           </Button>
         </div>
 
-        <Button 
-          size="sm" 
-          className="w-full text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all"
-          asChild
-        >
+        <Button size="sm" className="w-full text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all" asChild>
           <a href={organization.url} target="_blank" rel="noopener noreferrer">
             Learn More
             <ExternalLink className="w-3 h-3 ml-1" />
           </a>
         </Button>
       </CardContent>
-    </Card>
-  );
+    </Card>;
 };
