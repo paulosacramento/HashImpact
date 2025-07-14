@@ -264,12 +264,8 @@ const Index = () => {
       <section id="organizations" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
-              Featured Organizations
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Discover some of the amazing organizations you can support with your mining rewards
-            </p>
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">Featured Projects</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">Check out the amazing projects you can support with your mining rewards on the Geyser Fund platform!</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
