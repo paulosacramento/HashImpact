@@ -268,7 +268,7 @@ const Index = () => {
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">Check out the amazing projects you can support with your mining rewards on the Geyser Fund platform!</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <EditableOrganizationCard1 />
             <EditableOrganizationCard2 />
             <EditableOrganizationCard3 />
