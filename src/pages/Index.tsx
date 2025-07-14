@@ -260,6 +260,125 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Stretching Every Satoshi Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 border-y border-blue-500/20">
+        <div className="mx-auto max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              Stretching Every Satoshi—Maximizing Micro-Donations
+            </h2>
+          </div>
+          
+          <div className="space-y-6">
+            <details className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+              <summary className="p-6 cursor-pointer list-none">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    1. Why we focus on low-cost countries
+                  </h3>
+                  <ArrowDown className="w-5 h-5 text-blue-400 group-open:rotate-180 transition-transform" />
+                </div>
+              </summary>
+              <div className="px-6 pb-6 text-gray-300 leading-relaxed">
+                <p className="mb-4">
+                  Because individual payouts are tiny—often just cents per miner each month—we partner with NGOs where the local price level index (PLI) is low. That way, every satoshi buys more:
+                </p>
+                <ul className="space-y-2 ml-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 font-semibold">Greater purchasing power:</span>
+                    <span>In a PLI = 60 country, $1 covers almost twice the goods/services compared to PLI = 120.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 font-semibold">Faster impact:</span>
+                    <span>Lower costs mean less bureaucracy and quicker aid delivery.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 font-semibold">Transparent value:</span>
+                    <span>Easy to map your tiny contribution → real-world outcome on the ground.</span>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+              <summary className="p-6 cursor-pointer list-none">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    2. What is the Price Level Index?
+                  </h3>
+                  <ArrowDown className="w-5 h-5 text-blue-400 group-open:rotate-180 transition-transform" />
+                </div>
+              </summary>
+              <div className="px-6 pb-6 text-gray-300 leading-relaxed">
+                <p className="mb-4">
+                  The PLI is a comparative cost-of-living metric (U.S. = 100 baseline).
+                </p>
+                <ul className="space-y-2 ml-4">
+                  <li>PLI &lt; 100 = cheaper than the U.S.</li>
+                  <li>PLI &gt; 100 = more expensive than the U.S.</li>
+                </ul>
+                <p className="mt-4">
+                  By selecting partners in countries with PLI &lt; 80, tiny donations translate into more doses, meals, or tools per dollar.
+                </p>
+              </div>
+            </details>
+
+            <details className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+              <summary className="p-6 cursor-pointer list-none">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    3. How this supercharges impact
+                  </h3>
+                  <ArrowDown className="w-5 h-5 text-blue-400 group-open:rotate-180 transition-transform" />
+                </div>
+              </summary>
+              <div className="px-6 pb-6 text-gray-300 leading-relaxed">
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 font-semibold">Maximized impact per donor:</span>
+                    <span>Even $0.50/month can fund a week of school supplies in PLI = 50 regions.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 font-semibold">Lean operations:</span>
+                    <span>Low-cost environments reduce admin overhead and speed up delivery.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 font-semibold">Accountable storytelling:</span>
+                    <span>We can show exactly how far each satoshi stretches in local currency.</span>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <details className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+              <summary className="p-6 cursor-pointer list-none">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                    4. Our vision: Bigger miners, bigger change
+                  </h3>
+                  <ArrowDown className="w-5 h-5 text-blue-400 group-open:rotate-180 transition-transform" />
+                </div>
+              </summary>
+              <div className="px-6 pb-6 text-gray-300 leading-relaxed">
+                <div className="mb-4">
+                  <p className="mb-2 text-blue-400 font-semibold">Scaling up —</p>
+                  <p className="mb-4">As mid- and large-scale miners join, pooled funds grow, unlocking:</p>
+                  <ul className="space-y-1 ml-4">
+                    <li>More projects supported at once</li>
+                    <li>Faster expansion into new low-PLI regions</li>
+                    <li>Economies of scale — Higher volume lets us negotiate supplier discounts.</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="mb-2 text-blue-400 font-semibold">Next phase —</p>
+                  <p>Eventually we'll broaden to higher-cost countries, backed by proven efficiency.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Organizations - Moved to second position */}
       <section id="organizations" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800 to-gray-800">
         <div className="mx-auto max-w-6xl">
@@ -366,7 +485,9 @@ const Index = () => {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-slate-800/80 backdrop-blur-sm hover:bg-slate-700/80">
               <CardHeader className="pb-4">
                 <div className="flex items-center gap-4 mb-4">
-                  
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center text-sm font-bold text-yellow-400 group-hover:scale-110 transition-transform">
+                    04
+                  </div>
                   <div className="group-hover:scale-110 transition-transform">
                     <Zap className="w-8 h-8 text-purple-500" />
                   </div>
