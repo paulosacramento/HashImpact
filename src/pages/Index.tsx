@@ -8,6 +8,7 @@ import { SectionSeparator } from "@/components/SectionSeparator";
 import { PartnerCard } from "@/components/PartnerCard";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { ScrollIndicator } from "@/components/ScrollIndicator";
+import { PLIRuler } from "@/components/PLIRuler";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 interface Organization {
@@ -379,6 +380,8 @@ const Index = () => {
               </div>
             </details>
 
+            {/* PLI Ruler */}
+            <PLIRuler />
             
           </div>
         </div>
