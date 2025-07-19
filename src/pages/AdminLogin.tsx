@@ -13,7 +13,7 @@ export default function AdminLogin() {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  const { signIn, signUp } = useAuth();
+  const { signIn } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,20 +32,6 @@ export default function AdminLogin() {
     setIsLoading(false);
   };
 
-  const handleCreateAdmin = async () => {
-    setIsLoading(true);
-    setError('');
-    
-    const { error: signUpError } = await signUp('paulosacramento@gmail.com', 'eybhxqqsfqadkltsorvy999');
-    
-    if (signUpError) {
-      setError(`Admin creation failed: ${signUpError.message}`);
-    } else {
-      setError('Admin account created! You can now login with your credentials.');
-    }
-    
-    setIsLoading(false);
-  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background p-4">
@@ -92,15 +78,6 @@ export default function AdminLogin() {
               Sign In
             </Button>
             
-            <Button 
-              type="button" 
-              variant="outline" 
-              className="w-full mt-2" 
-              onClick={handleCreateAdmin}
-              disabled={isLoading}
-            >
-              Create Admin Account (One-time setup)
-            </Button>
             
           </form>
         </CardContent>
