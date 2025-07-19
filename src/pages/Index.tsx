@@ -341,7 +341,7 @@ const Index = () => {
               </summary>
               <div className="px-6 pb-6 text-gray-300 leading-relaxed">
                 <p className="mb-4">
-                  What is the Price Level Index (PLI)? The PLI measures how expensive a country's goods and services are relative to the global average, which is set to 100. It's calculated from each country's purchasing‑power‑parity conversion factor divided by its market exchange rate, then scaled so that the world average = 100.
+                  The PLI measures how expensive a country's goods and services are relative to the global average, which is set to 100. It's calculated from each country's purchasing‑power‑parity conversion factor divided by its market exchange rate, then scaled so that the world average = 100.
                 </p>
                 <ul className="space-y-2 ml-4">
                   <li>PLI &lt; 100: On average, goods and services cost less than the world average.</li>
