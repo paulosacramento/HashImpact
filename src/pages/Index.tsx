@@ -1,16 +1,47 @@
-import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowDown, Zap, Users, Target, ExternalLink, Upload, Calendar, CheckCircle, AlertCircle, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { PledgeGenerator } from "@/components/PledgeGenerator";
 import { SectionSeparator } from "@/components/SectionSeparator";
 import { PartnerCard } from "@/components/PartnerCard";
-import { EditableOrganizationCard1 } from "@/components/EditableOrganizationCard1";
-import { EditableOrganizationCard2 } from "@/components/EditableOrganizationCard2";
-import { EditableOrganizationCard3 } from "@/components/EditableOrganizationCard3";
+import { OrganizationCard } from "@/components/OrganizationCard";
 import { ScrollIndicator } from "@/components/ScrollIndicator";
 import { Link } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+interface Organization {
+  id: string;
+  name: string;
+  country: string;
+  price_level_index: number;
+  lightning_address: string;
+  geyser_url: string;
+}
+
 const Index = () => {
+  const [organizations, setOrganizations] = useState<Organization[]>([]);
+  const [loadingOrgs, setLoadingOrgs] = useState(true);
+
+  useEffect(() => {
+    fetchOrganizations();
+  }, []);
+
+  const fetchOrganizations = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('organizations')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+      setOrganizations(data || []);
+    } catch (error) {
+      console.error('Error fetching organizations:', error);
+    } finally {
+      setLoadingOrgs(false);
+    }
+  };
   const steps = [{
     number: "01",
     title: "Get Your Gear Ready",
@@ -388,9 +419,30 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <EditableOrganizationCard1 />
-            <EditableOrganizationCard2 />
-            <EditableOrganizationCard3 />
+            {loadingOrgs ? (
+              // Loading skeleton
+              Array.from({ length: 3 }).map((_, i) => (
+                <div key={i} className="h-64 bg-slate-800/50 rounded-lg animate-pulse" />
+              ))
+            ) : organizations.length > 0 ? (
+              organizations.map((org) => (
+                <OrganizationCard key={org.id} organization={org} />
+              ))
+            ) : (
+              <div className="col-span-3 text-center text-gray-400 py-12">
+                No organizations found. Please check back later.
+              </div>
+            )}
+          </div>
+          
+          {/* Admin link for authenticated users */}
+          <div className="flex justify-center">
+            <Button variant="outline" size="sm" asChild>
+              <Link to="/admin/login" className="text-gray-400 hover:text-white">
+                <Settings className="mr-2 h-4 w-4" />
+                Admin Dashboard
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

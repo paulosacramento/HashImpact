@@ -14,7 +14,39 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      organizations: {
+        Row: {
+          country: string
+          created_at: string
+          geyser_url: string
+          id: string
+          lightning_address: string
+          name: string
+          price_level_index: number
+          updated_at: string
+        }
+        Insert: {
+          country: string
+          created_at?: string
+          geyser_url: string
+          id?: string
+          lightning_address: string
+          name: string
+          price_level_index: number
+          updated_at?: string
+        }
+        Update: {
+          country?: string
+          created_at?: string
+          geyser_url?: string
+          id?: string
+          lightning_address?: string
+          name?: string
+          price_level_index?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
