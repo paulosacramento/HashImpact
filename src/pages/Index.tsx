@@ -8,6 +8,7 @@ import { SectionSeparator } from "@/components/SectionSeparator";
 import { PartnerCard } from "@/components/PartnerCard";
 import { OrganizationCard } from "@/components/OrganizationCard";
 import { ScrollIndicator } from "@/components/ScrollIndicator";
+import { PLIRuler } from "@/components/PLIRuler";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 interface Organization {
@@ -318,11 +319,11 @@ const Index = () => {
                     <span>In a PLI = 60 country, $1 covers almost twice the goods/services compared to PLI = 120.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    
+                    <span className="text-blue-400 font-semibold">Faster impact:</span>
                     <span>Lower costs mean less bureaucracy and quicker aid delivery.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    
+                    <span className="text-blue-400 font-semibold">Transparent value:</span>
                     <span>Easy to map your tiny contribution → real-world outcome on the ground.</span>
                   </li>
                 </ul>
@@ -340,14 +341,14 @@ const Index = () => {
               </summary>
               <div className="px-6 pb-6 text-gray-300 leading-relaxed">
                 <p className="mb-4">
-                  The PLI is a comparative cost-of-living metric (U.S. = 100 baseline).
+                  The PLI measures how expensive a country's goods and services are relative to the global average, which is set to 100. It's calculated from each country's purchasing‑power‑parity conversion factor divided by its market exchange rate, then scaled so that the world average = 100.
                 </p>
                 <ul className="space-y-2 ml-4">
-                  <li>PLI &lt; 100 = cheaper than the U.S.</li>
-                  <li>PLI &gt; 100 = more expensive than the U.S.</li>
+                  <li>PLI &lt; 100: On average, goods and services cost less than the world average.</li>
+                  <li>PLI &gt; 100: On average, goods and services cost more than the world average.</li>
                 </ul>
                 <p className="mt-4">
-                  By selecting partners in countries with PLI &lt; 80, tiny donations translate into more doses, meals, or tools per dollar.
+                  Why it matters: By working with partners in countries where PLI &lt; 80, every dollar you give stretches significantly farther than the global norm — meaning your "tiny donations" buy more vaccine doses, meals, tools, or other resources per dollar.
                 </p>
               </div>
             </details>
@@ -362,23 +363,14 @@ const Index = () => {
                 </div>
               </summary>
               <div className="px-6 pb-6 text-gray-300 leading-relaxed">
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 font-semibold">Maximized impact per donor:</span>
-                    <span>Even $0.50/month can fund a week of school supplies in PLI = 50 regions.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 font-semibold">Lean operations:</span>
-                    <span>Low-cost environments reduce admin overhead and speed up delivery.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 font-semibold">Accountable storytelling:</span>
-                    <span>We can show exactly how far each satoshi stretches in local currency.</span>
-                  </li>
-                </ul>
+                <p>
+                  In countries with a very low cost of living, even a small monthly contribution of less than a dollar helps provide a child with the essential tools they need for school.
+                </p>
               </div>
             </details>
 
+            {/* PLI Ruler */}
+            <PLIRuler />
             
           </div>
         </div>
