@@ -38,7 +38,7 @@ export default function AdminLogin() {
         <CardHeader>
           <CardTitle>Admin Login</CardTitle>
           <CardDescription>
-            Enter your credentials to access the admin dashboard
+            Authorized administrators only - sign in to manage organizations
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -77,12 +77,6 @@ export default function AdminLogin() {
               Sign In
             </Button>
             
-            <div className="text-center text-sm">
-              Need to create an admin account?{' '}
-              <Link to="/admin/signup" className="text-primary hover:underline">
-                Sign up
-              </Link>
-            </div>
           </form>
         </CardContent>
       </Card>
