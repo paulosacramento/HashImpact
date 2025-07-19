@@ -379,24 +379,7 @@ const Index = () => {
               </div>
             </details>
 
-            <details className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
-              
-              <div className="px-6 pb-6 text-gray-300 leading-relaxed">
-                <div className="mb-4">
-                  <p className="mb-2 text-blue-400 font-semibold">Scaling up —</p>
-                  <p className="mb-4">As mid- and large-scale miners join, pooled funds grow, unlocking:</p>
-                  <ul className="space-y-1 ml-4">
-                    <li>More projects supported at once</li>
-                    <li>Faster expansion into new low-PLI regions</li>
-                    <li>Economies of scale — Higher volume lets us negotiate supplier discounts.</li>
-                  </ul>
-                </div>
-                <div>
-                  <p className="mb-2 text-blue-400 font-semibold">Next phase —</p>
-                  <p>Eventually we'll broaden to higher-cost countries, backed by proven efficiency.</p>
-                </div>
-              </div>
-            </details>
+            
           </div>
         </div>
       </section>
