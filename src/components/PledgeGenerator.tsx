@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -233,12 +232,7 @@ export const PledgeGenerator = () => {
               <SelectContent>
                 {organizations.map(org => (
                   <SelectItem key={org.id} value={org.id}>
-                    <div className="flex flex-col">
-                      <span className="font-medium">{org.name}</span>
-                      <span className="text-sm text-gray-500">
-                        {org.country}
-                      </span>
-                    </div>
+                    {org.name} - {org.country}
                   </SelectItem>
                 ))}
               </SelectContent>
