@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,11 +8,20 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calendar, Upload, Copy, Share2, Zap, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { generatePledgeImage, type PledgeData } from "@/utils/pledgeImageGenerator";
+import { supabase } from "@/integrations/supabase/client";
+
+interface Organization {
+  id: string;
+  name: string;
+  country: string;
+  price_level_index: number;
+}
 
 export const PledgeGenerator = () => {
   const { toast } = useToast();
+  const [organizations, setOrganizations] = useState<Organization[]>([]);
   const [formData, setFormData] = useState({
-    organization: "",
+    organizationId: "",
     monthsOfSupport: "",
     startDate: "",
     endDate: "",
@@ -23,12 +32,45 @@ export const PledgeGenerator = () => {
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [isGeneratingImage, setIsGeneratingImage] = useState(false);
 
+  useEffect(() => {
+    fetchOrganizations();
+  }, []);
+
+  const fetchOrganizations = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('organizations')
+        .select('id, name, country, price_level_index')
+        .order('name');
+
+      if (error) {
+        console.error('Error fetching organizations:', error);
+        toast({
+          title: "Error",
+          description: "Failed to load organizations. Please try again.",
+          variant: "destructive"
+        });
+        return;
+      }
+
+      setOrganizations(data || []);
+    } catch (error) {
+      console.error('Error fetching organizations:', error);
+    }
+  };
+
+  const getSelectedOrganization = () => {
+    return organizations.find(org => org.id === formData.organizationId);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.organization || !formData.monthsOfSupport) {
+    const selectedOrg = getSelectedOrganization();
+    
+    if (!selectedOrg || !formData.monthsOfSupport) {
       toast({
         title: "Missing Information",
-        description: "Please fill in the organization name and months of support to create your pledge.",
+        description: "Please select an organization and months of support to create your pledge.",
         variant: "destructive"
       });
       return;
@@ -39,7 +81,7 @@ export const PledgeGenerator = () => {
     try {
       // Generate the pledge image
       const pledgeData: PledgeData = {
-        organization: formData.organization,
+        organization: selectedOrg.name,
         monthsOfSupport: formData.monthsOfSupport,
         minerName: formData.minerName || undefined,
         minerPhoto: formData.minerPhoto
@@ -67,7 +109,10 @@ export const PledgeGenerator = () => {
   };
 
   const handleCopyPledge = () => {
-    const pledgeText = `🚀 I'm pledging my Bitcoin mining hashrate to support ${formData.organization} for ${formData.monthsOfSupport} months! Join me in turning mining power into positive change. #HashImpact`;
+    const selectedOrg = getSelectedOrganization();
+    if (!selectedOrg) return;
+    
+    const pledgeText = `🚀 I'm pledging my Bitcoin mining hashrate to support ${selectedOrg.name} for ${formData.monthsOfSupport} months! Join me in turning mining power into positive change. #HashImpact`;
     navigator.clipboard.writeText(pledgeText);
     toast({
       title: "Copied to Clipboard!",
@@ -76,10 +121,11 @@ export const PledgeGenerator = () => {
   };
 
   const handleDownloadImage = () => {
-    if (generatedImage) {
+    const selectedOrg = getSelectedOrganization();
+    if (generatedImage && selectedOrg) {
       const link = document.createElement('a');
       link.href = generatedImage;
-      link.download = `hashimpact-pledge-${formData.organization.replace(/\s+/g, '-').toLowerCase()}.jpg`;
+      link.download = `hashimpact-pledge-${selectedOrg.name.replace(/\s+/g, '-').toLowerCase()}.jpg`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -92,6 +138,8 @@ export const PledgeGenerator = () => {
   };
 
   if (showPledge) {
+    const selectedOrg = getSelectedOrganization();
+    
     return (
       <Card className="max-w-2xl mx-auto bg-gradient-to-br from-orange-50 to-purple-50 border-2 border-orange-200">
         <CardHeader className="text-center pb-4">
@@ -117,7 +165,12 @@ export const PledgeGenerator = () => {
           <div className="text-center space-y-4">
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Supporting Organization</h3>
-              <p className="text-2xl font-bold text-orange-600">{formData.organization}</p>
+              <p className="text-2xl font-bold text-orange-600">{selectedOrg?.name}</p>
+              {selectedOrg && (
+                <p className="text-sm text-gray-600 mt-1">
+                  {selectedOrg.country} • PLI: {selectedOrg.price_level_index}
+                </p>
+              )}
             </div>
             
             <div className="grid grid-cols-1 gap-4">
@@ -168,15 +221,28 @@ export const PledgeGenerator = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="organization" className="text-sm font-medium text-gray-700">
-              Organization Name *
+              Organization *
             </Label>
-            <Input
-              id="organization"
-              placeholder="Enter organization name (e.g., Bitcoin Education Initiative)"
-              value={formData.organization}
-              onChange={(e) => setFormData(prev => ({ ...prev, organization: e.target.value }))}
-              className="w-full"
-            />
+            <Select 
+              value={formData.organizationId} 
+              onValueChange={(value) => setFormData(prev => ({ ...prev, organizationId: value }))}
+            >
+              <SelectTrigger>
+                <SelectValue placeholder="Select an organization to support" />
+              </SelectTrigger>
+              <SelectContent>
+                {organizations.map(org => (
+                  <SelectItem key={org.id} value={org.id}>
+                    <div className="flex flex-col">
+                      <span className="font-medium">{org.name}</span>
+                      <span className="text-sm text-gray-500">
+                        {org.country} • PLI: {org.price_level_index}
+                      </span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           <div className="space-y-2">
