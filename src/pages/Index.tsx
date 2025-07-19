@@ -363,20 +363,9 @@ const Index = () => {
                 </div>
               </summary>
               <div className="px-6 pb-6 text-gray-300 leading-relaxed">
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 font-semibold">Maximized impact per donor:</span>
-                    <span>Even $0.50/month can fund a week of school supplies in PLI = 50 regions.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 font-semibold">Lean operations:</span>
-                    <span>Low-cost environments reduce admin overhead and speed up delivery.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-400 font-semibold">Accountable storytelling:</span>
-                    <span>We can show exactly how far each satoshi stretches in local currency.</span>
-                  </li>
-                </ul>
+                <p>
+                  In countries with a very low cost of living, even a small monthly contribution of less than a dollar helps provide a child with the essential tools they need for school.
+                </p>
               </div>
             </details>
 
