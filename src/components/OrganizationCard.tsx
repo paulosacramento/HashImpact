@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -72,7 +71,8 @@ export function OrganizationCard({ organization }: OrganizationCardProps) {
         </div>
         
         <Button 
-          className="w-full text-xs bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-yellow-600 hover:to-amber-700 text-black font-semibold transition-all" 
+          variant="outline" 
+          className="w-full text-xs border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 hover:text-yellow-300 hover:border-yellow-400/70 transition-all" 
           onClick={() => window.open(organization.geyser_url, '_blank')}
         >
           <ExternalLink className="mr-2 h-3 w-3" />
