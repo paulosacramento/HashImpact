@@ -341,14 +341,14 @@ const Index = () => {
               </summary>
               <div className="px-6 pb-6 text-gray-300 leading-relaxed">
                 <p className="mb-4">
-                  The PLI is a comparative cost-of-living metric (U.S. = 100 baseline).
+                  What is the Price Level Index (PLI)? The PLI measures how expensive a country's goods and services are relative to the global average, which is set to 100. It's calculated from each country's purchasing‑power‑parity conversion factor divided by its market exchange rate, then scaled so that the world average = 100.
                 </p>
                 <ul className="space-y-2 ml-4">
-                  <li>PLI &lt; 100 = cheaper than the U.S.</li>
-                  <li>PLI &gt; 100 = more expensive than the U.S.</li>
+                  <li>PLI &lt; 100: On average, goods and services cost less than the world average.</li>
+                  <li>PLI &gt; 100: On average, goods and services cost more than the world average.</li>
                 </ul>
                 <p className="mt-4">
-                  By selecting partners in countries with PLI &lt; 80, tiny donations translate into more doses, meals, or tools per dollar.
+                  Why it matters: By working with partners in countries where PLI &lt; 80, every dollar you give stretches significantly farther than the global norm — meaning your "tiny donations" buy more vaccine doses, meals, tools, or other resources per dollar.
                 </p>
               </div>
             </details>
