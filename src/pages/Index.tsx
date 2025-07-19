@@ -435,15 +435,6 @@ const Index = () => {
             )}
           </div>
           
-          {/* Admin link for authenticated users */}
-          <div className="flex justify-center">
-            <Button variant="outline" size="sm" asChild>
-              <Link to="/admin/login" className="text-gray-400 hover:text-white">
-                <Settings className="mr-2 h-4 w-4" />
-                Admin Dashboard
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -956,6 +947,8 @@ We also do not consider organisations based in countries under UN Security Counc
             <Link to="/privacy" className="hover:text-yellow-400 transition-colors">Terms & Conditions</Link>
             <span>|</span>
             <a href="https://github.com/paulosacramento/HashImpact" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">GitHub</a>
+            <span>|</span>
+            <Link to="/admin/login" className="hover:text-yellow-400 transition-colors">Admin Dashboard</Link>
           </div>
         </div>
       </footer>
