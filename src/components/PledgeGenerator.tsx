@@ -166,11 +166,11 @@ export const PledgeGenerator = () => {
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Supporting Organization</h3>
               <p className="text-2xl font-bold text-orange-600">{selectedOrg?.name}</p>
-              {selectedOrg && (
-                <p className="text-sm text-gray-600 mt-1">
-                  {selectedOrg.country} • PLI: {selectedOrg.price_level_index}
-                </p>
-              )}
+               {selectedOrg && (
+                 <p className="text-sm text-gray-600 mt-1">
+                   {selectedOrg.country}
+                 </p>
+               )}
             </div>
             
             <div className="grid grid-cols-1 gap-4">
@@ -236,7 +236,7 @@ export const PledgeGenerator = () => {
                     <div className="flex flex-col">
                       <span className="font-medium">{org.name}</span>
                       <span className="text-sm text-gray-500">
-                        {org.country} • PLI: {org.price_level_index}
+                        {org.country}
                       </span>
                     </div>
                   </SelectItem>
