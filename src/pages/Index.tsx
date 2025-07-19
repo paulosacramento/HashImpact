@@ -18,22 +18,20 @@ interface Organization {
   lightning_address: string;
   geyser_url: string;
 }
-
 const Index = () => {
   const [organizations, setOrganizations] = useState<Organization[]>([]);
   const [loadingOrgs, setLoadingOrgs] = useState(true);
-
   useEffect(() => {
     fetchOrganizations();
   }, []);
-
   const fetchOrganizations = async () => {
     try {
-      const { data, error } = await supabase
-        .from('organizations')
-        .select('*')
-        .order('created_at', { ascending: false });
-
+      const {
+        data,
+        error
+      } = await supabase.from('organizations').select('*').order('created_at', {
+        ascending: false
+      });
       if (error) throw error;
       setOrganizations(data || []);
     } catch (error) {
@@ -382,14 +380,7 @@ const Index = () => {
             </details>
 
             <details className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
-              <summary className="p-6 cursor-pointer list-none">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
-                    4. Our vision: Bigger miners, bigger change
-                  </h3>
-                  <ArrowDown className="w-5 h-5 text-blue-400 group-open:rotate-180 transition-transform" />
-                </div>
-              </summary>
+              
               <div className="px-6 pb-6 text-gray-300 leading-relaxed">
                 <div className="mb-4">
                   <p className="mb-2 text-blue-400 font-semibold">Scaling up —</p>
@@ -419,20 +410,13 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {loadingOrgs ? (
-              // Loading skeleton
-              Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="h-64 bg-slate-800/50 rounded-lg animate-pulse" />
-              ))
-            ) : organizations.length > 0 ? (
-              organizations.map((org) => (
-                <OrganizationCard key={org.id} organization={org} />
-              ))
-            ) : (
-              <div className="col-span-3 text-center text-gray-400 py-12">
+            {loadingOrgs ?
+          // Loading skeleton
+          Array.from({
+            length: 3
+          }).map((_, i) => <div key={i} className="h-64 bg-slate-800/50 rounded-lg animate-pulse" />) : organizations.length > 0 ? organizations.map(org => <OrganizationCard key={org.id} organization={org} />) : <div className="col-span-3 text-center text-gray-400 py-12">
                 No organizations found. Please check back later.
-              </div>
-            )}
+              </div>}
           </div>
           
         </div>
